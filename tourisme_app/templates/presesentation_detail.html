@@ -1,0 +1,52 @@
+{% extends 'index.html' %}
+{% load i18n %}
+
+{% block body %}
+<style>
+    .presentation-image img {
+        width: 100%;
+        height: auto;
+        object-fit: cover; /* Pour garder le ratio d'aspect */
+        border-radius: 8px; /* Coins arrondis */
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Ombre pour un effet de profondeur */
+    }
+
+    .presentation-description {
+        margin-top: 20px; /* Espacement au-dessus de la description */
+        font-size: 1.1em; /* Taille de police de la description */
+        color: #333; /* Couleur du texte */
+    }
+
+    .presentation-date {
+        margin-top: 10px; /* Espacement au-dessus de la date */
+        font-style: italic; /* Style de la date */
+        color: #666; /* Couleur du texte de la date */
+    }
+</style>
+{% load static %}
+{% load thumbnail %}
+
+<section class="section section-lg novi-background bg-cover bg-default text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <h2>{{ detail_pres.titre }}</h2> <!-- Titre de la présentation -->
+                <div class="divider divider-decorate"></div>
+                <div class="presentation-image">
+                    {% if detail_pres.image %}
+                        {% thumbnail detail_pres.image "1920x600" crop="center" as thumb %}
+                            <img src="{{ thumb.url }}" alt="{{ detail_pres.intitule }}"/>
+                        {% endthumbnail %}
+                    {% else %}
+                        <img src="{% static 'images/default-placeholder.png' %}" alt="No Image Available"/>
+                    {% endif %}
+                </div>
+                <div class="presentation-description">
+                    <center><p>{{ detail_pres.description | safe }}</p> </center><!-- Description de la présentation -->
+                </div>
+                <time class="presentation-date" datetime="{{ detail_pres.date }}">{{ detail_pres.date }}</time> <!-- Date de la présentation -->
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,103 @@
+{% extends 'index.html' %}
+{% load i18n %}
+{% load static %}
+
+{% block body %}
+<div class="container mt-5">
+    <div class="row">
+       
+        <!-- Article principal -->
+        <div class="col-md-8 mb-4">
+            {% block article %}
+            {% if articles %}
+            <div class="card shadow-sm">
+                {% if articles.0.image %}
+                <img src="{{ articles.0.image.url }}" class="card-img-top" alt="Image de l'article principal">
+                {% else %}
+                <img src="{% static 'images/main-article.jpg' %}" class="card-img-top" alt="Image de l'article principal">
+                {% endif %}
+                <div class="card-body">
+                    <h2 class="card-title">{{ articles.0.title }}</h2>
+                    <p class="text-muted">{% trans 'Posté le ' %} {{ articles.0.created_at|date:"d M Y" }} par <strong>{{ articles.0.author }}</strong></p>
+                    {% comment %} <p class="card-text">kmlk</p> {% endcomment %}
+                    <a href="/detail/{{ articles.0.id }}" class="btn btn-primary">{% trans "Lire l'article complet" %}</a>
+                </div>
+            </div>
+            {% endif %}
+            {% endblock %}
+
+            <!-- Section des articles récents avec images -->
+            <div class="mt-5">
+                <h4>Articles récents</h4>
+                <div class="row">
+                    {% for article in articles %}
+                    <div class="col-md-4 mb-4">
+                        <div class="card h-100 shadow-sm">
+                            {% if article.image %}
+                            <img src="{{ article.image.url }}" class="card-img-top" alt="Image d'article récent">
+                            {% else %}
+                            <img src="{% static 'images/recent1.jpg' %}" class="card-img-top" alt="Image d'article récent">
+                            {% endif %}
+                            <div class="card-body">
+                                <h5 class="card-title">{{ article.title }}</h5>
+                                {% comment %} <p class="card-text">{{ article.content|truncatewords:20 }}</p> {% endcomment %}
+                                <a href="/detail/{{article.pk}}" class="btn btn-outline-dark btn-sm">Lire plus</a>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+
+        <!-- Barre latérale : catégories et articles récents -->
+        <div class="col-md-4">
+           
+            <!-- Catégories -->
+            <div class="mb-4">
+                <h5>Catégories</h5>
+                <div class="list-group">
+                    <a href="#" class="list-group-item list-group-item-action active">{% trans 'Toutes les catégories' %}</a>
+                    
+               {% for cate in categorie %}     
+               <a href="{% url 'articles_par_categorie' cate.id %}" class="list-group-item list-group-item-action">{{ cate.nom_categorie }}</a>
+               {% endfor %}
+               
+                </div>
+            </div>
+
+            <!-- Articles récents sans images -->
+            <div>
+                <h5>{% trans 'Articles récents' %}</h5>
+                <div class="list-group">
+                    {% for article in articles %}
+                    <a href="" class="list-group-item list-group-item-action">
+                        <h6 class="mb-1">{{ article.title }}</h6>
+                        <small class="text-muted">Posté le {{ article.created_at|date:"d M Y" }}</small>
+                    </a>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .card-title {
+        font-size: 1.25rem;
+        font-weight: bold;
+    }
+
+    .card-text {
+        color: #555;
+    }
+
+    .card-footer {
+        background-color: #f8f9fa;
+    }
+
+    .container {
+        max-width: 1100px;
+    }
+</style>
+{% endblock %}

@@ -1,0 +1,140 @@
+{% extends 'blog.html' %}
+{% load i18n %}
+
+{% load static %}
+
+
+<div class="container mt-5">
+    <div class="row">
+        <!-- Contenu principal de l'article -->
+        <div class="col-md-8 mb-4">
+
+            {% block article %}
+            <div class="card shadow-sm">
+                <img src="{{article.image.url}}" class="card-img-top" alt="Image de l'article">
+                <div class="card-body">
+                    <h2 class="card-title">{{article.title}}</h2>
+                    <p class="text-muted">Posté {{article.created_at}} par <strong>{{article.author}}</strong></p>
+                    <p class="card-text">
+                        {{article.content | safe}}
+                    </p>
+
+                    
+
+                    
+
+                    <a href="/blog" class="btn btn-primary mt-3">{% trans 'Retour aux articles' %}</a>
+                </div>
+            </div>
+
+            {% endblock %}
+            <!-- Section des commentaires -->
+            {% comment %} <div class="card shadow-sm mt-5">
+                <div class="card-body">
+                    <h5 class="card-title">{% trans 'Commentaires' %}</h5>
+
+                    <!-- Formulaire pour ajouter un commentaire -->
+                    <form class="mb-4">
+                        <div class="mb-3">
+                            <label for="comment" class="form-label">{% trans 'Laissez un commentaire' %}</label>
+                            <textarea class="form-control" id="comment" rows="3"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">{% trans 'Poster' %}</button>
+                    </form>
+
+                    <!-- Liste des commentaires -->
+                    <div>
+                        <h6>{% trans 'Commentaires récents' %}</h6>
+
+                        <!-- Exemple de commentaire principal -->
+                        <div class="media mb-3">
+                            <img src="{% static 'images/user1.jpg' %}" class="mr-3 rounded-circle" alt="User image" style="width: 50px;">
+                            <div class="media-body">
+                                <h6 class="mt-0">{% trans 'Utilisateur 1' %}</h6>
+                                {% blocktrans %} Très intéressant ! J'ai beaucoup appris sur les applications de l'IA.' {% endblocktrans %}
+                                <button class="btn btn-link btn-sm text-primary" onclick="toggleReplyForm(this)">{% trans 'Répondre' %}</button>
+
+                                <!-- Formulaire de réponse -->
+                                <form class="reply-form mb-3" style="display: none;">
+                                    <div class="mb-3">
+                                        <textarea class="form-control" rows="2" placeholder="Votre réponse..."></textarea>
+                                    </div>
+                                    <button type="submit" class="btn btn-sm btn-primary">{% trans 'Répondre' %}</button>
+                                </form>
+
+                                <!-- Réponse au commentaire principal -->
+                                <div class="media mt-3 ml-4">
+                                    <img src="{% static 'images/user2.jpg' %}" class="mr-3 rounded-circle" alt="User image" style="width: 50px;">
+                                    <div class="media-body">
+                                        <h6 class="mt-0">{% trans 'Utilisateur' %} 2</h6>
+                                        {% blocktrans %}Merci pour cet article, ça m'aide à mieux comprendre les défis de l'IA{% endblocktrans %}.
+                                        <button class="btn btn-link btn-sm text-primary" onclick="toggleReplyForm(this)">Répondre</button>
+
+                                        <!-- Formulaire de réponse pour le commentaire imbriqué -->
+                                        <form class="reply-form mb-3" style="display: none;">
+                                            <div class="mb-3">
+                                                <textarea class="form-control" rows="2" placeholder="Votre réponse..."></textarea>
+                                            </div>
+                                            <button type="submit" class="btn btn-sm btn-primary">{% trans 'Répondre' %}</button>
+                                        </form>
+
+                                        <!-- Réponse imbriquée -->
+                                        <div class="media mt-3 ml-4">
+                                            <img src="{% static 'images/user3.jpg' %}" class="mr-3 rounded-circle" alt="User image" style="width: 50px;">
+                                            <div class="media-body">
+                                                <h6 class="mt-0">{% trans 'Utilisateur' %} 3</h6>
+                                                {% blocktrans %}Je suis d'accord, la compréhension est cruciale pour une IA éthique.{% endblocktrans %}
+                                                <button class="btn btn-link btn-sm text-primary" onclick="toggleReplyForm(this)">{% trans 'Répondre' %}</button>
+                                                
+                                                <!-- Formulaire de réponse pour la réponse imbriquée -->
+                                                <form class="reply-form mb-3" style="display: none;">
+                                                    <div class="mb-3">
+                                                        <textarea class="form-control" rows="2" placeholder="Votre réponse..."></textarea>
+                                                    </div>
+                                                    <button type="submit" class="btn btn-sm btn-primary">{% trans 'Répondre' %}</button>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div> {% endcomment %}
+        </div>
+
+        <!-- Barre latérale : catégories et articles récents -->
+        <div class="col-md-4">
+            <!-- Catégories -->
+            
+            <!-- Articles récents -->
+            
+        </div>
+    </div>
+</div>
+
+<style>
+    .container {
+        max-width: 1100px;
+    }
+    .media {
+        position: relative;
+    }
+    .reply-form {
+        margin-top: 10px;
+    }
+</style>
+
+<script>
+    // Fonction pour afficher ou masquer le formulaire de réponse
+    function toggleReplyForm(button) {
+        const replyForm = button.nextElementSibling;
+        replyForm.style.display = replyForm.style.display === 'none' ? 'block' : 'none';
+    }
+</script>
+
+
+
+

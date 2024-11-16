@@ -1,0 +1,688 @@
+{% extends 'index.html' %}
+{% load i18n %}
+
+{% load static %}
+{% block body %}
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  /* Container principal */
+.container_set {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 85vh;
+    color: white;
+    padding: 20px;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Style du titre */
+.content1 h1 {
+    color: #ffffff;
+    font-size: 4em;
+    font-weight: bold;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.content1 p {
+    color: #ffffff;
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Bouton */
+.bton {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #dfdd4e;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.bton:hover {
+    background-color: #dbcb39;
+    color: #000000;
+}
+
+/* Style du body */
+.body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+/* Slider Container */
+.slider-contain {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    background-color: #ffffff;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+}
+
+/* Ligne de cartes d'activités */
+.slider-activities {
+    display: flex;
+    transition: transform 0.5s ease;
+    width: calc(280px * 9); /* Largeur totale pour s'adapter aux cartes */
+}
+
+/* Boutons de navigation */
+.slider-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 1.5em;
+    z-index: 2;
+}
+
+.left-button {
+    left: 0;
+}
+
+.right-button {
+    right: 0;
+}
+
+/* Cartes de services */
+.service-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 280px;
+    margin: 10px;
+    padding: 15px;
+    text-align: center;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Image dans les cartes */
+.service-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-bottom: 3px solid #fbc531; /* Couleur jaune */
+    border-radius: 6px;
+    margin-bottom: 15px;
+}
+
+/* Style des titres */
+.slider-contain h2 {
+    color: #504e2c;
+    font-size: 2.2em;
+    margin-bottom: 20px;
+}
+
+.service-card h3 {
+    color: #e9d83d;
+    font-size: 1.4em;
+    margin-bottom: 10px;
+}
+
+/* Texte dans les cartes */
+.service-card p {
+    color: #333;
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+/* Responsive Design */
+
+/* Ajustements pour tablettes */
+@media (max-width: 768px) {
+    .container_set {
+        flex-direction: column;
+        padding: 15px;
+        height: auto;
+    }
+
+    .content1 h1 {
+        font-size: 2.5em;
+        text-align: center;
+    }
+
+    .content1 p {
+        font-size: 1.1em;
+        text-align: center;
+    }
+
+    .bton {
+        font-size: 1em;
+    }
+
+    /* Slider */
+    .slider-activities {
+        flex-wrap: nowrap;
+        width: 100%;
+    }
+
+    .slider-button {
+        padding: 5px;
+        font-size: 1.2em;
+    }
+}
+
+/* Ajustements pour mobiles */
+@media (max-width: 480px) {
+    .content1 h1 {
+        font-size: 1.8em;
+    }
+
+    .content1 p {
+        font-size: 1em;
+    }
+
+    .bton {
+        font-size: 0.9em;
+        padding: 8px 18px;
+    }
+
+    /* Cartes pour mobiles */
+    .slider-activities {
+        width: 100%; /* Largeur de la première carte */
+        transform: translateX(0); /* Position de départ */
+    }
+
+    /* Permet de voir une carte à la fois */
+    .service-card {
+        min-width: 100%;
+        flex: 0 0 auto;
+        margin: 10px 0;
+    }
+}
+
+    /* start container_left */
+    .container_left {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-size: cover;
+        color: #000000;
+        padding: 0 20px;
+        flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+    }
+
+    .container_left .spanned {
+        border: 1px solid #ffa900;
+        border-radius: 25px;
+        background-color: #ffa900;
+        color: #e9e5e5;
+        padding-left: 2%;
+        padding-right: 2%;
+        font-size: 22px;
+        font-weight: bold;
+    }
+
+    .container_left .container {
+        margin-bottom: 2%;
+    }
+
+    .container_left .content1 h1 {
+        color: #000000;
+        margin-bottom: 20px;
+        font-size: 2em;
+    }
+
+    .container_left .content1 p {
+        color: #000000;
+        margin-bottom: 30px;
+        font-size: 1.2em;
+    }
+
+    .content2 {
+        text-align: center;
+        margin-top: 20px; /* Add margin to separate content on smaller screens */
+    }
+
+    .content2 img {
+        border-radius: 10px;
+        width: 500px;
+        height: auto;
+    }
+
+    /* Responsive design adjustments */
+    @media (max-width: 1200px) {
+        .container_left {
+            flex-direction: column; /* Stack items vertically */
+            padding: 10px; /* Adjust padding */
+        }
+
+        .container_left .content1 h1 {
+            font-size: 1.8em; /* Adjust font size for large tablets and smaller desktops */
+        }
+
+        .container_left .content1 p {
+            font-size: 1.1em; /* Adjust font size for large tablets and smaller desktops */
+        }
+
+        .content2 img {
+            width: 400px; /* Adjust image size */
+        }
+    }
+
+    @media (max-width: 768px) {
+        .container_left {
+            padding: 5px; /* Adjust padding for tablets and smaller screens */
+        }
+
+        .container_left .content1 h1 {
+            font-size: 1.6em; /* Adjust font size for tablets */
+        }
+
+        .container_left .content1 p {
+            font-size: 1em; /* Adjust font size for tablets */
+        }
+
+        .content2 img {
+            width: 100%; /* Make image responsive */
+            max-width: 300px; /* Limit max-width for tablets */
+        }
+    }
+
+    @media (max-width: 480px) {
+        .container_left .content1 h1 {
+            font-size: 1.4em; /* Further adjust font size for very small screens */
+        }
+
+        .container_left .content1 p {
+            font-size: 0.9em; /* Further adjust font size for very small screens */
+            margin-bottom: 20px; /* Reduce bottom margin */
+        }
+
+        .content2 img {
+            width: 100%; /* Ensure image takes full width */
+            max-width: 250px; /* Limit max-width for very small screens */
+        }
+    }
+    /* views-rows */
+    .img_text {
+        display: flex;
+        /* flex-wrap: wrap; Allow items to wrap on smaller screens */
+    }
+
+    .img_text .image_info img {
+        /* width: 100%; */
+        width: 280px;
+        border-radius: 15px;
+        /* Ensure images resize on smaller screens */
+        height: auto;
+    }
+
+    .img_text .text p {
+        color: #1b1b1b;
+        font-size: 1.25rem; /* Use relative units */
+        margin-left: 20px;
+        /* Ensure text resizes on smaller screens */
+        margin-right: 20px;
+    }
+
+    .field-content .author_heading {
+        display: flex; /* Corrected 'flexbox' to 'flex' */
+        flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+    }
+
+    .views-row h2 a {
+        color: #000000;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+        .img_text {
+            flex-direction: column; /* Stack items vertically on smaller screens */
+            align-items: center; /* Center items */
+        }
+
+        .img_text .text p {
+            margin-left: 0; /* Remove left margin */
+            margin-right: 0; /* Remove right margin */
+            font-size: 1rem; /* Adjust font size */
+            text-align: center; /* Center text */
+        }
+
+        .field-content .author_heading {
+            justify-content: center; /* Center items */
+        }
+    }
+
+    @media (max-width: 480px) {
+        .img_text .text p {
+            font-size: 0.875rem; /* Further adjust font size for very small screens */
+        }
+    }
+
+
+</style>
+
+<!-- Swiper container for the Maldives slider -->
+<div class="container_set swiper-container">
+    <div class="swiper-wrapper">
+      <!-- Slide 1: Beautiful Beaches -->
+      <div class="swiper-slide" style="background-image: url('{% static 'images/private_island.jpg' %}');">
+        <div class="container">
+          <div class="row w-100">
+            <div class="col-md-8 content1">
+              <h1>{% blocktrans %}Escape to the Pristine Beaches of the Maldives{% endblocktrans %}</h1>
+              <p>
+                <ul>
+                    <li>
+                        {% blocktrans %}Experience the purest white sands and crystal-clear waters{% endblocktrans %}
+                    </li>
+                    <li>
+                        {% blocktrans %}Relax and rejuvenate on secluded paradise shores{% endblocktrans %}
+                    </li>
+                
+                </ul>
+              </p>
+              <a href="{% url 'request_devis' %}">
+                <button class="bton">{% blocktrans %}Get a Quick Quote{% endblocktrans %}</button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Slide 2: Underwater Adventure -->
+      <div class="swiper-slide" style="background-image: url('{% static 'images/underwater_restaurant.jpg' %}');">
+        <div class="container">
+          <div class="row w-100">
+            <div class="col-md-8 content1">
+              <h1>{% blocktrans %}Dive into the Vibrant Marine Life{% endblocktrans %}</h1>
+              <p>
+                <ul>
+                    <li>
+                        {% blocktrans %}Snorkel or dive among colorful coral reefs and exotic fish{% endblocktrans %}
+                    </li>
+                    <li>
+                        {% blocktrans %}Witness the stunning underwater beauty of the Maldives{% endblocktrans %}
+                    </li>
+                </ul>
+                
+              </p>
+              <a href="{% url 'request_devis' %}">
+                <button class="bton">{% blocktrans %}Get a Quick Quote{% endblocktrans %}</button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Slide 3: Maldivian Culture -->
+      <div class="swiper-slide" style="background-image: url('{% static 'images/banana_reef.jpg' %}');">
+        <div class="container">
+          <div class="row w-100">
+            <div class="col-md-8 content1">
+              <h1>{% blocktrans %}Immerse in Maldivian Culture{% endblocktrans %}</h1>
+              <p>
+                <ul>
+                    <li>
+                        {% blocktrans %}Explore traditional music, arts, and local craftsmanship{% endblocktrans %}
+                    </li>
+                    <li>
+                        {% blocktrans %}Connect with the warm hospitality of Maldivian locals{% endblocktrans %}
+                    </li>
+                </ul>
+                
+              </p>
+              <a href="{% url 'request_devis' %}">
+                <button class="bton">{% blocktrans %}Get a Quick Quote{% endblocktrans %}</button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Slide 4: Luxury Resorts -->
+      <div class="swiper-slide" style="background-image: url('{% static 'images/spa_day.jpg' %}');">
+        <div class="container">
+          <div class="row w-100">
+            <div class="col-md-8 content1">
+              <h1>{% blocktrans %}Indulge in Luxury Resorts{% endblocktrans %}</h1>
+              <p>
+                <ul>
+                    <li>
+                        {% blocktrans %}Stay in over-water villas with panoramic ocean views{% endblocktrans %}
+                    </li>
+                    <li>
+                        {% blocktrans %}Enjoy world-class amenities and personalized service{% endblocktrans %}
+                    </li>
+                </ul>
+                
+              </p>
+              <a href="{% url 'request_devis' %}">
+                <button class="bton">{% blocktrans %}Get a Quick Quote{% endblocktrans %}</button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Swiper controls-->
+    <div class="swiper-pagination"></div>
+  </div>
+
+<div class="body">
+    <div class="slider-contain">
+        <h2>{% trans "Discover the Maldives" %}</h2>
+        <button class="slider-button left-button">&#10094;</button>
+        
+        <section class="slider-activities">
+            <!-- 1. Snorkeling at Banana Reef -->
+            <div class="service-card">
+                <img src="{% static 'images/banana_reef.jpg' %}" alt="{% blocktrans %}Snorkeling at Banana Reef{% endblocktrans %}">
+                <h3>{% blocktrans %}Snorkeling at Banana Reef{% endblocktrans %}</h3>
+                <p>{% blocktrans %}Experience the vibrant underwater world of Banana Reef, famous for its colorful coral gardens and diverse marine life.{% endblocktrans %}</p>
+            </div>
+            
+            <!-- 2. Sunset Cruise -->
+            <div class="service-card">
+                <img src="{% static 'images/sunset_cruise.jpg' %}" alt="{% blocktrans %}Sunset Cruise{% endblocktrans %}">
+                <h3>{% blocktrans %}Sunset Cruise{% endblocktrans %}</h3>
+                <p>{% blocktrans %}Enjoy a peaceful cruise across the Indian Ocean, with stunning views of the Maldives’ sunsets.{% endblocktrans %}</p>
+            </div>
+            
+            <!-- 3. Private Island Picnic -->
+            <div class="service-card">
+                <img src="{% static 'images/private_island.jpg' %}" alt="{% blocktrans %}Private Island Picnic{% endblocktrans %}">
+                <h3>{% blocktrans %}Private Island Picnic{% endblocktrans %}</h3>
+                <p>{% blocktrans %}Spend a day on a secluded island with a private picnic, surrounded by pristine beaches and turquoise waters.{% endblocktrans %}</p>
+            </div>
+            
+            <!-- 4. Dolphin Watching Safari -->
+            <div class="service-card">
+                <img src="{% static 'images/dolphin_safari.jpg' %}" alt="{% blocktrans %}Dolphin Watching Safari{% endblocktrans %}">
+                <h3>{% blocktrans %}Dolphin Watching Safari{% endblocktrans %}</h3>
+                <p>{% blocktrans %}Set sail to spot playful dolphins and enjoy a memorable safari adventure on the open sea.{% endblocktrans %}</p>
+            </div>
+            
+            <!-- 5. Spa Day on a Luxury Resort -->
+            <div class="service-card">
+                <img src="{% static 'images/spa_day.jpg' %}" alt="{% blocktrans %}Spa Day on a Luxury Resort{% endblocktrans %}">
+                <h3>{% blocktrans %}Spa Day on a Luxury Resort{% endblocktrans %}</h3>
+                <p>{% blocktrans %}Relax with a day of rejuvenating spa treatments on one of the Maldives' world-renowned luxury resorts.{% endblocktrans %}</p>
+            </div>
+            
+            <!-- 6. Diving at Maaya Thila -->
+            <div class="service-card">
+                <img src="{% static 'images/maaya_thila.jpg' %}" alt="{% blocktrans %}Diving at Maaya Thila{% endblocktrans %}">
+                <h3>{% blocktrans %}Diving at Maaya Thila{% endblocktrans %}</h3>
+                <p>{% blocktrans %}Dive at Maaya Thila, a top dive site where you can encounter sharks, rays, and an array of marine life.{% endblocktrans %}</p>
+            </div>
+            
+            <!-- 7. Maldivian Cooking Class -->
+            <div class="service-card">
+                <img src="{% static 'images/cooking_class.jpg' %}" alt="{% blocktrans %}Maldivian Cooking Class{% endblocktrans %}">
+                <h3>{% blocktrans %}Maldivian Cooking Class{% endblocktrans %}</h3>
+                <p>{% blocktrans %}Learn to cook traditional Maldivian dishes and experience the local flavors with a hands-on cooking class.{% endblocktrans %}</p>
+            </div>
+            
+            <!-- 8. Kayaking in Crystal Clear Lagoons -->
+            <div class="service-card">
+                <img src="{% static 'images/kayaking.jpg' %}" alt="{% blocktrans %}Kayaking in Crystal Clear Lagoons{% endblocktrans %}">
+                <h3>{% blocktrans %}Kayaking in Crystal Clear Lagoons{% endblocktrans %}</h3>
+                <p>{% blocktrans %}Explore the Maldives' clear lagoons by kayak and get close to the stunning natural beauty.{% endblocktrans %}</p>
+            </div>
+            
+            <!-- 9. Underwater Restaurant Experience -->
+            <div class="service-card">
+                <img src="{% static 'images/underwater_restaurant.jpg' %}" alt="{% blocktrans %}Underwater Restaurant Experience{% endblocktrans %}">
+                <h3>{% blocktrans %}Underwater Restaurant Experience{% endblocktrans %}</h3>
+                <p>{% blocktrans %}Dine with a view like no other at an underwater restaurant, surrounded by marine life.{% endblocktrans %}</p>
+            </div>
+        </section>
+        
+        <button class="slider-button right-button">&#10095;</button>
+    </div>
+</div>
+
+
+<!-- start container_left -->
+<div class="container_left">
+    <div class="container">
+        <div class="row w-100">
+            <div class="col-md-6 content1">
+                <h1><br>{% trans "Exclusive Maldives Experiences This Year" %}</h1>
+                <p>
+                    {% blocktrans %}After an incredible year for travel, we are thrilled to offer unique opportunities to explore the Maldives, with an emphasis on relaxation and luxury. Choose from a variety of packages that cater to both adventure and leisure.{% endblocktrans %} 
+                </p>
+                <p>
+                    <span class="spanned">61%</span> {% blocktrans %}of our packages offer extended stays for a more immersive experience in the Maldives.{% endblocktrans %}
+                    <br>
+                    {% trans "Book now to enjoy exclusive offers and exceptional service." %}
+                </p>
+            </div>
+            <div class="col-md-6 content2">
+                <img src="{% static 'images/maldives_resort.jpg' %}">
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row w-100">
+            <div class="col-md-6 content2">
+                <img src="{% static 'images/maldives_beach.jpg' %}">
+            </div>
+            <div class="col-md-6 content1">
+                <h1><br>{% blocktrans %}Luxury Beyond Expectations{% endblocktrans %}</h1>
+                <p>
+                    <span class="spanned">70%</span> {% blocktrans %}of our clients choose private villas or overwater bungalows, allowing them to experience the ultimate in privacy and comfort while staying in one of the world’s most exclusive destinations.{% endblocktrans %}
+                    <br> 
+                    <span class="spanned">43%</span> {% trans "opt for wellness retreats with spa and holistic treatments," %}
+                    <br> 
+                    <span class="spanned">26%</span> {% trans "book diving and snorkeling adventures," %}
+                    <br> 
+                    <span class="spanned">18%</span> {% trans "enjoy water sports and island hopping." %}
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row w-100">
+            <div class="col-md-6 content1">
+                <h1><br>{% trans "Experiences Tailored to Your Preferences" %}</h1>
+                <p>
+                    <span class="spanned">63%</span> {% blocktrans %}of visitors seek both adventure and relaxation during their trip to the Maldives.{% endblocktrans %}
+                    <br> 
+                    {% trans "We offer a wide variety of experiences:" %}
+                    <br> 
+                    {% trans "from spa retreats and sunset cruises," %}
+                    <br>
+                    {% trans "to shark diving and deep-sea fishing." %}
+                    <br>
+                    {% trans "For those seeking ultimate luxury, we recommend private island resorts where you can escape the crowds and immerse yourself in natural beauty." %}
+                </p>
+                <div class="rd-navbar-aside-right"><a class="button button-sm button-secondary button-nina" id="btn-requestQuote" style="background-color: rgb(43, 42, 42); color: aliceblue; border-color: black;" href="/request_devis">{% blocktrans %}request a quote{% endblocktrans %}</a></div>
+            </div>
+            <div class="col-md-6 content2">
+                <img src="{% static 'images/maldives_island.jpg' %}">
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end container_left -->
+
+<!-- Swiper JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script>
+      var swiper = new Swiper('.swiper-container', {
+    loop: true,
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+  });
+
+    document.addEventListener('DOMContentLoaded', function () {
+        const sliderActivities = document.querySelector('.slider-activities');
+        const leftButton = document.querySelector('.left-button');
+        const rightButton = document.querySelector('.right-button');
+        const cardWidth = 280; // Largeur de chaque carte
+        let currentIndex = 0; // Index pour suivre la position actuelle
+        let intervalId;
+    
+        // Fonction pour décaler les cartes
+        function updateSliderPosition() {
+            sliderActivities.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+        }
+    
+        // Fonction de défilement automatique
+        function startAutoScroll() {
+            intervalId = setInterval(() => {
+                currentIndex++;
+                if (currentIndex >= sliderActivities.children.length) {
+                    currentIndex = 0; // Retour au début
+                }
+                updateSliderPosition();
+            }, 3000); // Défilement toutes les 3 secondes
+        }
+    
+        // Stopper le défilement automatique lorsqu'on utilise les boutons
+        function stopAutoScroll() {
+            clearInterval(intervalId);
+            startAutoScroll(); // Reprendre après interaction
+        }
+    
+        // Événements de clic pour les boutons de navigation
+        leftButton.addEventListener('click', () => {
+            stopAutoScroll();
+            currentIndex = (currentIndex === 0) ? sliderActivities.children.length - 1 : currentIndex - 1;
+            updateSliderPosition();
+        });
+    
+        rightButton.addEventListener('click', () => {
+            stopAutoScroll();
+            currentIndex = (currentIndex + 1) % sliderActivities.children.length;
+            updateSliderPosition();
+        });
+    
+        // Démarrer le défilement automatique
+        startAutoScroll();
+    });
+</script>
+{% endblock %}

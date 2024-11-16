@@ -1,0 +1,3761 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-11-12 17:32+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: tourisme_app/templates/about.html:73 tourisme_app/templates/contacts.html:73
+#: tourisme_app/templates/index.html:155 tourisme_app/templates/shop.html:73
+#: tourisme_app/templates/typography.html:94
+#: tourisme_app/templates/typography.html:110
+msgid "Home"
+msgstr "Home"
+
+#: tourisme_app/templates/about.html:76 tourisme_app/templates/contacts.html:76
+#: tourisme_app/templates/index.html:158 tourisme_app/templates/shop.html:76
+#: tourisme_app/templates/typography.html:95
+msgid "About Us"
+msgstr "About Us"
+
+#: tourisme_app/templates/about.html:81 tourisme_app/templates/contacts.html:81
+#: tourisme_app/templates/index.html:163 tourisme_app/templates/shop.html:81
+msgid "Destinations"
+msgstr "Destinations"
+
+#: tourisme_app/templates/about.html:84 tourisme_app/templates/about.html:231
+#: tourisme_app/templates/contacts.html:83 tourisme_app/templates/h.html:55
+#: tourisme_app/templates/index.html:165 tourisme_app/templates/index.html:391
+#: tourisme_app/templates/index.html:395 tourisme_app/templates/shop.html:83
+msgid "Zanzibar"
+msgstr "Zanzibar"
+
+#: tourisme_app/templates/about.html:85 tourisme_app/templates/about.html:101
+#: tourisme_app/templates/contacts.html:84
+#: tourisme_app/templates/contacts.html:100
+#: tourisme_app/templates/index.html:166 tourisme_app/templates/index.html:182
+#: tourisme_app/templates/index.html:407 tourisme_app/templates/index.html:411
+#: tourisme_app/templates/shop.html:84 tourisme_app/templates/shop.html:100
+msgid "Ouganda"
+msgstr "Ouganda"
+
+#: tourisme_app/templates/about.html:86 tourisme_app/templates/about.html:102
+#: tourisme_app/templates/about.html:233
+#: tourisme_app/templates/booking.html:145
+#: tourisme_app/templates/contacts.html:85
+#: tourisme_app/templates/contacts.html:101 tourisme_app/templates/h.html:57
+#: tourisme_app/templates/index.html:167 tourisme_app/templates/index.html:183
+#: tourisme_app/templates/index.html:423 tourisme_app/templates/index.html:427
+#: tourisme_app/templates/shop.html:85 tourisme_app/templates/shop.html:101
+msgid "Kenya"
+msgstr "Kenya"
+
+#: tourisme_app/templates/about.html:87 tourisme_app/templates/about.html:234
+#: tourisme_app/templates/contacts.html:86
+#: tourisme_app/templates/index.html:168 tourisme_app/templates/index.html:439
+#: tourisme_app/templates/index.html:443 tourisme_app/templates/shop.html:86
+msgid "Dubaï"
+msgstr "Dubaï"
+
+#: tourisme_app/templates/about.html:88 tourisme_app/templates/contacts.html:87
+#: tourisme_app/templates/index.html:169 tourisme_app/templates/index.html:455
+#: tourisme_app/templates/index.html:459 tourisme_app/templates/shop.html:87
+msgid "Egypte"
+msgstr "Egypte"
+
+#: tourisme_app/templates/about.html:89 tourisme_app/templates/about.html:232
+#: tourisme_app/templates/booking.html:163
+#: tourisme_app/templates/contacts.html:88 tourisme_app/templates/h.html:60
+#: tourisme_app/templates/index.html:170 tourisme_app/templates/index.html:471
+#: tourisme_app/templates/index.html:475 tourisme_app/templates/shop.html:88
+msgid "Maldives"
+msgstr "Maldives"
+
+#: tourisme_app/templates/about.html:90 tourisme_app/templates/about.html:100
+#: tourisme_app/templates/contacts.html:99
+#: tourisme_app/templates/index.html:181
+msgid "Tanzanie"
+msgstr "Tanzanie"
+
+#: tourisme_app/templates/about.html:98
+msgid "Safari"
+msgstr "Safari"
+
+#: tourisme_app/templates/about.html:109 tourisme_app/templates/index.html:724
+msgid "Shop"
+msgstr "Shop"
+
+#: tourisme_app/templates/about.html:112 tourisme_app/templates/index.html:192
+#: tourisme_app/templates/index.html:725 tourisme_app/templates/shop.html:110
+#: tourisme_app/templates/typography.html:96
+msgid "Contacts"
+msgstr "Contacts"
+
+#: tourisme_app/templates/about.html:118 tourisme_app/templates/index.html:198
+msgid "request a quote"
+msgstr "request a quote"
+
+#: tourisme_app/templates/about.html:187 tourisme_app/templates/about.html:189
+msgid "Bienvenue sur"
+msgstr "Welcome to"
+
+#: tourisme_app/templates/about.html:189
+msgid ""
+" votre portail dédié aux expériences de voyage exceptionnelles à travers les "
+"plus belles destinations du monde. Que vous rêviez de partir à l'aventure "
+"dans la nature sauvage, de vous détendre dans des paradis tropicaux ou de "
+"découvrir des cultures fascinantes, WelcomeToSafari.com est là pour "
+"transformer vos rêves de voyage en réalité. "
+msgstr ""
+"Your gateway to exceptional travel experiences across the most "
+"beautifuldestinations in the world. Whether you dream of adventure in the "
+"wild,relaxing in tropical paradises, or discovering fascinating cultures,"
+"WelcomeToSafari.com is here to turn your travel dreams into reality."
+
+#: tourisme_app/templates/about.html:200
+msgid "Des destinations uniques"
+msgstr "Unique destinations"
+
+#: tourisme_app/templates/about.html:202
+msgid " Explorez des lieux parmi les plus fascinants du globe avec "
+msgstr " Explore some of the world's most fascinating places with "
+
+#: tourisme_app/templates/about.html:202
+msgid " Nos destinations incluent "
+msgstr "Nos destinations incluent"
+
+#: tourisme_app/templates/about.html:203
+msgid " Zanzibar, les Maldives, le Kenya, Dubaï "
+msgstr "Zanzibar, the Maldives, Kenya, Dubai"
+
+#: tourisme_app/templates/about.html:203
+msgid "et"
+msgstr "and"
+
+#: tourisme_app/templates/about.html:203
+#, fuzzy
+#| msgid "Egypte"
+msgid "l'Égypte"
+msgstr "Egypte"
+
+#: tourisme_app/templates/about.html:203
+msgid ""
+" chacune offrant une combinaison de paysages à couper le souffle, "
+"d'aventures palpitantes et de découvertes culturelles riches."
+msgstr ""
+"Each offering a combination of breathtaking landscapes,thrilling adventures, "
+"and rich cultural discoveries."
+
+#: tourisme_app/templates/about.html:206
+msgid "Voyages sur mesure"
+msgstr "Custom-made travel"
+
+#: tourisme_app/templates/about.html:208
+msgid ""
+" Nous croyons que chaque voyage doit être unique. C'est pourquoi nous "
+"proposons des "
+msgstr "We believe that every trip should be unique.That's why we offer custom"
+
+#: tourisme_app/templates/about.html:208
+msgid "itinéraires personnalisés"
+msgstr "custom itineraries"
+
+#: tourisme_app/templates/about.html:208
+msgid ""
+" qui répondent à vos goûts et à votre budget. Que ce soit pour réserver un "
+"hébergement de luxe ou pour des visites guidées exclusives, chaque détail "
+"est pensé pour vous offrir une expérience inoubliable."
+msgstr ""
+"that suit your tastes and budget.Whether it's booking luxury accommodation "
+"orexclusive guided tours, every detail is designedto provide you with an "
+"unforgettable experience."
+
+#: tourisme_app/templates/blog.html:24
+#: tourisme_app/templates/about.html:211
+msgid "Des services complets"
+msgstr "Comprehensive services"
+
+#: tourisme_app/templates/about.html:213
+msgid "De l’accueil personnalisé aux croisières de luxe,"
+msgstr "From personalized welcome to luxury cruises,"
+
+#: tourisme_app/templates/about.html:213
+msgid ""
+"s’occupe de tout pour vous garantir des vacances sans tracas. Nos services "
+"comprennent :"
+msgstr ""
+"takes care of everything to ensure you have a hassle-free vacation.Our "
+"services include:"
+
+#: tourisme_app/templates/about.html:216
+msgid "Hébergement de qualité"
+msgstr "Quality Accommodation"
+
+#: tourisme_app/templates/about.html:216
+msgid ""
+" Profitez de logements dans les meilleures zones, notamment des hôtels de "
+"luxe, des villas privées et des bungalows sur l'eau."
+msgstr ""
+"Enjoy accommodations in the best locations, including luxury hotels,private "
+"villas, and overwater bungalows."
+
+#: tourisme_app/templates/about.html:217
+msgid "Guides touristiques experts"
+msgstr "Expert tour guides"
+
+#: tourisme_app/templates/about.html:217
+msgid ""
+" Découvrez chaque destination avec des experts locaux qui vous dévoileront "
+"les trésors cachés et vous guideront dans des aventures authentiques."
+msgstr ""
+"Discover each destination with local experts who will reveal hidden "
+"treasuresand guide you on authentic adventures."
+
+#: tourisme_app/templates/about.html:218
+msgid "Croisières de luxe"
+msgstr "Luxury Cruises"
+
+#: tourisme_app/templates/about.html:218
+msgid ""
+"Vivez des croisières inoubliables à travers l’océan Indien ou sur le "
+"majestueux Nil, avec confort et service irréprochables."
+msgstr ""
+"Experience unforgettable cruises across the Indian Ocean or along the "
+"majestic Nile,with comfort and impeccable service."
+
+#: tourisme_app/templates/about.html:219
+msgid "Accueil à l’aéroport"
+msgstr "Airport welcome"
+
+#: tourisme_app/templates/about.html:219
+msgid ""
+" Bénéficiez d’un accueil VIP et d'un transfert privé dès votre arrivée pour "
+"commencer votre aventure sans stress."
+msgstr ""
+"Enjoy a VIP welcome and private transfer upon arrivalto start your adventure "
+"stress-free."
+
+#: tourisme_app/templates/about.html:222
+msgid "Support client 24/7"
+msgstr "24/7 Customer Support"
+
+#: tourisme_app/templates/about.html:224
+msgid "Notre équipe dédiée est à votre disposition"
+msgstr "Our dedicated team is at your disposal."
+
+#: tourisme_app/templates/about.html:224
+msgid "24 heures sur 24"
+msgstr "24 hours a day"
+
+#: tourisme_app/templates/about.html:224
+msgid ""
+"pour s’assurer que votre voyage se déroule parfaitement. Nous sommes à "
+"l’écoute de vos besoins avant, pendant, et après votre séjour."
+msgstr ""
+"to ensure that your trip goes perfectly. We are here to listen to your needs "
+"before,during, and after your stay."
+
+#: tourisme_app/templates/about.html:229
+msgid "Nos Destinations phares"
+msgstr "Our Featured Destinations"
+
+#: tourisme_app/templates/about.html:231
+msgid ""
+" Plages de sable blanc, eaux turquoise, et une culture riche en histoire et "
+"en épices. Une destination idyllique pour les amoureux de la nature et de "
+"l'histoire."
+msgstr ""
+
+#: tourisme_app/templates/about.html:232
+msgid ""
+" Imaginez des eaux cristallines, des plages privées et des récifs coralliens "
+"parfaits pour la plongée. Les Maldives sont le synonyme de sérénité et de "
+"luxe."
+msgstr ""
+"Imagine crystal-clear waters, private beaches, and coral reefs perfect for "
+"diving. The Maldives are synonymous with serenity and luxury."
+
+#: tourisme_app/templates/about.html:233
+msgid ""
+" Une terre d’aventure avec des safaris inoubliables dans les parcs "
+"nationaux, où vous pourrez observer des lions, des éléphants et d'autres "
+"animaux sauvages emblématiques."
+msgstr ""
+"A land of adventure with unforgettable safaris in national parks, where you "
+"can observe lions, elephants, and other iconic wildlife."
+
+#: tourisme_app/templates/about.html:234
+msgid ""
+" Cette métropole futuriste offre des expériences de luxe, du désert aux "
+"gratte-ciel impressionnants, idéale pour ceux qui recherchent un mélange de "
+"modernité et de tradition."
+msgstr ""
+"This futuristic metropolis offers luxury experiences, from the desert to "
+"towering skyscrapers, ideal for those seeking a blend of modernity and "
+"tradition."
+
+#: tourisme_app/templates/about.html:235
+msgid "Égypte"
+msgstr ""
+
+#: tourisme_app/templates/about.html:235
+msgid ""
+" Partez à la découverte des pyramides, de la Vallée des Rois, et faites une "
+"croisière sur le Nil pour plonger au cœur d’une histoire millénaire."
+msgstr ""
+"Embark on a journey to discover the pyramids, the Valley of the Kings, and "
+"take a cruise on the Nile to dive into the heart of millennia-old history."
+
+#: tourisme_app/templates/about.html:245
+#, fuzzy
+#| msgid "Galerie d"
+msgid "Galerie d'Images"
+msgstr "Gallery of images"
+
+#: tourisme_app/templates/about.html:246
+msgid ""
+"Place pour images captivantes de chaque destination, montrant la beauté des "
+"paysages et les expériences exclusives proposées."
+msgstr ""
+"Space for captivating images of each destination, showcasing the beauty of "
+"the landscapes and the exclusive experiences offered."
+
+#: tourisme_app/templates/about.html:277
+msgid ""
+"At our travel agency, you can book air tickets to any world destination. We "
+"also provide online ticket booking via our website in just a couple of steps."
+msgstr ""
+"At our travel agency, you can book air tickets to any world destination. We "
+"also provide online ticket booking via our website in just a couple of steps."
+
+#: tourisme_app/templates/about.html:284
+msgid "PICK UP AIRPORT"
+msgstr "PICK UP AIRPORT"
+
+#: tourisme_app/templates/about.html:286 tourisme_app/templates/index.html:520
+msgid ""
+"Besides regular tours and excursions, we also offer a variety of cruises & "
+"sea voyages for different customers looking for awesome experiences."
+msgstr ""
+"Besides regular tours and excursions, we also offer a variety of cruises & "
+"sea voyages for different customers looking for awesome experiences."
+
+#: tourisme_app/templates/about.html:293 tourisme_app/templates/index.html:526
+msgid "Hotel Bookings"
+msgstr "Hotel Bookings"
+
+#: tourisme_app/templates/about.html:295
+msgid ""
+"We offer a wide selection of hotels ranging from 5-star ones to small "
+"properties located worldwide so that you could book a hotel you like."
+msgstr ""
+"We offer a wide selection of hotels ranging from 5-star ones to small "
+"properties located worldwide so that you could book a hotel you like."
+
+#: tourisme_app/templates/about.html:302 tourisme_app/templates/index.html:534
+msgid "Tailored Summer Tours"
+msgstr "Tailored Summer Tours"
+
+#: tourisme_app/templates/about.html:304 tourisme_app/templates/index.html:536
+msgid ""
+"Our agency provides varied tours including tailored summer tours for clients "
+"who are searching for an exclusive and memorable vacation."
+msgstr ""
+"Our agency provides varied tours including tailored summer tours for clients "
+"who are searching for an exclusive and memorable vacation."
+
+#: tourisme_app/templates/articles_par_categorie.html:11
+msgid "Articles dans la catégorie :"
+msgstr "Articles in the category:"
+
+#: tourisme_app/templates/articles_par_categorie.html:24
+#: tourisme_app/templates/blog.html:21
+msgid "Posté le "
+msgstr "Posted on "
+
+#: tourisme_app/templates/articles_par_categorie.html:26
+msgid "Lire l'article complet"
+msgstr "Read the full article"
+
+#: tourisme_app/templates/articles_par_categorie.html:31
+msgid "Aucun article trouvé dans cette catégorie."
+msgstr "No articles found in this category."
+
+#: tourisme_app/templates/blog.html:62
+msgid "Toutes les catégories"
+msgstr "All categories"
+
+#: tourisme_app/templates/blog.html:73
+msgid "Articles récents"
+msgstr "Recent articles"
+
+#: tourisme_app/templates/booking.html:12 tourisme_app/templates/h.html:8
+msgid "Travel Quote Request Form"
+msgstr "Travel Quote Request Form"
+
+#: tourisme_app/templates/booking.html:40 tourisme_app/templates/h.html:33
+#: tourisme_app/templates/request_devis.html:45
+msgid "Travel Quote Request"
+msgstr "Travel Quote Request"
+
+#: tourisme_app/templates/booking.html:44 tourisme_app/templates/h.html:36
+#: tourisme_app/templates/request_devis.html:50
+msgid "Full Name"
+msgstr "Full Name"
+
+#: tourisme_app/templates/booking.html:48 tourisme_app/templates/h.html:40
+#: tourisme_app/templates/request_devis.html:55
+msgid "Email Address"
+msgstr "Email Address"
+
+#: tourisme_app/templates/booking.html:52 tourisme_app/templates/h.html:44
+#: tourisme_app/templates/request_devis.html:60
+msgid "Phone Number"
+msgstr "Phone Number"
+
+#: tourisme_app/templates/booking.html:56 tourisme_app/templates/h.html:48
+#: tourisme_app/templates/request_devis.html:65
+msgid "Country of Origin"
+msgstr "Country of Origin"
+
+#: tourisme_app/templates/booking.html:58
+#: tourisme_app/templates/request_devis.html:67
+msgid "Select your country"
+msgstr "Select your country"
+
+#: tourisme_app/templates/booking.html:59
+msgid "Afghanistan"
+msgstr "Afghanistan"
+
+#: tourisme_app/templates/booking.html:60
+msgid "Albania"
+msgstr "Albania"
+
+#: tourisme_app/templates/booking.html:61
+msgid "Algeria"
+msgstr "Algeria"
+
+#: tourisme_app/templates/booking.html:62
+msgid "Andorra"
+msgstr "Andorra"
+
+#: tourisme_app/templates/booking.html:63
+msgid "Angola"
+msgstr "Angola"
+
+#: tourisme_app/templates/booking.html:64
+msgid "Antigua and Barbuda"
+msgstr "Antigua and Barbuda"
+
+#: tourisme_app/templates/booking.html:65
+msgid "Argentina"
+msgstr "Argentina"
+
+#: tourisme_app/templates/booking.html:66
+msgid "Armenia"
+msgstr "Armenia"
+
+#: tourisme_app/templates/booking.html:67
+msgid "Australia"
+msgstr "Australia"
+
+#: tourisme_app/templates/booking.html:68
+msgid "Austria"
+msgstr "Austria"
+
+#: tourisme_app/templates/booking.html:69
+msgid "Azerbaijan"
+msgstr "Azerbaijan"
+
+#: tourisme_app/templates/booking.html:70
+msgid "Bahamas"
+msgstr "Bahamas"
+
+#: tourisme_app/templates/booking.html:71
+msgid "Bahrain"
+msgstr "Bahrain"
+
+#: tourisme_app/templates/booking.html:72
+msgid "Bangladesh"
+msgstr "Bangladesh"
+
+#: tourisme_app/templates/booking.html:73
+msgid "Barbados"
+msgstr "Barbados"
+
+#: tourisme_app/templates/booking.html:74
+msgid "Belarus"
+msgstr "Belarus"
+
+#: tourisme_app/templates/booking.html:75
+msgid "Belgium"
+msgstr "Belgium"
+
+#: tourisme_app/templates/booking.html:76
+msgid "Belize"
+msgstr "Belize"
+
+#: tourisme_app/templates/booking.html:77
+msgid "Benin"
+msgstr "Benin"
+
+#: tourisme_app/templates/booking.html:78
+msgid "Bhutan"
+msgstr "Bhutan"
+
+#: tourisme_app/templates/booking.html:79
+msgid "Bolivia"
+msgstr "Bolivia"
+
+#: tourisme_app/templates/booking.html:80
+msgid "Bosnia and Herzegovina"
+msgstr "Bosnia and Herzegovina"
+
+#: tourisme_app/templates/booking.html:81
+msgid "Botswana"
+msgstr "Botswana"
+
+#: tourisme_app/templates/booking.html:82
+msgid "Brazil"
+msgstr "Brazil"
+
+#: tourisme_app/templates/booking.html:83
+msgid "Brunei"
+msgstr "Brunei"
+
+#: tourisme_app/templates/booking.html:84
+msgid "Bulgaria"
+msgstr "Bulgaria"
+
+#: tourisme_app/templates/booking.html:85
+msgid "Burkina Faso"
+msgstr "Burkina Faso"
+
+#: tourisme_app/templates/booking.html:86
+msgid "Burundi"
+msgstr "Burundi"
+
+#: tourisme_app/templates/booking.html:87
+msgid "Cabo Verde"
+msgstr "Cabo Verde"
+
+#: tourisme_app/templates/booking.html:88
+msgid "Cambodia"
+msgstr "Cambodia"
+
+#: tourisme_app/templates/booking.html:89
+msgid "Cameroon"
+msgstr "Cameroon"
+
+#: tourisme_app/templates/booking.html:90
+msgid "Canada"
+msgstr "Canada"
+
+#: tourisme_app/templates/booking.html:91
+msgid "Central African Republic"
+msgstr "Central African Republic"
+
+#: tourisme_app/templates/booking.html:92
+msgid "Chad"
+msgstr "Chad"
+
+#: tourisme_app/templates/booking.html:93
+msgid "Chile"
+msgstr "Chile"
+
+#: tourisme_app/templates/booking.html:94
+msgid "China"
+msgstr "China"
+
+#: tourisme_app/templates/booking.html:95
+msgid "Colombia"
+msgstr "Colombia"
+
+#: tourisme_app/templates/booking.html:96
+msgid "Comoros"
+msgstr "Comoros"
+
+#: tourisme_app/templates/booking.html:97
+msgid "Congo"
+msgstr "Congo"
+
+#: tourisme_app/templates/booking.html:98
+msgid "Congo, Democratic Republic of the"
+msgstr "Congo, Democratic Republic of the"
+
+#: tourisme_app/templates/booking.html:99
+msgid "Costa Rica"
+msgstr "Costa Rica"
+
+#: tourisme_app/templates/booking.html:100
+msgid "Croatia"
+msgstr "Croatia"
+
+#: tourisme_app/templates/booking.html:101
+msgid "Cuba"
+msgstr "Cuba"
+
+#: tourisme_app/templates/booking.html:102
+msgid "Cyprus"
+msgstr "Cyprus"
+
+#: tourisme_app/templates/booking.html:103
+msgid "Czech Republic"
+msgstr "Czech Republic"
+
+#: tourisme_app/templates/booking.html:104
+msgid "Denmark"
+msgstr "Denmark"
+
+#: tourisme_app/templates/booking.html:105
+msgid "Djibouti"
+msgstr "Djibouti"
+
+#: tourisme_app/templates/booking.html:106
+msgid "Dominica"
+msgstr "Dominica"
+
+#: tourisme_app/templates/booking.html:107
+msgid "Dominican Republic"
+msgstr "Dominican Republic"
+
+#: tourisme_app/templates/booking.html:108
+msgid "Ecuador"
+msgstr "Ecuador"
+
+#: tourisme_app/templates/booking.html:109 tourisme_app/templates/h.html:58
+msgid "Egypt"
+msgstr "Egypt"
+
+#: tourisme_app/templates/booking.html:110
+msgid "El Salvador"
+msgstr "El Salvador"
+
+#: tourisme_app/templates/booking.html:111
+msgid "Equatorial Guinea"
+msgstr "Equatorial Guinea"
+
+#: tourisme_app/templates/booking.html:112
+msgid "Eritrea"
+msgstr "Eritrea"
+
+#: tourisme_app/templates/booking.html:113
+msgid "Estonia"
+msgstr "Estonia"
+
+#: tourisme_app/templates/booking.html:114
+msgid "Eswatini"
+msgstr "Eswatini"
+
+#: tourisme_app/templates/booking.html:115
+msgid "Ethiopia"
+msgstr "Ethiopia"
+
+#: tourisme_app/templates/booking.html:116
+msgid "Fiji"
+msgstr "Fiji"
+
+#: tourisme_app/templates/booking.html:117
+msgid "Finland"
+msgstr "Finland"
+
+#: tourisme_app/templates/booking.html:118
+msgid "France"
+msgstr "France"
+
+#: tourisme_app/templates/booking.html:119
+msgid "Gabon"
+msgstr "Gabon"
+
+#: tourisme_app/templates/booking.html:120
+msgid "Gambia"
+msgstr "Gambia"
+
+#: tourisme_app/templates/booking.html:121
+msgid "Georgia"
+msgstr "Georgia"
+
+#: tourisme_app/templates/booking.html:122
+msgid "Germany"
+msgstr "Germany"
+
+#: tourisme_app/templates/booking.html:123
+msgid "Ghana"
+msgstr "Ghana"
+
+#: tourisme_app/templates/booking.html:124
+msgid "Greece"
+msgstr "Greece"
+
+#: tourisme_app/templates/booking.html:125
+msgid "Grenada"
+msgstr "Grenada"
+
+#: tourisme_app/templates/booking.html:126
+msgid "Guatemala"
+msgstr "Guatemala"
+
+#: tourisme_app/templates/booking.html:127
+msgid "Guinea"
+msgstr "Guinea"
+
+#: tourisme_app/templates/booking.html:128
+msgid "Guinea-Bissau"
+msgstr "Guinea-Bissau"
+
+#: tourisme_app/templates/booking.html:129
+msgid "Guyana"
+msgstr "Guyana"
+
+#: tourisme_app/templates/booking.html:130
+msgid "Haiti"
+msgstr "Haiti"
+
+#: tourisme_app/templates/booking.html:131
+msgid "Honduras"
+msgstr "Honduras"
+
+#: tourisme_app/templates/booking.html:132
+msgid "Hungary"
+msgstr "Hungary"
+
+#: tourisme_app/templates/booking.html:133
+msgid "Iceland"
+msgstr "Iceland"
+
+#: tourisme_app/templates/booking.html:134
+msgid "India"
+msgstr "India"
+
+#: tourisme_app/templates/booking.html:135
+msgid "Indonesia"
+msgstr "Indonesia"
+
+#: tourisme_app/templates/booking.html:136
+msgid "Iran"
+msgstr "Iran"
+
+#: tourisme_app/templates/booking.html:137
+msgid "Iraq"
+msgstr "Iraq"
+
+#: tourisme_app/templates/booking.html:138
+msgid "Ireland"
+msgstr "Ireland"
+
+#: tourisme_app/templates/booking.html:139
+msgid "Israel"
+msgstr "Israel"
+
+#: tourisme_app/templates/booking.html:140
+msgid "Italy"
+msgstr "Italy"
+
+#: tourisme_app/templates/booking.html:141
+msgid "Jamaica"
+msgstr "Jamaica"
+
+#: tourisme_app/templates/booking.html:142
+msgid "Japan"
+msgstr "Japan"
+
+#: tourisme_app/templates/booking.html:143
+msgid "Jordan"
+msgstr "Jordan"
+
+#: tourisme_app/templates/booking.html:144
+msgid "Kazakhstan"
+msgstr "Kazakhstan"
+
+#: tourisme_app/templates/booking.html:146
+msgid "Kiribati"
+msgstr "Kiribati"
+
+#: tourisme_app/templates/booking.html:147
+msgid "Korea, North"
+msgstr "Korea, North"
+
+#: tourisme_app/templates/booking.html:148
+msgid "Korea, South"
+msgstr "Korea, South"
+
+#: tourisme_app/templates/booking.html:149
+msgid "Kuwait"
+msgstr "Kuwait"
+
+#: tourisme_app/templates/booking.html:150
+msgid "Kyrgyzstan"
+msgstr "Kyrgyzstan"
+
+#: tourisme_app/templates/booking.html:151
+msgid "Laos"
+msgstr "Laos"
+
+#: tourisme_app/templates/booking.html:152
+msgid "Latvia"
+msgstr "Latvia"
+
+#: tourisme_app/templates/booking.html:153
+msgid "Lebanon"
+msgstr "Lebanon"
+
+#: tourisme_app/templates/booking.html:154
+msgid "Lesotho"
+msgstr "Lesotho"
+
+#: tourisme_app/templates/booking.html:155
+msgid "Liberia"
+msgstr "Liberia"
+
+#: tourisme_app/templates/booking.html:156
+msgid "Libya"
+msgstr "Libya"
+
+#: tourisme_app/templates/booking.html:157
+msgid "Liechtenstein"
+msgstr "Liechtenstein"
+
+#: tourisme_app/templates/booking.html:158
+msgid "Lithuania"
+msgstr "Lithuania"
+
+#: tourisme_app/templates/booking.html:159
+msgid "Luxembourg"
+msgstr "Luxembourg"
+
+#: tourisme_app/templates/booking.html:160
+msgid "Madagascar"
+msgstr "Madagascar"
+
+#: tourisme_app/templates/booking.html:161
+msgid "Malawi"
+msgstr "Malawi"
+
+#: tourisme_app/templates/booking.html:162
+msgid "Malaysia"
+msgstr "Malaysia"
+
+#: tourisme_app/templates/booking.html:164
+msgid "Mali"
+msgstr "Mali"
+
+#: tourisme_app/templates/booking.html:165
+msgid "Malta"
+msgstr "Malta"
+
+#: tourisme_app/templates/booking.html:166
+msgid "Marshall Islands"
+msgstr "Marshall Islands"
+
+#: tourisme_app/templates/booking.html:167
+msgid "Mauritania"
+msgstr "Mauritania"
+
+#: tourisme_app/templates/booking.html:168
+msgid "Mauritius"
+msgstr "Mauritius"
+
+#: tourisme_app/templates/booking.html:169
+msgid "Mexico"
+msgstr "Mexico"
+
+#: tourisme_app/templates/booking.html:170
+msgid "Micronesia"
+msgstr "Micronesia"
+
+#: tourisme_app/templates/booking.html:171
+msgid "Moldova"
+msgstr "Moldova"
+
+#: tourisme_app/templates/booking.html:172
+msgid "Monaco"
+msgstr "Monaco"
+
+#: tourisme_app/templates/booking.html:173
+msgid "Mongolia"
+msgstr "Mongolia"
+
+#: tourisme_app/templates/booking.html:174
+msgid "Montenegro"
+msgstr "Montenegro"
+
+#: tourisme_app/templates/booking.html:175
+msgid "Morocco"
+msgstr "Morocco"
+
+#: tourisme_app/templates/booking.html:176
+msgid "Mozambique"
+msgstr "Mozambique"
+
+#: tourisme_app/templates/booking.html:177
+msgid "Myanmar"
+msgstr "Myanmar"
+
+#: tourisme_app/templates/booking.html:178
+msgid "Namibia"
+msgstr "Namibia"
+
+#: tourisme_app/templates/booking.html:179
+msgid "Nauru"
+msgstr "Nauru"
+
+#: tourisme_app/templates/booking.html:180
+msgid "Nepal"
+msgstr "Nepal"
+
+#: tourisme_app/templates/booking.html:181
+msgid "Netherlands"
+msgstr "Netherlands"
+
+#: tourisme_app/templates/booking.html:182
+msgid "New Zealand"
+msgstr "New Zealand"
+
+#: tourisme_app/templates/booking.html:183
+msgid "Nicaragua"
+msgstr "Nicaragua"
+
+#: tourisme_app/templates/booking.html:184
+msgid "Niger"
+msgstr "Niger"
+
+#: tourisme_app/templates/booking.html:185
+msgid "Nigeria"
+msgstr "Nigeria"
+
+#: tourisme_app/templates/booking.html:186
+msgid "North Macedonia"
+msgstr "North Macedonia"
+
+#: tourisme_app/templates/booking.html:187
+msgid "Norway"
+msgstr "Norway"
+
+#: tourisme_app/templates/booking.html:188
+msgid "Oman"
+msgstr "Oman"
+
+#: tourisme_app/templates/booking.html:189
+msgid "Pakistan"
+msgstr "Pakistan"
+
+#: tourisme_app/templates/booking.html:190
+msgid "Palau"
+msgstr "Palau"
+
+#: tourisme_app/templates/booking.html:191
+msgid "Panama"
+msgstr "Panama"
+
+#: tourisme_app/templates/booking.html:192
+msgid "Papua New Guinea"
+msgstr "Papua New Guinea"
+
+#: tourisme_app/templates/booking.html:193
+msgid "Paraguay"
+msgstr "Paraguay"
+
+#: tourisme_app/templates/booking.html:194
+msgid "Peru"
+msgstr "Peru"
+
+#: tourisme_app/templates/booking.html:195
+msgid "Philippines"
+msgstr "Philippines"
+
+#: tourisme_app/templates/booking.html:196
+msgid "Poland"
+msgstr "Poland"
+
+#: tourisme_app/templates/booking.html:197
+msgid "Portugal"
+msgstr "Portugal"
+
+#: tourisme_app/templates/booking.html:198
+msgid "Qatar"
+msgstr "Qatar"
+
+#: tourisme_app/templates/booking.html:199
+msgid "Romania"
+msgstr "Romania"
+
+#: tourisme_app/templates/booking.html:200
+msgid "Russia"
+msgstr "Russia"
+
+#: tourisme_app/templates/booking.html:201
+msgid "Rwanda"
+msgstr "Rwanda"
+
+#: tourisme_app/templates/booking.html:202
+msgid "Saint Kitts and Nevis"
+msgstr "Saint Kitts and Nevis"
+
+#: tourisme_app/templates/booking.html:203
+msgid "Saint Lucia"
+msgstr "Saint Lucia"
+
+#: tourisme_app/templates/booking.html:204
+msgid "Saint Vincent and the Grenadines"
+msgstr "Saint Vincent and the Grenadines"
+
+#: tourisme_app/templates/booking.html:205
+msgid "Samoa"
+msgstr "Samoa"
+
+#: tourisme_app/templates/booking.html:206
+msgid "San Marino"
+msgstr "San Marino"
+
+#: tourisme_app/templates/booking.html:207
+msgid "Sao Tome and Principe"
+msgstr "Sao Tome and Principe"
+
+#: tourisme_app/templates/booking.html:208
+msgid "Saudi Arabia"
+msgstr "Saudi Arabia"
+
+#: tourisme_app/templates/booking.html:209
+msgid "Senegal"
+msgstr "Senegal"
+
+#: tourisme_app/templates/booking.html:210
+msgid "Serbia"
+msgstr "Serbia"
+
+#: tourisme_app/templates/booking.html:211
+msgid "Seychelles"
+msgstr "Seychelles"
+
+#: tourisme_app/templates/booking.html:212
+msgid "Sierra Leone"
+msgstr "Sierra Leone"
+
+#: tourisme_app/templates/booking.html:213
+msgid "Singapore"
+msgstr "Singapore"
+
+#: tourisme_app/templates/booking.html:214
+msgid "Slovakia"
+msgstr "Slovakia"
+
+#: tourisme_app/templates/booking.html:215
+msgid "Slovenia"
+msgstr "Slovenia"
+
+#: tourisme_app/templates/booking.html:216
+msgid "Solomon Islands"
+msgstr "Solomon Islands"
+
+#: tourisme_app/templates/booking.html:217
+msgid "Somalia"
+msgstr "Somalia"
+
+#: tourisme_app/templates/booking.html:218
+msgid "South Africa"
+msgstr "South Africa"
+
+#: tourisme_app/templates/booking.html:219
+msgid "South Sudan"
+msgstr "South Sudan"
+
+#: tourisme_app/templates/booking.html:220
+msgid "Spain"
+msgstr "Spain"
+
+#: tourisme_app/templates/booking.html:221
+msgid "Sri Lanka"
+msgstr "Sri Lanka"
+
+#: tourisme_app/templates/booking.html:222
+msgid "Sudan"
+msgstr "Sudan"
+
+#: tourisme_app/templates/booking.html:223
+msgid "Suriname"
+msgstr "Suriname"
+
+#: tourisme_app/templates/booking.html:224
+msgid "Sweden"
+msgstr "Sweden"
+
+#: tourisme_app/templates/booking.html:225
+msgid "Switzerland"
+msgstr "Switzerland"
+
+#: tourisme_app/templates/booking.html:226
+msgid "Syria"
+msgstr "Syria"
+
+#: tourisme_app/templates/booking.html:227
+msgid "Taiwan"
+msgstr "Taiwan"
+
+#: tourisme_app/templates/booking.html:228
+msgid "Tajikistan"
+msgstr "Tajikistan"
+
+#: tourisme_app/templates/booking.html:229
+msgid "Tanzania"
+msgstr "Tanzania"
+
+#: tourisme_app/templates/booking.html:230
+msgid "Thailand"
+msgstr "Thailand"
+
+#: tourisme_app/templates/booking.html:231
+msgid "Timor-Leste"
+msgstr "Timor-Leste"
+
+#: tourisme_app/templates/booking.html:232
+msgid "Togo"
+msgstr "Togo"
+
+#: tourisme_app/templates/booking.html:233
+msgid "Tonga"
+msgstr "Tonga"
+
+#: tourisme_app/templates/booking.html:234
+msgid "Trinidad and Tobago"
+msgstr "Trinidad and Tobago"
+
+#: tourisme_app/templates/booking.html:235
+msgid "Tunisia"
+msgstr "Tunisia"
+
+#: tourisme_app/templates/booking.html:236
+msgid "Turkey"
+msgstr "Turkey"
+
+#: tourisme_app/templates/booking.html:237
+msgid "Turkmenistan"
+msgstr "Turkmenistan"
+
+#: tourisme_app/templates/booking.html:238
+msgid "Tuvalu"
+msgstr "Tuvalu"
+
+#: tourisme_app/templates/booking.html:239 tourisme_app/templates/h.html:56
+msgid "Uganda"
+msgstr "Uganda"
+
+#: tourisme_app/templates/booking.html:240
+msgid "Ukraine"
+msgstr "Ukraine"
+
+#: tourisme_app/templates/booking.html:241
+msgid "United Arab Emirates"
+msgstr "United Arab Emirates"
+
+#: tourisme_app/templates/booking.html:242
+msgid "United Kingdom"
+msgstr "United Kingdom"
+
+#: tourisme_app/templates/booking.html:243
+msgid "United States"
+msgstr "United States"
+
+#: tourisme_app/templates/booking.html:244
+msgid "Uruguay"
+msgstr "Uruguay"
+
+#: tourisme_app/templates/booking.html:245
+msgid "Uzbekistan"
+msgstr "Uzbekistan"
+
+#: tourisme_app/templates/booking.html:246
+msgid "Vanuatu"
+msgstr "Vanuatu"
+
+#: tourisme_app/templates/booking.html:247
+msgid "Venezuela"
+msgstr "Venezuela"
+
+#: tourisme_app/templates/booking.html:248
+msgid "Vietnam"
+msgstr "Vietnam"
+
+#: tourisme_app/templates/booking.html:249
+msgid "Yemen"
+msgstr "Yemen"
+
+#: tourisme_app/templates/booking.html:250
+msgid "Zambia"
+msgstr "Zambia"
+
+#: tourisme_app/templates/booking.html:251
+msgid "Zimbabwe"
+msgstr "Zimbabwe"
+
+#: tourisme_app/templates/booking.html:257 tourisme_app/templates/h.html:52
+#: tourisme_app/templates/request_devis.html:72
+msgid "Desired Destination"
+msgstr "Desired Destination"
+
+#: tourisme_app/templates/booking.html:264
+msgid "from the"
+msgstr "from the"
+
+#: tourisme_app/templates/booking.html:275 tourisme_app/templates/h.html:64
+#: tourisme_app/templates/request_devis.html:82
+msgid "Start Date"
+msgstr "Start Date"
+
+#: tourisme_app/templates/booking.html:279 tourisme_app/templates/h.html:68
+#: tourisme_app/templates/request_devis.html:87
+msgid "End Date"
+msgstr "End Date"
+
+#: tourisme_app/templates/booking.html:283 tourisme_app/templates/h.html:72
+#: tourisme_app/templates/request_devis.html:92
+msgid "Number of Adults"
+msgstr "Number of Adults"
+
+#: tourisme_app/templates/booking.html:287 tourisme_app/templates/h.html:76
+#: tourisme_app/templates/request_devis.html:97
+msgid "Number of Minors"
+msgstr "Number of Minors"
+
+#: tourisme_app/templates/booking.html:291 tourisme_app/templates/h.html:80
+#: tourisme_app/templates/request_devis.html:102
+msgid "Number of Babies"
+msgstr "Number of Babies"
+
+#: tourisme_app/templates/booking.html:295 tourisme_app/templates/h.html:84
+#: tourisme_app/templates/request_devis.html:107
+msgid "Specific Details"
+msgstr "Specific Details"
+
+#: tourisme_app/templates/booking.html:298 tourisme_app/templates/h.html:87
+#: tourisme_app/templates/request_devis.html:111
+msgid "Submit Request"
+msgstr "Submit Request"
+
+#: tourisme_app/templates/comment.html:9 tourisme_app/templates/comment.html:15
+msgid "Répondre"
+msgstr "Reply"
+
+#: tourisme_app/templates/contacts.html:134
+msgid "Address"
+msgstr "Address"
+
+#: tourisme_app/templates/contacts.html:167
+msgid "opening hours"
+msgstr "opening hours"
+
+#: tourisme_app/templates/contacts.html:190
+msgid ""
+" You can contact us any way\n"
+"              that is convenient for you. We are available 24/7 via whatsapp "
+"or\n"
+"              email. You can also use a quick contact form below or visit "
+"our\n"
+"              office personally. "
+msgstr ""
+" You can contact us any way\n"
+"              that is convenient for you. We are available 24/7 via whatsapp "
+"or\n"
+"              email. You can also use a quick contact form below or visit "
+"our\n"
+"              office personally. "
+
+#: tourisme_app/templates/contacts.html:200
+msgid "First name"
+msgstr "First name"
+
+#: tourisme_app/templates/contacts.html:206
+msgid "Last name"
+msgstr "Last name"
+
+#: tourisme_app/templates/contacts.html:218
+msgid "Phone"
+msgstr "Phone"
+
+#: tourisme_app/templates/contacts.html:230
+msgid "send message"
+msgstr "Send message"
+
+#: tourisme_app/templates/detail.html:26
+msgid "Retour aux articles"
+msgstr "Back to articles"
+
+#: tourisme_app/templates/dubai_destination.html:403
+msgid "Ascend the Iconic Burj Khalifa"
+msgstr "Ascend the Iconic Burj Khalifa"
+
+#: tourisme_app/templates/dubai_destination.html:406
+msgid "Enjoy breathtaking panoramic views of Dubai from the top"
+msgstr "Enjoy breathtaking panoramic views of Dubai from the top"
+
+#: tourisme_app/templates/dubai_destination.html:407
+msgid "A must-see architectural marvel"
+msgstr "A must-see architectural marvel"
+
+#: tourisme_app/templates/dubai_destination.html:411
+#: tourisme_app/templates/dubai_destination.html:431
+#: tourisme_app/templates/dubai_destination.html:455
+#: tourisme_app/templates/dubai_destination.html:479
+#: tourisme_app/templates/egypte_destination.html:296
+#: tourisme_app/templates/egypte_destination.html:316
+#: tourisme_app/templates/egypte_destination.html:336
+#: tourisme_app/templates/egypte_destination.html:356
+#: tourisme_app/templates/kenya_safari.html:428
+#: tourisme_app/templates/kenya_safari.html:448
+#: tourisme_app/templates/kenya_safari.html:468
+#: tourisme_app/templates/kenya_safari.html:488
+#: tourisme_app/templates/maldives_destination.html:398
+#: tourisme_app/templates/maldives_destination.html:423
+#: tourisme_app/templates/maldives_destination.html:448
+#: tourisme_app/templates/maldives_destination.html:473
+#: tourisme_app/templates/tanzania_safari.html:296
+#: tourisme_app/templates/tanzania_safari.html:317
+#: tourisme_app/templates/tanzania_safari.html:338
+#: tourisme_app/templates/tanzania_safari.html:359
+#: tourisme_app/templates/uganda_safari.html:398
+#: tourisme_app/templates/uganda_safari.html:423
+#: tourisme_app/templates/uganda_safari.html:448
+#: tourisme_app/templates/uganda_safari.html:473
+#: tourisme_app/templates/zanzibar_destination.html:309
+#: tourisme_app/templates/zanzibar_destination.html:334
+#: tourisme_app/templates/zanzibar_destination.html:359
+#: tourisme_app/templates/zanzibar_destination.html:384
+msgid "Get a Quick Quote"
+msgstr "Get a Quick Quote"
+
+#: tourisme_app/templates/dubai_destination.html:423
+msgid "Experience a Thrilling Desert Safari"
+msgstr "Experience a Thrilling Desert Safari"
+
+#: tourisme_app/templates/dubai_destination.html:426
+msgid "Adventure through the golden sands with dune bashing"
+msgstr "Adventure through the golden sands with dune bashing"
+
+#: tourisme_app/templates/dubai_destination.html:427
+msgid "Enjoy an authentic Arabian night experience"
+msgstr "Enjoy an authentic Arabian night experience"
+
+#: tourisme_app/templates/dubai_destination.html:443
+msgid "Sail Through Dubai Marina"
+msgstr "Sail Through Dubai Marina"
+
+#: tourisme_app/templates/dubai_destination.html:447
+msgid "Take in stunning cityscapes on a luxury dhow cruise"
+msgstr "Take in stunning cityscapes on a luxury dhow cruise"
+
+#: tourisme_app/templates/dubai_destination.html:450
+msgid "An unforgettable evening with great food and ambiance"
+msgstr "An unforgettable evening with great food and ambiance"
+
+#: tourisme_app/templates/dubai_destination.html:467
+msgid "Discover the Palm Jumeirah"
+msgstr "Discover the Palm Jumeirah"
+
+#: tourisme_app/templates/dubai_destination.html:471
+msgid "Explore the famous man-made island, a marvel of design"
+msgstr "Explore the famous man-made island, a marvel of design"
+
+#: tourisme_app/templates/dubai_destination.html:474
+msgid "Luxurious experiences await at every corner"
+msgstr "Luxurious experiences await at every corner"
+
+#: tourisme_app/templates/dubai_destination.html:494
+#: tourisme_app/templates/kenya_safari.html:503
+msgid "Our Tourism Experiences"
+msgstr "Our Tourism Experiences"
+
+#: tourisme_app/templates/dubai_destination.html:499
+#: tourisme_app/templates/dubai_destination.html:500
+msgid "Burj Khalifa Tour"
+msgstr "Burj Khalifa Tour"
+
+#: tourisme_app/templates/dubai_destination.html:502
+msgid ""
+"Ascend to the top of the world’s tallest building and enjoy panoramic views "
+"of the entire city of Dubai."
+msgstr ""
+"Ascend to the top of the world’s tallest building and enjoy panoramic views "
+"of the entire city of Dubai."
+
+#: tourisme_app/templates/dubai_destination.html:507
+#: tourisme_app/templates/dubai_destination.html:508
+msgid "Dhow Cruise"
+msgstr "Dhow Cruise"
+
+#: tourisme_app/templates/dubai_destination.html:510
+msgid ""
+"Sail through Dubai Marina aboard a traditional dhow for a luxurious evening "
+"with stunning views."
+msgstr ""
+"Sail through Dubai Marina aboard a traditional dhow for a luxurious evening "
+"with stunning views."
+
+#: tourisme_app/templates/dubai_destination.html:515
+msgid "Cultural Discovery"
+msgstr "Cultural Discovery"
+
+#: tourisme_app/templates/dubai_destination.html:516
+msgid "Cultural Tour"
+msgstr "Cultural Tour"
+
+#: tourisme_app/templates/dubai_destination.html:518
+msgid ""
+"Discover Dubai's rich cultural heritage with visits to museums, palaces, and "
+"contemporary art galleries."
+msgstr ""
+"Discover Dubai's rich cultural heritage with visits to museums, palaces, and "
+"contemporary art galleries."
+
+#: tourisme_app/templates/dubai_destination.html:523
+#: tourisme_app/templates/dubai_destination.html:524
+msgid "Desert Safari"
+msgstr "Desert Safari"
+
+#: tourisme_app/templates/dubai_destination.html:526
+msgid ""
+"Experience thrilling dune bashing, camel rides, and a traditional Bedouin "
+"camp in the Dubai desert."
+msgstr ""
+"Experience thrilling dune bashing, camel rides, and a traditional Bedouin "
+"camp in the Dubai desert."
+
+#: tourisme_app/templates/dubai_destination.html:531
+#: tourisme_app/templates/dubai_destination.html:532
+msgid "Dubai Mall"
+msgstr "Dubai Mall"
+
+#: tourisme_app/templates/dubai_destination.html:534
+msgid ""
+"Explore the world’s largest mall with luxury stores, an aquarium, an ice "
+"rink, and endless dining options."
+msgstr ""
+"Explore the world’s largest mall with luxury stores, an aquarium, an ice "
+"rink, and endless dining options."
+
+#: tourisme_app/templates/dubai_destination.html:539
+#: tourisme_app/templates/dubai_destination.html:540
+msgid "Palm Jumeirah"
+msgstr "Palm Jumeirah"
+
+#: tourisme_app/templates/dubai_destination.html:542
+msgid ""
+"Visit the iconic palm-shaped island for luxury hotels, beach clubs, and "
+"water sports experiences."
+msgstr ""
+"Visit the iconic palm-shaped island for luxury hotels, beach clubs, and "
+"water sports experiences."
+
+#: tourisme_app/templates/dubai_destination.html:547
+#: tourisme_app/templates/dubai_destination.html:548
+msgid "Skydiving"
+msgstr "Skydiving"
+
+#: tourisme_app/templates/dubai_destination.html:550
+msgid ""
+"Enjoy a thrilling skydive over Palm Jumeirah, with stunning views of Dubai "
+"from above."
+msgstr ""
+"Enjoy a thrilling skydive over Palm Jumeirah, with stunning views of Dubai "
+"from above."
+
+#: tourisme_app/templates/dubai_destination.html:555
+#: tourisme_app/templates/dubai_destination.html:556
+msgid "Global Village"
+msgstr "Global Village"
+
+#: tourisme_app/templates/dubai_destination.html:558
+msgid ""
+"Experience cultures from around the world with pavilions, shows, and "
+"international cuisine."
+msgstr ""
+"Experience cultures from around the world with pavilions, shows, and "
+"international cuisine."
+
+#: tourisme_app/templates/dubai_destination.html:563
+#: tourisme_app/templates/dubai_destination.html:564
+msgid "Dubai Frame"
+msgstr "Dubai Frame"
+
+#: tourisme_app/templates/dubai_destination.html:566
+msgid ""
+"Step into a massive frame offering incredible views of old and new Dubai "
+"from its sky deck."
+msgstr ""
+"Step into a massive frame offering incredible views of old and new Dubai "
+"from its sky deck."
+
+#: tourisme_app/templates/dubai_destination.html:576
+#: tourisme_app/templates/kenya_safari.html:593
+msgid "A Complete Journey for Your Trip"
+msgstr "A Complete Journey for Your Trip"
+
+#: tourisme_app/templates/dubai_destination.html:578
+msgid ""
+"By choosing our agency, you benefit from personalized service, local "
+"experts, and tailor-made experiences to discover Dubai like never before."
+msgstr ""
+"By choosing our agency, you benefit from personalized service, local "
+"experts, and tailor-made experiences to discover Dubai like never before."
+
+#: tourisme_app/templates/dubai_destination.html:589
+msgid "Fully Organized Tours"
+msgstr "Fully Organized Tours"
+
+#: tourisme_app/templates/dubai_destination.html:591
+msgid ""
+"We offer complete tour packages that cover all aspects to ensure a smooth "
+"and enjoyable experience in Dubai. Our local experts guide you throughout "
+"your stay to maximize your discovery."
+msgstr ""
+"We offer complete tour packages that cover all aspects to ensure a smooth "
+"and enjoyable experience in Dubai. Our local experts guide you throughout "
+"your stay to maximize your discovery."
+
+#: tourisme_app/templates/dubai_destination.html:606
+msgid "Personalized Guided Tours"
+msgstr "Personalized Guided Tours"
+
+#: tourisme_app/templates/dubai_destination.html:608
+msgid ""
+"Each journey is unique, which is why we create personalized guided tours "
+"based on your preferences. Whether you're passionate about architecture, "
+"shopping, or adventure, we have the perfect itinerary for you."
+msgstr ""
+"Each journey is unique, which is why we create personalized guided tours "
+"based on your preferences. Whether you're passionate about architecture, "
+"shopping, or adventure, we have the perfect itinerary for you."
+
+#: tourisme_app/templates/dubai_destination.html:617
+#: tourisme_app/templates/kenya_safari.html:638
+msgid "Achieve Your Travel Dreams"
+msgstr "Achieve Your Travel Dreams"
+
+#: tourisme_app/templates/dubai_destination.html:619
+msgid ""
+"Have a dream trip to Dubai but don't know where to start? Let us guide you. "
+"We put our expertise at your disposal to organize a stay that meets your "
+"expectations."
+msgstr ""
+"Have a dream trip to Dubai but don't know where to start? Let us guide you. "
+"We put our expertise at your disposal to organize a stay that meets your "
+"expectations."
+
+#: tourisme_app/templates/egypte_destination.html:288
+msgid "Explore the Ancient Pyramids of Giza"
+msgstr "Explore the Ancient Pyramids of Giza"
+
+#: tourisme_app/templates/egypte_destination.html:291
+msgid "Stand in awe before the majestic Pyramids"
+msgstr "Stand in awe before the majestic Pyramids"
+
+#: tourisme_app/templates/egypte_destination.html:292
+msgid "Uncover secrets of one of the world's wonders"
+msgstr "Uncover secrets of one of the world's wonders"
+
+#: tourisme_app/templates/egypte_destination.html:308
+msgid "Sail the Legendary Nile River"
+msgstr "Sail the Legendary Nile River"
+
+#: tourisme_app/templates/egypte_destination.html:311
+msgid "Enjoy a luxurious cruise with breathtaking views"
+msgstr "Enjoy a luxurious cruise with breathtaking views"
+
+#: tourisme_app/templates/egypte_destination.html:312
+msgid "Experience the tranquility of Egypt’s ancient river"
+msgstr "Experience the tranquility of Egypt’s ancient river"
+
+#: tourisme_app/templates/egypte_destination.html:328
+msgid "Discover Egypt’s Rich History"
+msgstr "Discover Egypt’s Rich History"
+
+#: tourisme_app/templates/egypte_destination.html:331
+msgid "Marvel at artifacts from ancient Egypt"
+msgstr "Marvel at artifacts from ancient Egypt"
+
+#: tourisme_app/templates/egypte_destination.html:332
+msgid "Explore the mysteries of the Pharaohs"
+msgstr "Explore the mysteries of the Pharaohs"
+
+#: tourisme_app/templates/egypte_destination.html:348
+msgid "Relax on the Red Sea Shores"
+msgstr "Relax on the Red Sea Shores"
+
+#: tourisme_app/templates/egypte_destination.html:351
+msgid "Crystal-clear waters perfect for diving"
+msgstr "Crystal-clear waters perfect for diving"
+
+#: tourisme_app/templates/egypte_destination.html:352
+msgid "Unwind on pristine, golden beaches"
+msgstr "Unwind on pristine, golden beaches"
+
+#: tourisme_app/templates/egypte_destination.html:371
+msgid "Discover Egypt"
+msgstr "Discover Egypt"
+
+#: tourisme_app/templates/egypte_destination.html:377
+#: tourisme_app/templates/egypte_destination.html:378
+msgid "Pyramids of Giza"
+msgstr "Pyramids of Giza"
+
+#: tourisme_app/templates/egypte_destination.html:379
+msgid ""
+"Visit the iconic Pyramids of Giza and the Sphinx, marvels of ancient Egypt "
+"and wonders of the world."
+msgstr ""
+"Visit the iconic Pyramids of Giza and the Sphinx, marvels of ancient Egypt "
+"and wonders of the world."
+
+#: tourisme_app/templates/egypte_destination.html:384
+#: tourisme_app/templates/egypte_destination.html:385
+msgid "Nile River Cruise"
+msgstr "Nile River Cruise"
+
+#: tourisme_app/templates/egypte_destination.html:386
+msgid ""
+"Experience a relaxing cruise along the Nile River with breathtaking views "
+"and ancient sites along the way."
+msgstr ""
+"Experience a relaxing cruise along the Nile River with breathtaking views "
+"and ancient sites along the way."
+
+#: tourisme_app/templates/egypte_destination.html:391
+#: tourisme_app/templates/egypte_destination.html:392
+msgid "Valley of the Kings"
+msgstr "Valley of the Kings"
+
+#: tourisme_app/templates/egypte_destination.html:393
+msgid ""
+"Explore the tombs of pharaohs in the Valley of the Kings and discover the "
+"rich history of ancient Egypt."
+msgstr ""
+"Explore the tombs of pharaohs in the Valley of the Kings and discover the "
+"rich history of ancient Egypt."
+
+#: tourisme_app/templates/egypte_destination.html:398
+#: tourisme_app/templates/egypte_destination.html:399
+msgid "Abu Simbel Temples"
+msgstr "Abu Simbel Temples"
+
+#: tourisme_app/templates/egypte_destination.html:400
+msgid ""
+"Visit the remarkable Abu Simbel temples, dedicated to Ramses II, and witness "
+"the grandeur of ancient architecture."
+msgstr ""
+"Visit the remarkable Abu Simbel temples, dedicated to Ramses II, and witness "
+"the grandeur of ancient architecture."
+
+#: tourisme_app/templates/egypte_destination.html:405
+#: tourisme_app/templates/egypte_destination.html:406
+msgid "Red Sea Diving"
+msgstr "Red Sea Diving"
+
+#: tourisme_app/templates/egypte_destination.html:407
+msgid ""
+"Dive into the vibrant waters of the Red Sea, home to stunning coral reefs "
+"and diverse marine life."
+msgstr ""
+"Dive into the vibrant waters of the Red Sea, home to stunning coral reefs "
+"and diverse marine life."
+
+#: tourisme_app/templates/egypte_destination.html:412
+#: tourisme_app/templates/egypte_destination.html:413
+msgid "Egyptian Museum"
+msgstr "Egyptian Museum"
+
+#: tourisme_app/templates/egypte_destination.html:414
+msgid ""
+"Explore the Egyptian Museum in Cairo, housing a vast collection of ancient "
+"Egyptian artifacts and treasures."
+msgstr ""
+"Explore the Egyptian Museum in Cairo, housing a vast collection of ancient "
+"Egyptian artifacts and treasures."
+
+#: tourisme_app/templates/egypte_destination.html:419
+#: tourisme_app/templates/egypte_destination.html:420
+msgid "Hot Air Balloon over Luxor"
+msgstr "Hot Air Balloon over Luxor"
+
+#: tourisme_app/templates/egypte_destination.html:421
+msgid ""
+"Soar over Luxor's ancient temples and valleys in a hot air balloon for a "
+"unique aerial perspective."
+msgstr ""
+"Soar over Luxor's ancient temples and valleys in a hot air balloon for a "
+"unique aerial perspective."
+
+#: tourisme_app/templates/egypte_destination.html:426
+#: tourisme_app/templates/egypte_destination.html:427
+msgid "Siwa Oasis"
+msgstr "Siwa Oasis"
+
+#: tourisme_app/templates/egypte_destination.html:428
+msgid ""
+"Discover the serene beauty of Siwa Oasis, an isolated paradise surrounded by "
+"desert landscapes."
+msgstr ""
+"Discover the serene beauty of Siwa Oasis, an isolated paradise surrounded by "
+"desert landscapes."
+
+#: tourisme_app/templates/egypte_destination.html:433
+#: tourisme_app/templates/egypte_destination.html:434
+msgid "Khan El Khalili Bazaar"
+msgstr "Khan El Khalili Bazaar"
+
+#: tourisme_app/templates/egypte_destination.html:435
+msgid ""
+"Shop for unique souvenirs and handicrafts in Cairo's bustling Khan El "
+"Khalili Bazaar, a historic marketplace."
+msgstr ""
+"Shop for unique souvenirs and handicrafts in Cairo's bustling Khan El "
+"Khalili Bazaar, a historic marketplace."
+
+#: tourisme_app/templates/egypte_destination.html:449
+msgid "Egypt Safari Adventures"
+msgstr "Egypt Safari Adventures"
+
+#: tourisme_app/templates/egypte_destination.html:451
+msgid ""
+"Embark on a thrilling safari to uncover Egypt’s hidden gems. Discover the "
+"beauty of the White Desert, explore the ancient ruins of Luxor, or snorkel "
+"in the crystal-clear waters of the Red Sea. Our expert guides ensure your "
+"experience is both educational and unforgettable."
+msgstr ""
+"Embark on a thrilling safari to uncover Egypt’s hidden gems. Discover the "
+"beauty of the White Desert, explore the ancient ruins of Luxor, or snorkel "
+"in the crystal-clear waters of the Red Sea. Our expert guides ensure your "
+"experience is both educational and unforgettable."
+
+#: tourisme_app/templates/egypte_destination.html:452
+msgid ""
+"Our safari packages are designed to suit all kinds of travelers, whether "
+"you're seeking a luxurious experience or a more adventurous journey."
+msgstr ""
+"Our safari packages are designed to suit all kinds of travelers, whether "
+"you're seeking a luxurious experience or a more adventurous journey."
+
+#: tourisme_app/templates/egypte_destination.html:456
+msgid "Egypt Desert Safari"
+msgstr "Egypt Desert Safari"
+
+#: tourisme_app/templates/egypte_destination.html:456
+msgid "Explore Egypt"
+msgstr "Explore Egypt"
+
+#: tourisme_app/templates/egypte_destination.html:461
+msgid "Why Choose Egypt?"
+msgstr "Why Choose Egypt?"
+
+#: tourisme_app/templates/egypte_destination.html:465
+msgid "History and Culture"
+msgstr "History and Culture"
+
+#: tourisme_app/templates/egypte_destination.html:465
+msgid ""
+"Egypt is home to some of the world's oldest and most fascinating historical "
+"sites, from the pyramids to the temples of Karnak."
+msgstr ""
+"Egypt is home to some of the world's oldest and most fascinating historical "
+"sites, from the pyramids to the temples of Karnak."
+
+#: tourisme_app/templates/egypte_destination.html:466
+msgid "Natural Wonders"
+msgstr "Natural Wonders"
+
+#: tourisme_app/templates/egypte_destination.html:466
+msgid ""
+"From the vast deserts to the tranquil Nile River, Egypt offers natural "
+"beauty at every turn."
+msgstr ""
+"From the vast deserts to the tranquil Nile River, Egypt offers natural "
+"beauty at every turn."
+
+#: tourisme_app/templates/egypte_destination.html:467
+msgid "Adventure"
+msgstr "Adventure"
+
+#: tourisme_app/templates/egypte_destination.html:467
+msgid ""
+"Whether it's diving in the Red Sea or riding camels through the desert, "
+"Egypt is perfect for thrill-seekers."
+msgstr ""
+"Whether it's diving in the Red Sea or riding camels through the desert, "
+"Egypt is perfect for thrill-seekers."
+
+#: tourisme_app/templates/egypte_destination.html:473
+#: tourisme_app/templates/tanzania_safari.html:476
+#: tourisme_app/templates/uganda_safari.html:600
+#: tourisme_app/templates/zanzibar_destination.html:502
+msgid "Plan Your Journey"
+msgstr "Plan Your Journey"
+
+#: tourisme_app/templates/egypte_destination.html:474
+msgid ""
+"Let us help you create a personalized itinerary. Whether you're interested "
+"in historical tours, desert safaris, or beach vacations, we can tailor your "
+"trip to make your Egyptian adventure unforgettable."
+msgstr ""
+"Let us help you create a personalized itinerary. Whether you're interested "
+"in historical tours, desert safaris, or beach vacations, we can tailor your "
+"trip to make your Egyptian adventure unforgettable."
+
+#: tourisme_app/templates/egypte_destination.html:475
+msgid ""
+"Contact us today to start planning your dream trip to Egypt. Our team of "
+"experts is ready to guide you through every step of the process, ensuring a "
+"seamless and enriching travel experience."
+msgstr ""
+"Contact us today to start planning your dream trip to Egypt. Our team of "
+"experts is ready to guide you through every step of the process, ensuring a "
+"seamless and enriching travel experience."
+
+#: tourisme_app/templates/egypte_destination.html:480
+msgid "Nile Cruise"
+msgstr "Nile Cruise"
+
+#: tourisme_app/templates/egypte_destination.html:480
+msgid "Cruise along the Nile"
+msgstr "Cruise along the Nile"
+
+#: tourisme_app/templates/emails/email_template_client.html:9
+msgid "Quote Request Confirmation"
+msgstr "Quote Request Confirmation"
+
+#: tourisme_app/templates/emails/email_template_client.html:89
+msgid "Hello"
+msgstr "Hello"
+
+#: tourisme_app/templates/emails/email_template_client.html:90
+msgid ""
+" Thank you for your quote request. We have received the following details:"
+msgstr ""
+" Thank you for your quote request. We have received the following details:"
+
+#: tourisme_app/templates/emails/email_template_client.html:93
+msgid "Full Name:"
+msgstr "Full Name:"
+
+#: tourisme_app/templates/emails/email_template_client.html:94
+msgid "Email:"
+msgstr "Email:"
+
+#: tourisme_app/templates/emails/email_template_client.html:95
+#: tourisme_app/templates/emails/email_template_client.html:111
+msgid "Phone:"
+msgstr "Phone:"
+
+#: tourisme_app/templates/emails/email_template_client.html:96
+msgid "Country of Origin:"
+msgstr "Country of Origin:"
+
+#: tourisme_app/templates/emails/email_template_client.html:97
+msgid "Desired Destination:"
+msgstr "Desired Destination:"
+
+#: tourisme_app/templates/emails/email_template_client.html:98
+msgid "Estimated Price:"
+msgstr "Estimated Price:"
+
+#: tourisme_app/templates/emails/email_template_client.html:99
+msgid "Start Date:"
+msgstr "Start Date:"
+
+#: tourisme_app/templates/emails/email_template_client.html:100
+msgid "End Date:"
+msgstr "End Date:"
+
+#: tourisme_app/templates/emails/email_template_client.html:101
+msgid "Number of Adults:"
+msgstr "Number of Adults:"
+
+#: tourisme_app/templates/emails/email_template_client.html:102
+msgid "Number of Minors:"
+msgstr "Number of Minors:"
+
+#: tourisme_app/templates/emails/email_template_client.html:103
+msgid "Number of Babies:"
+msgstr "Number of Babies:"
+
+#: tourisme_app/templates/emails/email_template_client.html:104
+msgid "Additional Details:"
+msgstr "Additional Details:"
+
+#: tourisme_app/templates/emails/email_template_client.html:107
+msgid ""
+" We will review your request and get back to you shortly with further "
+"information."
+msgstr ""
+" We will review your request and get back to you shortly with further "
+"information."
+
+#: tourisme_app/templates/emails/email_template_client.html:110
+msgid "For further inquiries, you can contact us at:"
+msgstr "For further inquiries, you can contact us at:"
+
+#: tourisme_app/templates/emails/email_template_client.html:116
+msgid "Stay connected with us:"
+msgstr "Stay connected with us:"
+
+#: tourisme_app/templates/emails/email_template_client.html:146
+msgid "All rights reserved."
+msgstr "All rights reserved."
+
+#: tourisme_app/templates/h.html:54
+#: tourisme_app/templates/request_devis.html:74
+msgid "Select your destination"
+msgstr "Select your destination"
+
+#: tourisme_app/templates/h.html:59
+msgid "Dubai"
+msgstr "Dubai"
+
+#: tourisme_app/templates/h.html:85
+#: tourisme_app/templates/request_devis.html:108
+msgid "Please indicate your preferences, special requirements, etc."
+msgstr "Please indicate your preferences, special requirements, etc."
+
+#: tourisme_app/templates/index.html:140
+msgid "buy template now"
+msgstr "buy template now"
+
+#: tourisme_app/templates/index.html:189 tourisme_app/templates/shop.html:107
+msgid "Actualite"
+msgstr "News"
+
+#: tourisme_app/templates/index.html:219
+msgid ""
+" Customizable tours designed to showcase the beauty of Zanzibar. Experience "
+"pristine beaches, rich culture, and exotic wildlife."
+msgstr ""
+" Customizable tours designed to showcase the beauty of Zanzibar. Experience "
+"pristine beaches, rich culture, and exotic wildlife."
+
+#: tourisme_app/templates/index.html:219 tourisme_app/templates/index.html:234
+#: tourisme_app/templates/index.html:249 tourisme_app/templates/index.html:265
+#: tourisme_app/templates/index.html:295
+msgid "learn more"
+msgstr "learn more"
+
+#: tourisme_app/templates/index.html:232
+msgid "Looking to explore Ouganda in a unique and memorable way?"
+msgstr "Looking to explore Uganda in a unique and memorable way?"
+
+#: tourisme_app/templates/index.html:234
+msgid ""
+"Our mission is to offer you unforgettable experiences in Ouganda, combining "
+"nature, adventure, and cultural immersion to create exceptional moments."
+msgstr ""
+"Our mission is to offer you unforgettable experiences in Uganda, combining "
+"nature, adventure, and cultural immersion to create exceptional moments."
+
+#: tourisme_app/templates/index.html:247
+msgid "Looking to explore Kenya in a unique and memorable way?"
+msgstr "Looking to explore Kenya in a unique and memorable way?"
+
+#: tourisme_app/templates/index.html:249
+msgid ""
+"Our mission is to offer you unforgettable experiences in Kenya, combining "
+"wildlife safaris, adventure, and cultural immersion to create exceptional "
+"moments."
+msgstr ""
+"Our mission is to offer you unforgettable experiences in Kenya, combining "
+"wildlife safaris, adventure, and cultural immersion to create exceptional "
+"moments."
+
+#: tourisme_app/templates/index.html:263
+msgid "Looking to explore Dubai in a unique and memorable way?"
+msgstr "Looking to explore Dubai in a unique and memorable way?"
+
+#: tourisme_app/templates/index.html:265
+msgid ""
+"Our mission is to offer you unforgettable experiences in Dubai, combining "
+"luxury, adventure, and cultural immersion to create exceptional moments."
+msgstr ""
+"Our mission is to offer you unforgettable experiences in Dubai, combining "
+"luxury, adventure, and cultural immersion to create exceptional moments."
+
+#: tourisme_app/templates/index.html:278
+msgid "Are you ready to discover the wonders of Egypt?"
+msgstr "Are you ready to discover the wonders of Egypt?"
+
+#: tourisme_app/templates/index.html:280
+msgid ""
+"Expert-guided tours tailored for you. Explore ancient history and modern "
+"culture"
+msgstr ""
+"Expert-guided tours tailored for you. Explore ancient history and modern "
+"culture."
+
+#: tourisme_app/templates/index.html:293
+msgid "Looking for a Paradise Getaway?"
+msgstr "Looking for a Paradise Getaway?"
+
+#: tourisme_app/templates/index.html:295
+msgid ""
+"Entrust us with your dream holiday plans; our travel agency specializes in "
+"crafting tailored experiences in the Maldives, delivering the ultimate "
+"luxury and serenity you deserve."
+msgstr ""
+"Entrust us with your dream holiday plans; our travel agency specializes in "
+"crafting tailored experiences in the Maldives, delivering the ultimate "
+"luxury and serenity you deserve."
+
+#: tourisme_app/templates/index.html:318
+msgid "Let’s plan your dream trip together!"
+msgstr "Let’s plan your dream trip together!"
+
+#: tourisme_app/templates/index.html:339
+msgid "Adults"
+msgstr "Adults"
+
+#: tourisme_app/templates/index.html:345
+msgid "Children"
+msgstr "Children"
+
+#: tourisme_app/templates/index.html:353
+msgid "Depart Date"
+msgstr "Depart Date"
+
+#: tourisme_app/templates/index.html:357
+msgid "Choose the date"
+msgstr "Choose the date"
+
+#: tourisme_app/templates/index.html:362
+msgid "Start Customizing"
+msgstr "Start Customizing"
+
+#: tourisme_app/templates/index.html:377
+msgid "Our Best Tours"
+msgstr "Our Best Tours"
+
+#: tourisme_app/templates/index.html:377
+msgid "Hot tours"
+msgstr "Hot tours"
+
+#: tourisme_app/templates/index.html:381
+msgid "view all tours"
+msgstr "view all tours"
+
+#: tourisme_app/templates/index.html:396 tourisme_app/templates/index.html:412
+#: tourisme_app/templates/index.html:428 tourisme_app/templates/index.html:444
+#: tourisme_app/templates/index.html:460 tourisme_app/templates/index.html:476
+msgid "from"
+msgstr "from"
+
+#: tourisme_app/templates/index.html:510
+msgid "Air Tickets"
+msgstr "Air Tickets"
+
+#: tourisme_app/templates/index.html:512
+msgid ""
+" At our travel agency, you can book air tickets to any world destination. We "
+"also provide online ticket booking via our website in just a couple of steps."
+msgstr ""
+" At our travel agency, you can book air tickets to any world destination. We "
+"also provide online ticket booking via our website in just a couple of steps."
+
+#: tourisme_app/templates/index.html:518
+msgid "Visa and Travel Insurance"
+msgstr "Visa and Travel Insurance"
+
+#: tourisme_app/templates/index.html:528
+msgid ""
+"We offer a wide selection of hotel ranging from 5-star ones to small "
+"properties located worldwide so that you could book a hotel you like."
+msgstr ""
+"We offer a wide selection of hotels ranging from 5-star ones to small "
+"properties located worldwide so that you could book a hotel you like."
+
+#: tourisme_app/templates/index.html:547
+msgid "Latest Presentations"
+msgstr "Latest Presentations"
+
+#: tourisme_app/templates/index.html:593
+msgid "view all blog posts"
+msgstr "view all blog posts"
+
+#: tourisme_app/templates/index.html:612
+msgid ""
+"I wanted to thank you very much for planning the trip to France for my "
+"boyfriend and me. It was amazing and exceeded my expectations! We had a "
+"wonderful time and were very pleased with the accommodations in Paris and "
+"Bayeux. Our private/small tour guides were fantastic! I appreciate all the "
+"effort to get us to the Eiffel Tower finally."
+msgstr ""
+"I wanted to thank you very much for planning the trip to France for my "
+"boyfriend and me. It was amazing and exceeded my expectations! We had a "
+"wonderful time and were very pleased with the accommodations in Paris and "
+"Bayeux. Our private/small tour guides were fantastic! I appreciate all the "
+"effort to get us to the Eiffel Tower finally."
+
+#: tourisme_app/templates/index.html:616 tourisme_app/templates/index.html:629
+#: tourisme_app/templates/index.html:642
+msgid "Regular Customer"
+msgstr "Regular Customer"
+
+#: tourisme_app/templates/index.html:625
+msgid ""
+"I had a marvelous time in our travels to Madagascar, Zimbabwe and Botswana, "
+"I had just wonderful experiences.I loved the location of the Gorges Camp as "
+"I felt like it was only the time we got to see real and rural Africans and "
+"how they truly lived. The service was amazing and everyone was very "
+"attentive!"
+msgstr ""
+"I had a marvelous time in our travels to Madagascar, Zimbabwe, and Botswana. "
+"I had wonderful experiences. I loved the location of the Gorges Camp as I "
+"felt like it was the only time we got to see real and rural Africans and how "
+"they truly lived. The service was amazing, and everyone was very attentive!"
+
+#: tourisme_app/templates/index.html:638
+msgid ""
+"Just wanted to say many, many thanks for helping me set up an amazing Costa "
+"Rican adventure! My nephew and I had a blast! All of the accommodations were "
+"perfect as were the activities that we did (canopy, coffee tour, hikes, "
+"fishing, and massages!) We have such fond memories and can't thank you "
+"enough!"
+msgstr ""
+"Just wanted to say many, many thanks for helping me set up an amazing Costa "
+"Rican adventure! My nephew and I had a blast! All of the accommodations were "
+"perfect as were the activities that we did (canopy, coffee tour, hikes, "
+"fishing, and massages!) We have such fond memories and can't thank you "
+"enough!"
+
+#: tourisme_app/templates/index.html:667
+msgid "Informations de voyage"
+msgstr "Travel Information"
+
+#: tourisme_app/templates/index.html:669
+msgid "Services de visa"
+msgstr "Visa Services"
+
+#: tourisme_app/templates/index.html:670
+msgid "Forfaits de voyage"
+msgstr "Travel Packages"
+
+#: tourisme_app/templates/index.html:671
+msgid "Conseils de voyage"
+msgstr "Travel Tips"
+
+#: tourisme_app/templates/index.html:672
+msgid "FAQ"
+msgstr "FAQ"
+
+#: tourisme_app/templates/index.html:712
+msgid ""
+" Nous sommes une agence spécialisée dans l'obtention de visas et la "
+"planification de voyages. Nous offrons un accompagnement personnalisé pour "
+"vos voyages d'affaires et de tourisme."
+msgstr ""
+"We are an agency specialized in obtaining visas and travel planning. We "
+"offer personalized support for your business and leisure trips."
+
+#: tourisme_app/templates/index.html:720
+msgid "Liens rapides"
+msgstr "Quick Links"
+
+#: tourisme_app/templates/index.html:722
+msgid "HOME"
+msgstr "HOME"
+
+#: tourisme_app/templates/index.html:723
+msgid "About us"
+msgstr "About us"
+
+#: tourisme_app/templates/index.html:730
+msgid "Contactez-nous"
+msgstr "Contact us"
+
+#: tourisme_app/templates/index.html:737
+msgid "Nos partenaires de paiement"
+msgstr "Our Payment Partners"
+
+#: tourisme_app/templates/index.html:757
+msgid "Politique de confidentialité"
+msgstr "Privacy Policy"
+
+#: tourisme_app/templates/index.html:758
+msgid "Conditions d'utilisation"
+msgstr "Terms of Service"
+
+#: tourisme_app/templates/index.html:759
+msgid "Mentions légales"
+msgstr "Legal Notices"
+
+#: tourisme_app/templates/kenya_safari.html:420
+msgid "Ready to Discover Kenya's Iconic Wildlife?"
+msgstr "Ready to Discover Kenya's Iconic Wildlife?"
+
+#: tourisme_app/templates/kenya_safari.html:423
+msgid "Embark on a safari adventure through the world-famous Maasai Mara"
+msgstr "Embark on a safari adventure through the world-famous Maasai Mara"
+
+#: tourisme_app/templates/kenya_safari.html:424
+msgid "Witness the Great Migration and Kenya's Big Five"
+msgstr "Witness the Great Migration and Kenya's Big Five"
+
+#: tourisme_app/templates/kenya_safari.html:440
+msgid "Relax on Kenya's Stunning Coastline"
+msgstr "Relax on Kenya's Stunning Coastline"
+
+#: tourisme_app/templates/kenya_safari.html:443
+msgid "Enjoy white sandy beaches and turquoise waters in Mombasa"
+msgstr "Enjoy white sandy beaches and turquoise waters in Mombasa"
+
+#: tourisme_app/templates/kenya_safari.html:444
+msgid "Perfect getaway for relaxation and water sports"
+msgstr "Perfect getaway for relaxation and water sports"
+
+#: tourisme_app/templates/kenya_safari.html:460
+msgid "Hike through Kenya's Majestic Mountains"
+msgstr "Hike through Kenya's Majestic Mountains"
+
+#: tourisme_app/templates/kenya_safari.html:463
+msgid "Challenge yourself with a trek up Mount Kenya"
+msgstr "Challenge yourself with a trek up Mount Kenya"
+
+#: tourisme_app/templates/kenya_safari.html:464
+msgid "Experience breathtaking landscapes and diverse flora and fauna"
+msgstr "Experience breathtaking landscapes and diverse flora and fauna"
+
+#: tourisme_app/templates/kenya_safari.html:480
+msgid "Immerse Yourself in Kenya's Rich Culture"
+msgstr "Immerse Yourself in Kenya's Rich Culture"
+
+#: tourisme_app/templates/kenya_safari.html:483
+msgid "Visit Maasai villages and explore Kenya's vibrant traditions"
+msgstr "Visit Maasai villages and explore Kenya's vibrant traditions"
+
+#: tourisme_app/templates/kenya_safari.html:484
+msgid "Discover local art, music, and cuisine"
+msgstr "Discover local art, music, and cuisine"
+
+#: tourisme_app/templates/kenya_safari.html:508
+#: tourisme_app/templates/kenya_safari.html:509
+#: tourisme_app/templates/uganda_safari.html:494
+#: tourisme_app/templates/uganda_safari.html:495
+msgid "Gorilla Trekking"
+msgstr "Gorilla Trekking"
+
+#: tourisme_app/templates/kenya_safari.html:511
+msgid ""
+"Trek through Bwindi’s misty jungles to meet the majestic mountain gorillas, "
+"a truly unforgettable experience."
+msgstr ""
+"Trek through Bwindi’s misty jungles to meet the majestic mountain gorillas, "
+"a truly unforgettable experience."
+
+#: tourisme_app/templates/kenya_safari.html:516
+#: tourisme_app/templates/kenya_safari.html:517
+#: tourisme_app/templates/uganda_safari.html:502
+#: tourisme_app/templates/uganda_safari.html:503
+msgid "Nile River Adventure"
+msgstr "Nile River Adventure"
+
+#: tourisme_app/templates/kenya_safari.html:519
+msgid ""
+"Discover the source of the Nile with thrilling white-water rafting, "
+"kayaking, and scenic boat cruises."
+msgstr ""
+"Discover the source of the Nile with thrilling white-water rafting, "
+"kayaking, and scenic boat cruises."
+
+#: tourisme_app/templates/kenya_safari.html:524
+#: tourisme_app/templates/kenya_safari.html:525
+#: tourisme_app/templates/uganda_safari.html:510
+#: tourisme_app/templates/uganda_safari.html:511
+msgid "Savannah Safari"
+msgstr "Savannah Safari"
+
+#: tourisme_app/templates/kenya_safari.html:527
+msgid ""
+"Enjoy game drives in Queen Elizabeth Park to spot lions, elephants, and "
+"other iconic African wildlife."
+msgstr ""
+"Enjoy game drives in Queen Elizabeth Park to spot lions, elephants, and "
+"other iconic African wildlife."
+
+#: tourisme_app/templates/kenya_safari.html:533
+#: tourisme_app/templates/kenya_safari.html:534
+msgid "Masai Mara Safari"
+msgstr "Masai Mara Safari"
+
+#: tourisme_app/templates/kenya_safari.html:536
+msgid ""
+"Experience the Great Migration in the Masai Mara and see vast herds of "
+"wildebeest and zebras."
+msgstr ""
+"Experience the Great Migration in the Masai Mara and see vast herds of "
+"wildebeest and zebras."
+
+#: tourisme_app/templates/kenya_safari.html:542
+#: tourisme_app/templates/kenya_safari.html:543
+msgid "Mount Kenya Trek"
+msgstr "Mount Kenya Trek"
+
+#: tourisme_app/templates/kenya_safari.html:545
+msgid ""
+"Climb Africa’s second-highest peak for breathtaking views and a rewarding "
+"adventure."
+msgstr ""
+"Climb Africa’s second-highest peak for breathtaking views and a rewarding "
+"adventure."
+
+#: tourisme_app/templates/kenya_safari.html:551
+#: tourisme_app/templates/kenya_safari.html:552
+msgid "Diani Beach"
+msgstr "Diani Beach"
+
+#: tourisme_app/templates/kenya_safari.html:554
+msgid ""
+"Relax on the white sands of Diani Beach, perfect for sunbathing and water "
+"sports."
+msgstr ""
+"Relax on the white sands of Diani Beach, perfect for sunbathing and water "
+"sports."
+
+#: tourisme_app/templates/kenya_safari.html:560
+#: tourisme_app/templates/kenya_safari.html:561
+msgid "Amboseli National Park"
+msgstr "Amboseli National Park"
+
+#: tourisme_app/templates/kenya_safari.html:563
+msgid ""
+"Spot elephants with Mount Kilimanjaro as a stunning backdrop in Amboseli."
+msgstr ""
+"Spot elephants with Mount Kilimanjaro as a stunning backdrop in Amboseli."
+
+#: tourisme_app/templates/kenya_safari.html:569
+#: tourisme_app/templates/kenya_safari.html:570
+msgid "Lamu Island"
+msgstr "Lamu Island"
+
+#: tourisme_app/templates/kenya_safari.html:572
+msgid ""
+"Explore the ancient Swahili culture of Lamu Island, a UNESCO World Heritage "
+"Site."
+msgstr ""
+"Explore the ancient Swahili culture of Lamu Island, a UNESCO World Heritage "
+"Site."
+
+#: tourisme_app/templates/kenya_safari.html:578
+#: tourisme_app/templates/kenya_safari.html:579
+msgid "Lake Nakuru"
+msgstr "Lake Nakuru"
+
+#: tourisme_app/templates/kenya_safari.html:581
+msgid "Visit Lake Nakuru, home to flocks of flamingos and abundant wildlife."
+msgstr "Visit Lake Nakuru, home to flocks of flamingos and abundant wildlife."
+
+#: tourisme_app/templates/kenya_safari.html:595
+msgid ""
+"By choosing our agency, you benefit from personalized service, local "
+"experts, and tailor-made experiences to discover Kenya like never before."
+msgstr ""
+"By choosing our agency, you benefit from personalized service, local "
+"experts, and tailor-made experiences to discover Kenya like never before."
+
+#: tourisme_app/templates/kenya_safari.html:610
+msgid "Fully Organized Safaris"
+msgstr "Fully Organized Safaris"
+
+#: tourisme_app/templates/kenya_safari.html:612
+msgid ""
+"We offer complete safari packages that cover all aspects to ensure a smooth "
+"and enjoyable experience in Kenya. Our local experts guide you throughout "
+"your journey to maximize your discovery of the wildlife and landscapes."
+msgstr ""
+"We offer complete safari packages that cover all aspects to ensure a smooth "
+"and enjoyable experience in Kenya. Our local experts guide you throughout "
+"your journey to maximize your discovery of the wildlife and landscapes."
+
+#: tourisme_app/templates/kenya_safari.html:627
+msgid "Personalized Cultural Tours"
+msgstr "Personalized Cultural Tours"
+
+#: tourisme_app/templates/kenya_safari.html:629
+msgid ""
+"Each journey is unique, which is why we create personalized cultural tours "
+"based on your preferences. Whether you're passionate about the rich heritage "
+"of the Maasai people or want to explore local markets and traditions, we "
+"have the perfect itinerary for you."
+msgstr ""
+"Each journey is unique, which is why we create personalized cultural tours "
+"based on your preferences. Whether you're passionate about the rich heritage "
+"of the Maasai people or want to explore local markets and traditions, we "
+"have the perfect itinerary for you."
+
+#: tourisme_app/templates/kenya_safari.html:640
+msgid ""
+"Have a dream trip to Kenya but don't know where to start? Let us guide you. "
+"We put our expertise at your disposal to organize a stay that meets your "
+"expectations, from safaris to beach escapes."
+msgstr ""
+"Have a dream trip to Kenya but don't know where to start? Let us guide you. "
+"We put our expertise at your disposal to organize a stay that meets your "
+"expectations, from safaris to beach escapes."
+
+#: tourisme_app/templates/maldives_destination.html:385
+msgid "Escape to the Pristine Beaches of the Maldives"
+msgstr "Escape to the Pristine Beaches of the Maldives"
+
+#: tourisme_app/templates/maldives_destination.html:389
+msgid "Experience the purest white sands and crystal-clear waters"
+msgstr "Experience the purest white sands and crystal-clear waters"
+
+#: tourisme_app/templates/maldives_destination.html:392
+msgid "Relax and rejuvenate on secluded paradise shores"
+msgstr "Relax and rejuvenate on secluded paradise shores"
+
+#: tourisme_app/templates/maldives_destination.html:410
+msgid "Dive into the Vibrant Marine Life"
+msgstr "Dive into the Vibrant Marine Life"
+
+#: tourisme_app/templates/maldives_destination.html:414
+msgid "Snorkel or dive among colorful coral reefs and exotic fish"
+msgstr "Snorkel or dive among colorful coral reefs and exotic fish"
+
+#: tourisme_app/templates/maldives_destination.html:417
+msgid "Witness the stunning underwater beauty of the Maldives"
+msgstr "Witness the stunning underwater beauty of the Maldives"
+
+#: tourisme_app/templates/maldives_destination.html:435
+msgid "Immerse in Maldivian Culture"
+msgstr "Immerse in Maldivian Culture"
+
+#: tourisme_app/templates/maldives_destination.html:439
+msgid "Explore traditional music, arts, and local craftsmanship"
+msgstr "Explore traditional music, arts, and local craftsmanship"
+
+#: tourisme_app/templates/maldives_destination.html:442
+msgid "Connect with the warm hospitality of Maldivian locals"
+msgstr "Connect with the warm hospitality of Maldivian locals"
+
+#: tourisme_app/templates/maldives_destination.html:460
+msgid "Indulge in Luxury Resorts"
+msgstr "Indulge in Luxury Resorts"
+
+#: tourisme_app/templates/maldives_destination.html:464
+msgid "Stay in over-water villas with panoramic ocean views"
+msgstr "Stay in over-water villas with panoramic ocean views"
+
+#: tourisme_app/templates/maldives_destination.html:467
+msgid "Enjoy world-class amenities and personalized service"
+msgstr "Enjoy world-class amenities and personalized service"
+
+#: tourisme_app/templates/maldives_destination.html:487
+msgid "Discover the Maldives"
+msgstr "Discover the Maldives"
+
+#: tourisme_app/templates/maldives_destination.html:493
+#: tourisme_app/templates/maldives_destination.html:494
+msgid "Snorkeling at Banana Reef"
+msgstr "Snorkeling at Banana Reef"
+
+#: tourisme_app/templates/maldives_destination.html:495
+msgid ""
+"Experience the vibrant underwater world of Banana Reef, famous for its "
+"colorful coral gardens and diverse marine life."
+msgstr ""
+"Experience the vibrant underwater world of Banana Reef, famous for its "
+"colorful coral gardens and diverse marine life."
+
+#: tourisme_app/templates/maldives_destination.html:500
+#: tourisme_app/templates/maldives_destination.html:501
+msgid "Sunset Cruise"
+msgstr "Sunset Cruise"
+
+#: tourisme_app/templates/maldives_destination.html:502
+msgid ""
+"Enjoy a peaceful cruise across the Indian Ocean, with stunning views of the "
+"Maldives’ sunsets."
+msgstr ""
+"Enjoy a peaceful cruise across the Indian Ocean, with stunning views of the "
+"Maldives’ sunsets."
+
+#: tourisme_app/templates/maldives_destination.html:507
+#: tourisme_app/templates/maldives_destination.html:508
+msgid "Private Island Picnic"
+msgstr "Private Island Picnic"
+
+#: tourisme_app/templates/maldives_destination.html:509
+msgid ""
+"Spend a day on a secluded island with a private picnic, surrounded by "
+"pristine beaches and turquoise waters."
+msgstr ""
+"Spend a day on a secluded island with a private picnic, surrounded by "
+"pristine beaches and turquoise waters."
+
+#: tourisme_app/templates/maldives_destination.html:514
+#: tourisme_app/templates/maldives_destination.html:515
+msgid "Dolphin Watching Safari"
+msgstr "Dolphin Watching Safari"
+
+#: tourisme_app/templates/maldives_destination.html:516
+msgid ""
+"Set sail to spot playful dolphins and enjoy a memorable safari adventure on "
+"the open sea."
+msgstr ""
+"Set sail to spot playful dolphins and enjoy a memorable safari adventure on "
+"the open sea."
+
+#: tourisme_app/templates/maldives_destination.html:521
+#: tourisme_app/templates/maldives_destination.html:522
+msgid "Spa Day on a Luxury Resort"
+msgstr "Spa Day on a Luxury Resort"
+
+#: tourisme_app/templates/maldives_destination.html:523
+msgid ""
+"Relax with a day of rejuvenating spa treatments on one of the Maldives' "
+"world-renowned luxury resorts."
+msgstr ""
+"Relax with a day of rejuvenating spa treatments on one of the Maldives' "
+"world-renowned luxury resorts."
+
+#: tourisme_app/templates/maldives_destination.html:528
+#: tourisme_app/templates/maldives_destination.html:529
+msgid "Diving at Maaya Thila"
+msgstr "Diving at Maaya Thila"
+
+#: tourisme_app/templates/maldives_destination.html:530
+msgid ""
+"Dive at Maaya Thila, a top dive site where you can encounter sharks, rays, "
+"and an array of marine life."
+msgstr ""
+"Dive at Maaya Thila, a top dive site where you can encounter sharks, rays, "
+"and an array of marine life."
+
+#: tourisme_app/templates/maldives_destination.html:535
+#: tourisme_app/templates/maldives_destination.html:536
+msgid "Maldivian Cooking Class"
+msgstr "Maldivian Cooking Class"
+
+#: tourisme_app/templates/maldives_destination.html:537
+msgid ""
+"Learn to cook traditional Maldivian dishes and experience the local flavors "
+"with a hands-on cooking class."
+msgstr ""
+"Learn to cook traditional Maldivian dishes and experience the local flavors "
+"with a hands-on cooking class."
+
+#: tourisme_app/templates/maldives_destination.html:542
+#: tourisme_app/templates/maldives_destination.html:543
+msgid "Kayaking in Crystal Clear Lagoons"
+msgstr "Kayaking in Crystal Clear Lagoons"
+
+#: tourisme_app/templates/maldives_destination.html:544
+msgid ""
+"Explore the Maldives' clear lagoons by kayak and get close to the stunning "
+"natural beauty."
+msgstr ""
+"Explore the Maldives' clear lagoons by kayak and get close to the stunning "
+"natural beauty."
+
+#: tourisme_app/templates/maldives_destination.html:549
+#: tourisme_app/templates/maldives_destination.html:550
+msgid "Underwater Restaurant Experience"
+msgstr "Underwater Restaurant Experience"
+
+#: tourisme_app/templates/maldives_destination.html:551
+msgid ""
+"Dine with a view like no other at an underwater restaurant, surrounded by "
+"marine life."
+msgstr ""
+"Dine with a view like no other at an underwater restaurant, surrounded by "
+"marine life."
+
+#: tourisme_app/templates/maldives_destination.html:565
+msgid "Exclusive Maldives Experiences This Year"
+msgstr "Exclusive Maldives Experiences This Year"
+
+#: tourisme_app/templates/maldives_destination.html:567
+msgid ""
+"After an incredible year for travel, we are thrilled to offer unique "
+"opportunities to explore the Maldives, with an emphasis on relaxation and "
+"luxury. Choose from a variety of packages that cater to both adventure and "
+"leisure."
+msgstr ""
+"After an incredible year for travel, we are thrilled to offer unique "
+"opportunities to explore the Maldives, with an emphasis on relaxation and "
+"luxury. Choose from a variety of packages that cater to both adventure and "
+"leisure."
+
+#: tourisme_app/templates/maldives_destination.html:570
+msgid ""
+"of our packages offer extended stays for a more immersive experience in the "
+"Maldives."
+msgstr ""
+"of our packages offer extended stays for a more immersive experience in the "
+"Maldives."
+
+#: tourisme_app/templates/maldives_destination.html:572
+msgid "Book now to enjoy exclusive offers and exceptional service."
+msgstr "Book now to enjoy exclusive offers and exceptional service."
+
+#: tourisme_app/templates/maldives_destination.html:587
+msgid "Luxury Beyond Expectations"
+msgstr "Luxury Beyond Expectations"
+
+#: tourisme_app/templates/maldives_destination.html:589
+msgid ""
+"of our clients choose private villas or overwater bungalows, allowing them "
+"to experience the ultimate in privacy and comfort while staying in one of "
+"the world’s most exclusive destinations."
+msgstr ""
+"of our clients choose private villas or overwater bungalows, allowing them "
+"to experience the ultimate in privacy and comfort while staying in one of "
+"the world’s most exclusive destinations."
+
+#: tourisme_app/templates/maldives_destination.html:591
+msgid "opt for wellness retreats with spa and holistic treatments,"
+msgstr "opt for wellness retreats with spa and holistic treatments,"
+
+#: tourisme_app/templates/maldives_destination.html:593
+msgid "book diving and snorkeling adventures,"
+msgstr "book diving and snorkeling adventures,"
+
+#: tourisme_app/templates/maldives_destination.html:595
+msgid "enjoy water sports and island hopping."
+msgstr "enjoy water sports and island hopping."
+
+#: tourisme_app/templates/maldives_destination.html:604
+msgid "Experiences Tailored to Your Preferences"
+msgstr "Experiences Tailored to Your Preferences"
+
+#: tourisme_app/templates/maldives_destination.html:606
+msgid ""
+"of visitors seek both adventure and relaxation during their trip to the "
+"Maldives."
+msgstr ""
+"of visitors seek both adventure and relaxation during their trip to the "
+"Maldives."
+
+#: tourisme_app/templates/maldives_destination.html:608
+msgid "We offer a wide variety of experiences:"
+msgstr "We offer a wide variety of experiences:"
+
+#: tourisme_app/templates/maldives_destination.html:610
+msgid "from spa retreats and sunset cruises,"
+msgstr "from spa retreats and sunset cruises,"
+
+#: tourisme_app/templates/maldives_destination.html:612
+msgid "to shark diving and deep-sea fishing."
+msgstr "to shark diving and deep-sea fishing."
+
+#: tourisme_app/templates/maldives_destination.html:614
+msgid ""
+"For those seeking ultimate luxury, we recommend private island resorts where "
+"you can escape the crowds and immerse yourself in natural beauty."
+msgstr ""
+"For those seeking ultimate luxury, we recommend private island resorts where "
+"you can escape the crowds and immerse yourself in natural beauty."
+
+#: tourisme_app/templates/payment_failed.html:11
+msgid "Paiement Échoué"
+msgstr "Payment Failed"
+
+#: tourisme_app/templates/payment_failed.html:12
+msgid ""
+"Désolé, le paiement pour vos activités de destination n'a pas abouti. "
+"Veuillez réessayer ou contacter notre support pour assistance."
+msgstr ""
+"Sorry, the payment for your destination activities did not go through. "
+"Please try again or contact our support for assistance."
+
+#: tourisme_app/templates/payment_failed.html:13
+#: tourisme_app/templates/payment_success.html:13
+msgid "Retour à l'accueil"
+msgstr "Back to Home"
+
+#: tourisme_app/templates/payment_success.html:11
+msgid "Paiement Réussi !"
+msgstr "Payment Successful!"
+
+#: tourisme_app/templates/payment_success.html:12
+msgid ""
+"Merci pour votre paiement. Vos activités pour cette destination sont "
+"maintenant confirmées."
+msgstr ""
+"Thank you for your payment. Your activities for this destination are now "
+"confirmed."
+
+#: tourisme_app/templates/service_detail.html:29
+msgid "Previous"
+msgstr "Previous"
+
+#: tourisme_app/templates/service_detail.html:114
+msgid "Our most popular African safari itineraries"
+msgstr "Our most popular African safari itineraries"
+
+#: tourisme_app/templates/shop.html:581
+msgid "Looking for authentic souvenirs?"
+msgstr "Looking for authentic souvenirs?"
+
+#: tourisme_app/templates/shop.html:583
+msgid ""
+"\n"
+"                        Discover our unique selection of Afritudes products, "
+"authentic souvenirs, and local handicrafts\n"
+"                        that reflect the richness and cultural diversity of "
+"the region. Order today for unique and memorable items.\n"
+"                        "
+msgstr ""
+"\n"
+"                        Discover our unique selection of Afritudes products, "
+"authentic souvenirs, and local handicrafts\n"
+"                        that reflect the richness and cultural diversity of "
+"the region. Order today for unique and memorable items.\n"
+"                        "
+
+#: tourisme_app/templates/shop.html:588
+msgid "Contact Us"
+msgstr "Contact Us"
+
+#: tourisme_app/templates/shop.html:596
+msgid "Our Products"
+msgstr "Our Products"
+
+#: tourisme_app/templates/shop.html:601 tourisme_app/templates/shop.html:605
+msgid "Handicrafts"
+msgstr "Handicrafts"
+
+#: tourisme_app/templates/shop.html:602
+msgid "Local Handicrafts"
+msgstr "Local Handicrafts"
+
+#: tourisme_app/templates/shop.html:603
+msgid "Handmade, unique crafts."
+msgstr "Handmade, unique crafts."
+
+#: tourisme_app/templates/shop.html:604 tourisme_app/templates/shop.html:615
+#: tourisme_app/templates/shop.html:626 tourisme_app/templates/shop.html:637
+#: tourisme_app/templates/shop.html:648 tourisme_app/templates/shop.html:659
+msgid "Price:"
+msgstr "Price:"
+
+#: tourisme_app/templates/shop.html:605 tourisme_app/templates/shop.html:616
+#: tourisme_app/templates/shop.html:627 tourisme_app/templates/shop.html:638
+#: tourisme_app/templates/shop.html:649 tourisme_app/templates/shop.html:660
+msgid "Category:"
+msgstr "Category:"
+
+#: tourisme_app/templates/shop.html:606 tourisme_app/templates/shop.html:617
+#: tourisme_app/templates/shop.html:628 tourisme_app/templates/shop.html:639
+#: tourisme_app/templates/shop.html:650 tourisme_app/templates/shop.html:661
+msgid "Stock:"
+msgstr "Stock:"
+
+#: tourisme_app/templates/shop.html:606
+msgid "10 available"
+msgstr "10 available"
+
+#: tourisme_app/templates/shop.html:607 tourisme_app/templates/shop.html:618
+#: tourisme_app/templates/shop.html:629 tourisme_app/templates/shop.html:640
+#: tourisme_app/templates/shop.html:651 tourisme_app/templates/shop.html:662
+msgid "Delivery:"
+msgstr "Delivery:"
+
+#: tourisme_app/templates/shop.html:607
+msgid "Local & International Shipping"
+msgstr "Local & International Shipping"
+
+#: tourisme_app/templates/shop.html:612
+msgid "Afritudes Products"
+msgstr "Afritudes Products"
+
+#: tourisme_app/templates/shop.html:613
+msgid "Afritudes Scarf"
+msgstr "Afritudes Scarf"
+
+#: tourisme_app/templates/shop.html:614
+msgid "Stylish and modern."
+msgstr "Stylish and modern."
+
+#: tourisme_app/templates/shop.html:616
+msgid "Fashion"
+msgstr "Fashion"
+
+#: tourisme_app/templates/shop.html:617
+msgid "5 available"
+msgstr "5 available"
+
+#: tourisme_app/templates/shop.html:618 tourisme_app/templates/shop.html:651
+msgid "International Shipping"
+msgstr "International Shipping"
+
+#: tourisme_app/templates/shop.html:623
+msgid "Personalized Souvenirs"
+msgstr "Personalized Souvenirs"
+
+#: tourisme_app/templates/shop.html:624
+msgid "Custom Mug"
+msgstr "Custom Mug"
+
+#: tourisme_app/templates/shop.html:625
+msgid "Engrave your name!"
+msgstr "Engrave your name!"
+
+#: tourisme_app/templates/shop.html:627 tourisme_app/templates/shop.html:660
+msgid "Customizable"
+msgstr "Customizable"
+
+#: tourisme_app/templates/shop.html:628
+msgid "20 available"
+msgstr "20 available"
+
+#: tourisme_app/templates/shop.html:629 tourisme_app/templates/shop.html:662
+msgid "Local & International"
+msgstr "Local & International"
+
+#: tourisme_app/templates/shop.html:634
+msgid "Artisan Jewelry"
+msgstr "Artisan Jewelry"
+
+#: tourisme_app/templates/shop.html:635
+msgid "Wooden Necklace"
+msgstr "Wooden Necklace"
+
+#: tourisme_app/templates/shop.html:636
+msgid "Crafted by local artisans."
+msgstr "Crafted by local artisans."
+
+#: tourisme_app/templates/shop.html:638
+msgid "Jewelry"
+msgstr "Jewelry"
+
+#: tourisme_app/templates/shop.html:639
+msgid "8 available"
+msgstr "8 available"
+
+#: tourisme_app/templates/shop.html:640
+msgid "Local Delivery"
+msgstr "Local Delivery"
+
+#: tourisme_app/templates/shop.html:645
+msgid "Cultural Decor"
+msgstr "Cultural Decor"
+
+#: tourisme_app/templates/shop.html:646
+msgid "Decorative Mask"
+msgstr "Decorative Mask"
+
+#: tourisme_app/templates/shop.html:647
+msgid "Hand-carved wooden mask."
+msgstr "Hand-carved wooden mask."
+
+#: tourisme_app/templates/shop.html:649
+msgid "Home Decor"
+msgstr "Home Decor"
+
+#: tourisme_app/templates/shop.html:650
+msgid "3 available"
+msgstr "3 available"
+
+#: tourisme_app/templates/shop.html:656
+msgid "Custom T-shirt"
+msgstr "Custom T-shirt"
+
+#: tourisme_app/templates/shop.html:657
+msgid "Printed T-shirt"
+msgstr "Printed T-shirt"
+
+#: tourisme_app/templates/shop.html:658
+msgid "Customizable prints."
+msgstr "Customizable prints."
+
+#: tourisme_app/templates/shop.html:661
+msgid "15 available"
+msgstr "15 available"
+
+#: tourisme_app/templates/shop.html:669
+msgid "Souvenirs and Afritudes Products for Sale"
+msgstr "Souvenirs and Afritudes Products for Sale"
+
+#: tourisme_app/templates/shop.html:671
+msgid ""
+"\n"
+"                        Explore our carefully curated selection of high-"
+"quality souvenirs.\n"
+"                        Each item is crafted with care and reflects the rich "
+"cultural heritage of the region.\n"
+"                        "
+msgstr ""
+"\n"
+"                        Explore our carefully curated selection of high-"
+"quality souvenirs.\n"
+"                        Each item is crafted with care and reflects the rich "
+"cultural heritage of the region.\n"
+"                        "
+
+#: tourisme_app/templates/shop.html:685
+msgid "Cultural Souvenirs Collection"
+msgstr "Cultural Souvenirs Collection"
+
+#: tourisme_app/templates/shop.html:686
+msgid "Wide range of local products."
+msgstr "Wide range of local products."
+
+#: tourisme_app/templates/shop.html:700
+msgid "Handcrafted Products"
+msgstr "Handcrafted Products"
+
+#: tourisme_app/templates/shop.html:701
+msgid "Beautiful and unique items for your home."
+msgstr "Beautiful and unique items for your home."
+
+#: tourisme_app/templates/shop.html:709
+msgid "Fast Delivery"
+msgstr "Fast Delivery"
+
+#: tourisme_app/templates/shop.html:710
+msgid "Local and international shipping available."
+msgstr "Local and international shipping available."
+
+#: tourisme_app/templates/tanzania_safari.html:287
+msgid "Embark on a Tanzanian Safari Adventure"
+msgstr "Embark on a Tanzanian Safari Adventure"
+
+#: tourisme_app/templates/tanzania_safari.html:290
+msgid "Explore the Serengeti and witness the Great Migration"
+msgstr "Explore the Serengeti and witness the Great Migration"
+
+#: tourisme_app/templates/tanzania_safari.html:291
+msgid "Encounter Tanzania’s iconic wildlife up close"
+msgstr "Encounter Tanzania’s iconic wildlife up close"
+
+#: tourisme_app/templates/tanzania_safari.html:308
+msgid "Climb Mount Kilimanjaro"
+msgstr "Climb Mount Kilimanjaro"
+
+#: tourisme_app/templates/tanzania_safari.html:311
+msgid "Reach the summit of Africa’s tallest mountain"
+msgstr "Reach the summit of Africa’s tallest mountain"
+
+#: tourisme_app/templates/tanzania_safari.html:312
+msgid "A once-in-a-lifetime trekking experience"
+msgstr "A once-in-a-lifetime trekking experience"
+
+#: tourisme_app/templates/tanzania_safari.html:329
+msgid "Relax on Zanzibar’s Pristine Beaches"
+msgstr "Relax on Zanzibar’s Pristine Beaches"
+
+#: tourisme_app/templates/tanzania_safari.html:332
+msgid "Unwind on the soft, white sands of Zanzibar"
+msgstr "Unwind on the soft, white sands of Zanzibar"
+
+#: tourisme_app/templates/tanzania_safari.html:333
+msgid "Crystal clear waters perfect for relaxation"
+msgstr "Crystal clear waters perfect for relaxation"
+
+#: tourisme_app/templates/tanzania_safari.html:350
+msgid "Experience Tanzanian Culture"
+msgstr "Experience Tanzanian Culture"
+
+#: tourisme_app/templates/tanzania_safari.html:353
+msgid "Engage with local tribes and experience Tanzanian heritage"
+msgstr "Engage with local tribes and experience Tanzanian heritage"
+
+#: tourisme_app/templates/tanzania_safari.html:354
+msgid "Visit bustling markets and traditional villages"
+msgstr "Visit bustling markets and traditional villages"
+
+#: tourisme_app/templates/tanzania_safari.html:373
+msgid "Discover Tanzania"
+msgstr "Discover Tanzania"
+
+#: tourisme_app/templates/tanzania_safari.html:379
+#: tourisme_app/templates/tanzania_safari.html:380
+msgid "Serengeti Safari"
+msgstr "Serengeti Safari"
+
+#: tourisme_app/templates/tanzania_safari.html:381
+msgid ""
+"Experience the Serengeti National Park with a safari adventure and witness "
+"the Great Migration of wildebeest and zebras."
+msgstr ""
+"Experience the Serengeti National Park with a safari adventure and witness "
+"the Great Migration of wildebeest and zebras."
+
+#: tourisme_app/templates/tanzania_safari.html:386
+#: tourisme_app/templates/tanzania_safari.html:387
+msgid "Mount Kilimanjaro Trek"
+msgstr "Mount Kilimanjaro Trek"
+
+#: tourisme_app/templates/tanzania_safari.html:388
+msgid ""
+"Challenge yourself with a trek up Mount Kilimanjaro, the highest peak in "
+"Africa."
+msgstr ""
+"Challenge yourself with a trek up Mount Kilimanjaro, the highest peak in "
+"Africa."
+
+#: tourisme_app/templates/tanzania_safari.html:393
+#: tourisme_app/templates/tanzania_safari.html:394
+msgid "Ngorongoro Crater"
+msgstr "Ngorongoro Crater"
+
+#: tourisme_app/templates/tanzania_safari.html:395
+msgid ""
+"Explore the Ngorongoro Crater, a UNESCO World Heritage Site teeming with "
+"diverse wildlife."
+msgstr ""
+"Explore the Ngorongoro Crater, a UNESCO World Heritage Site teeming with "
+"diverse wildlife."
+
+#: tourisme_app/templates/tanzania_safari.html:400
+#: tourisme_app/templates/tanzania_safari.html:401
+msgid "Lake Manyara National Park"
+msgstr "Lake Manyara National Park"
+
+#: tourisme_app/templates/tanzania_safari.html:402
+msgid ""
+"Visit Lake Manyara, famous for its flamingos, tree-climbing lions, and "
+"stunning landscapes."
+msgstr ""
+"Visit Lake Manyara, famous for its flamingos, tree-climbing lions, and "
+"stunning landscapes."
+
+#: tourisme_app/templates/tanzania_safari.html:407
+#: tourisme_app/templates/tanzania_safari.html:408
+msgid "Tarangire National Park"
+msgstr "Tarangire National Park"
+
+#: tourisme_app/templates/tanzania_safari.html:409
+msgid ""
+"Discover the elephant herds and iconic baobab trees of Tarangire National "
+"Park."
+msgstr ""
+"Discover the elephant herds and iconic baobab trees of Tarangire National "
+"Park."
+
+#: tourisme_app/templates/tanzania_safari.html:414
+#: tourisme_app/templates/tanzania_safari.html:415
+msgid "Maasai Village Visit"
+msgstr "Maasai Village Visit"
+
+#: tourisme_app/templates/tanzania_safari.html:416
+msgid ""
+"Experience the culture and traditions of the Maasai people with a guided "
+"village visit."
+msgstr ""
+"Experience the culture and traditions of the Maasai people with a guided "
+"village visit."
+
+#: tourisme_app/templates/tanzania_safari.html:421
+#: tourisme_app/templates/tanzania_safari.html:422
+msgid "Zanzibar Spice Tour"
+msgstr "Zanzibar Spice Tour"
+
+#: tourisme_app/templates/tanzania_safari.html:423
+msgid ""
+"Explore Zanzibar's spice plantations and learn about the island's rich "
+"history in the spice trade."
+msgstr ""
+"Explore Zanzibar's spice plantations and learn about the island's rich "
+"history in the spice trade."
+
+#: tourisme_app/templates/tanzania_safari.html:428
+#: tourisme_app/templates/tanzania_safari.html:429
+msgid "Arusha Coffee Tour"
+msgstr "Arusha Coffee Tour"
+
+#: tourisme_app/templates/tanzania_safari.html:430
+msgid ""
+"Take a coffee tour in Arusha and learn about the coffee-making process from "
+"bean to cup."
+msgstr ""
+"Take a coffee tour in Arusha and learn about the coffee-making process from "
+"bean to cup."
+
+#: tourisme_app/templates/tanzania_safari.html:435
+#: tourisme_app/templates/tanzania_safari.html:436
+#: tourisme_app/templates/uganda_safari.html:559
+#: tourisme_app/templates/uganda_safari.html:560
+msgid "Hot Air Balloon Safari"
+msgstr "Hot Air Balloon Safari"
+
+#: tourisme_app/templates/tanzania_safari.html:437
+msgid ""
+"Get a bird’s-eye view of the Tanzanian landscape with a breathtaking hot air "
+"balloon safari."
+msgstr ""
+"Get a bird’s-eye view of the Tanzanian landscape with a breathtaking hot air "
+"balloon safari."
+
+#: tourisme_app/templates/tanzania_safari.html:452
+msgid "Tanzania Safari Adventures"
+msgstr "Tanzania Safari Adventures"
+
+#: tourisme_app/templates/tanzania_safari.html:454
+msgid ""
+"Experience the ultimate safari adventure in Tanzania. Explore the world-"
+"renowned Serengeti National Park, home to the Big Five and the Great "
+"Migration. Discover the stunning Ngorongoro Crater, often called the “Eighth "
+"Wonder of the World,” and marvel at its dense wildlife population."
+msgstr ""
+"Experience the ultimate safari adventure in Tanzania. Explore the world-"
+"renowned Serengeti National Park, home to the Big Five and the Great "
+"Migration. Discover the stunning Ngorongoro Crater, often called the “Eighth "
+"Wonder of the World,” and marvel at its dense wildlife population."
+
+#: tourisme_app/templates/tanzania_safari.html:455
+msgid ""
+"Whether you're after the thrill of spotting lions, elephants, or witnessing "
+"wildebeest cross the Mara River, our safari packages ensure an unparalleled "
+"wildlife experience."
+msgstr ""
+"Whether you're after the thrill of spotting lions, elephants, or witnessing "
+"wildebeest cross the Mara River, our safari packages ensure an unparalleled "
+"wildlife experience."
+
+#: tourisme_app/templates/tanzania_safari.html:459
+msgid "Tanzania Safari"
+msgstr "Tanzania Safari"
+
+#: tourisme_app/templates/tanzania_safari.html:459
+msgid "Explore Tanzania"
+msgstr "Explore Tanzania"
+
+#: tourisme_app/templates/tanzania_safari.html:464
+msgid "Why Choose Tanzania?"
+msgstr "Why Choose Tanzania?"
+
+#: tourisme_app/templates/tanzania_safari.html:468
+msgid "World-Class Safaris"
+msgstr "World-Class Safaris"
+
+#: tourisme_app/templates/tanzania_safari.html:468
+msgid ""
+"Tanzania is home to some of Africa's most famous national parks, offering "
+"the best wildlife viewing experiences on the continent."
+msgstr ""
+"Tanzania is home to some of Africa's most famous national parks, offering "
+"the best wildlife viewing experiences on the continent."
+
+#: tourisme_app/templates/tanzania_safari.html:469
+msgid "Diverse Landscapes"
+msgstr "Diverse Landscapes"
+
+#: tourisme_app/templates/tanzania_safari.html:469
+msgid ""
+"From the snow-capped peaks of Mount Kilimanjaro to the crystal-clear waters "
+"of Zanzibar, Tanzania’s diverse geography is breathtaking."
+msgstr ""
+"From the snow-capped peaks of Mount Kilimanjaro to the crystal-clear waters "
+"of Zanzibar, Tanzania’s diverse geography is breathtaking."
+
+#: tourisme_app/templates/tanzania_safari.html:470
+msgid "Rich Cultural Heritage"
+msgstr "Rich Cultural Heritage"
+
+#: tourisme_app/templates/tanzania_safari.html:470
+msgid ""
+"Immerse yourself in the traditions of the Maasai, Hadzabe, and other "
+"indigenous communities while exploring the cultural heart of Tanzania."
+msgstr ""
+"Immerse yourself in the traditions of the Maasai, Hadzabe, and other "
+"indigenous communities while exploring the cultural heart of Tanzania."
+
+#: tourisme_app/templates/tanzania_safari.html:477
+msgid ""
+"Let us help you craft the perfect Tanzanian adventure. Whether you want to "
+"climb Mount Kilimanjaro, embark on a safari, or relax on Zanzibar’s beaches, "
+"we will tailor a trip that suits your desires and ensures an unforgettable "
+"experience."
+msgstr ""
+"Let us help you craft the perfect Tanzanian adventure. Whether you want to "
+"climb Mount Kilimanjaro, embark on a safari, or relax on Zanzibar’s beaches, "
+"we will tailor a trip that suits your desires and ensures an unforgettable "
+"experience."
+
+#: tourisme_app/templates/tanzania_safari.html:478
+msgid ""
+"Contact us today to begin planning your dream vacation in Tanzania. Our team "
+"of experts is here to guide you through every step of the process, ensuring "
+"a seamless and enriching journey."
+msgstr ""
+"Contact us today to begin planning your dream vacation in Tanzania. Our team "
+"of experts is here to guide you through every step of the process, ensuring "
+"a seamless and enriching journey."
+
+#: tourisme_app/templates/tanzania_safari.html:483
+#: tourisme_app/templates/zanzibar_destination.html:509
+msgid "Zanzibar Sunset Cruise"
+msgstr "Zanzibar Sunset Cruise"
+
+#: tourisme_app/templates/tanzania_safari.html:483
+#: tourisme_app/templates/zanzibar_destination.html:509
+msgid "Sail along Zanzibar’s stunning coast"
+msgstr "Sail along Zanzibar’s stunning coast"
+
+#: tourisme_app/templates/typography.html:97
+#: tourisme_app/templates/typography.html:108
+#: tourisme_app/templates/typography.html:111
+msgid "Typography"
+msgstr "Typography"
+
+#: tourisme_app/templates/typography.html:107
+msgid "Choose Your Style"
+msgstr "Choose Your Style"
+
+#: tourisme_app/templates/typography.html:130
+msgid "H1 Heading"
+msgstr "H1 Heading"
+
+#: tourisme_app/templates/typography.html:131
+#: tourisme_app/templates/typography.html:135
+#: tourisme_app/templates/typography.html:139
+#: tourisme_app/templates/typography.html:143
+#: tourisme_app/templates/typography.html:147
+#: tourisme_app/templates/typography.html:151
+#: tourisme_app/templates/typography.html:171
+msgid ""
+"Welcome to our wonderful world. We sincerely hope that each and every user "
+"entering our website will find exactly what he/she is looking for. With "
+"advanced features of activating account and new login widgets, you will "
+"definitely have a great experience of using our web page."
+msgstr ""
+
+#: tourisme_app/templates/typography.html:134
+msgid "H2 Heading"
+msgstr "H2 Heading"
+
+#: tourisme_app/templates/typography.html:138
+msgid "H3 Heading"
+msgstr "H3 Heading"
+
+#: tourisme_app/templates/typography.html:142
+msgid "H4 Heading"
+msgstr "H4 Heading"
+
+#: tourisme_app/templates/typography.html:146
+msgid "H5 Heading"
+msgstr "H5 Heading"
+
+#: tourisme_app/templates/typography.html:150
+msgid "H6 Heading"
+msgstr "H6 Heading"
+
+#: tourisme_app/templates/uganda_safari.html:385
+msgid "Discover the Wilderness of Uganda"
+msgstr "Discover the Wilderness of Uganda"
+
+#: tourisme_app/templates/uganda_safari.html:389
+msgid "Guided tours through Uganda's national parks"
+msgstr "Guided tours through Uganda's national parks"
+
+#: tourisme_app/templates/uganda_safari.html:392
+msgid "Witness the majestic wildlife in its natural habitat"
+msgstr "Witness the majestic wildlife in its natural habitat"
+
+#: tourisme_app/templates/uganda_safari.html:410
+msgid "Meet Uganda's Iconic Gorillas"
+msgstr "Meet Uganda's Iconic Gorillas"
+
+#: tourisme_app/templates/uganda_safari.html:414
+msgid "Experience a unique gorilla trekking adventure"
+msgstr "Experience a unique gorilla trekking adventure"
+
+#: tourisme_app/templates/uganda_safari.html:417
+msgid "Get close to endangered mountain gorillas"
+msgstr "Get close to endangered mountain gorillas"
+
+#: tourisme_app/templates/uganda_safari.html:435
+msgid "Adventure on the Nile"
+msgstr "Adventure on the Nile"
+
+#: tourisme_app/templates/uganda_safari.html:439
+msgid "Enjoy thrilling rafting and water sports"
+msgstr "Enjoy thrilling rafting and water sports"
+
+#: tourisme_app/templates/uganda_safari.html:442
+msgid "Explore the scenic views of the Nile River"
+msgstr "Explore the scenic views of the Nile River"
+
+#: tourisme_app/templates/uganda_safari.html:460
+msgid "Experience Ugandan Culture"
+msgstr "Experience Ugandan Culture"
+
+#: tourisme_app/templates/uganda_safari.html:464
+msgid "Engage with local communities and traditions"
+msgstr "Engage with local communities and traditions"
+
+#: tourisme_app/templates/uganda_safari.html:467
+msgid "Discover the vibrant culture of Uganda"
+msgstr "Discover the vibrant culture of Uganda"
+
+#: tourisme_app/templates/uganda_safari.html:488
+msgid "Discover Uganda"
+msgstr "Discover Uganda"
+
+#: tourisme_app/templates/uganda_safari.html:497
+msgid ""
+"Venture into the misty jungles of Bwindi to come face-to-face with the "
+"majestic mountain gorillas, one of the most unforgettable wildlife "
+"experiences in Africa."
+msgstr ""
+"Venture into the misty jungles of Bwindi to come face-to-face with the "
+"majestic mountain gorillas, one of the most unforgettable wildlife "
+"experiences in Africa."
+
+#: tourisme_app/templates/uganda_safari.html:505
+msgid ""
+"Explore the source of the Nile River with thrilling activities such as white-"
+"water rafting, kayaking, and boat cruises in Jinja, the adrenaline capital "
+"of East Africa."
+msgstr ""
+"Explore the source of the Nile River with thrilling activities such as white-"
+"water rafting, kayaking, and boat cruises in Jinja, the adrenaline capital "
+"of East Africa."
+
+#: tourisme_app/templates/uganda_safari.html:513
+msgid ""
+"Discover the wildlife treasures of Uganda with game drives in Queen "
+"Elizabeth National Park, where you can spot lions, elephants, hippos, and "
+"other iconic African animals."
+msgstr ""
+"Discover the wildlife treasures of Uganda with game drives in Queen "
+"Elizabeth National Park, where you can spot lions, elephants, hippos, and "
+"other iconic African animals."
+
+#: tourisme_app/templates/uganda_safari.html:519
+#: tourisme_app/templates/uganda_safari.html:520
+msgid "Rwenzori Mountains Hiking"
+msgstr "Rwenzori Mountains Hiking"
+
+#: tourisme_app/templates/uganda_safari.html:522
+msgid ""
+"Embark on an adventurous hike through the Rwenzori Mountains, also known as "
+"the \"Mountains of the Moon,\" offering breathtaking views and diverse "
+"landscapes from tropical rainforests to snow-capped peaks."
+msgstr ""
+"Embark on an adventurous hike through the Rwenzori Mountains, also known as "
+"the \"Mountains of the Moon,\" offering breathtaking views and diverse "
+"landscapes from tropical rainforests to snow-capped peaks."
+
+#: tourisme_app/templates/uganda_safari.html:527
+#: tourisme_app/templates/uganda_safari.html:528
+msgid "Chimpanzee Tracking"
+msgstr "Chimpanzee Tracking"
+
+#: tourisme_app/templates/uganda_safari.html:530
+msgid ""
+"Experience the thrill of tracking wild chimpanzees in Kibale Forest National "
+"Park, where you can observe these fascinating primates in their natural "
+"habitat."
+msgstr ""
+"Experience the thrill of tracking wild chimpanzees in Kibale Forest National "
+"Park, where you can observe these fascinating primates in their natural "
+"habitat."
+
+#: tourisme_app/templates/uganda_safari.html:535
+#: tourisme_app/templates/uganda_safari.html:536
+msgid "Crater Lakes Exploration"
+msgstr "Crater Lakes Exploration"
+
+#: tourisme_app/templates/uganda_safari.html:538
+msgid ""
+"Discover the stunning crater lakes of western Uganda, where scenic hikes, "
+"bird-watching, and peaceful boat rides offer a tranquil escape amid lush "
+"greenery and volcanic landscapes."
+msgstr ""
+"Discover the stunning crater lakes of western Uganda, where scenic hikes, "
+"bird-watching, and peaceful boat rides offer a tranquil escape amid lush "
+"greenery and volcanic landscapes."
+
+#: tourisme_app/templates/uganda_safari.html:543
+#: tourisme_app/templates/uganda_safari.html:544
+msgid "Cultural Visit to Buganda Kingdom"
+msgstr "Cultural Visit to Buganda Kingdom"
+
+#: tourisme_app/templates/uganda_safari.html:546
+msgid ""
+"Immerse yourself in the rich culture of the Buganda Kingdom with visits to "
+"the royal palaces, traditional dances, and historical sites around Kampala, "
+"Uganda's vibrant capital."
+msgstr ""
+"Immerse yourself in the rich culture of the Buganda Kingdom with visits to "
+"the royal palaces, traditional dances, and historical sites around Kampala, "
+"Uganda's vibrant capital."
+
+#: tourisme_app/templates/uganda_safari.html:551
+#: tourisme_app/templates/uganda_safari.html:552
+msgid "Birdwatching Safari"
+msgstr "Birdwatching Safari"
+
+#: tourisme_app/templates/uganda_safari.html:554
+msgid ""
+"Discover why Uganda is a top birding destination with guided birdwatching "
+"tours in Murchison Falls National Park, spotting diverse species from "
+"colorful kingfishers to the rare shoebill."
+msgstr ""
+"Discover why Uganda is a top birding destination with guided birdwatching "
+"tours in Murchison Falls National Park, spotting diverse species from "
+"colorful kingfishers to the rare shoebill."
+
+#: tourisme_app/templates/uganda_safari.html:562
+msgid ""
+"Soar above the plains of Murchison Falls National Park in a hot air balloon, "
+"taking in sweeping views of the savannah and spotting wildlife from above at "
+"sunrise."
+msgstr ""
+"Soar above the plains of Murchison Falls National Park in a hot air balloon, "
+"taking in sweeping views of the savannah and spotting wildlife from above at "
+"sunrise."
+
+#: tourisme_app/templates/uganda_safari.html:576
+msgid "Uganda Safari Adventures"
+msgstr "Uganda Safari Adventures"
+
+#: tourisme_app/templates/uganda_safari.html:578
+msgid ""
+"Experience the adventure of a lifetime as you embark on safaris to witness "
+"Uganda’s extraordinary wildlife. Trek through the Bwindi Forest to see "
+"mountain gorillas, or explore Murchison Falls National Park for spectacular "
+"views and diverse wildlife."
+msgstr ""
+"Experience the adventure of a lifetime as you embark on safaris to witness "
+"Uganda’s extraordinary wildlife. Trek through the Bwindi Forest to see "
+"mountain gorillas, or explore Murchison Falls National Park for spectacular "
+"views and diverse wildlife."
+
+#: tourisme_app/templates/uganda_safari.html:579
+msgid ""
+"Our safari packages cater to all preferences, from wildlife observation to "
+"cultural and outdoor adventures."
+msgstr ""
+"Our safari packages cater to all preferences, from wildlife observation to "
+"cultural and outdoor adventures."
+
+#: tourisme_app/templates/uganda_safari.html:588
+msgid "Why Choose Uganda?"
+msgstr "Why Choose Uganda?"
+
+#: tourisme_app/templates/uganda_safari.html:592
+msgid "Incredible Wildlife"
+msgstr "Incredible Wildlife"
+
+#: tourisme_app/templates/uganda_safari.html:592
+msgid ""
+"Uganda is home to some of the world's most rare and impressive wildlife, "
+"including mountain gorillas, chimpanzees, and diverse bird species."
+msgstr ""
+"Uganda is home to some of the world's most rare and impressive wildlife, "
+"including mountain gorillas, chimpanzees, and diverse bird species."
+
+#: tourisme_app/templates/uganda_safari.html:593
+#: tourisme_app/templates/zanzibar_destination.html:495
+msgid "Rich Culture"
+msgstr "Rich Culture"
+
+#: tourisme_app/templates/uganda_safari.html:593
+msgid ""
+"Discover Uganda’s unique cultural heritage through local villages, "
+"traditional music, and historic sites."
+msgstr ""
+"Discover Uganda’s unique cultural heritage through local villages, "
+"traditional music, and historic sites."
+
+#: tourisme_app/templates/uganda_safari.html:594
+msgid "Stunning Landscapes"
+msgstr "Stunning Landscapes"
+
+#: tourisme_app/templates/uganda_safari.html:594
+msgid ""
+"From the Rwenzori Mountains to the shores of Lake Victoria, Uganda boasts "
+"some of Africa's most scenic landscapes."
+msgstr ""
+"From the Rwenzori Mountains to the shores of Lake Victoria, Uganda boasts "
+"some of Africa's most scenic landscapes."
+
+#: tourisme_app/templates/uganda_safari.html:601
+msgid ""
+"Let us help you craft the ideal Ugandan adventure. Whether you're seeking a "
+"wildlife safari, a cultural immersion, or a mountain trek, we will create a "
+"personalized itinerary to ensure an unforgettable experience."
+msgstr ""
+"Let us help you craft the ideal Ugandan adventure. Whether you're seeking a "
+"wildlife safari, a cultural immersion, or a mountain trek, we will create a "
+"personalized itinerary to ensure an unforgettable experience."
+
+#: tourisme_app/templates/uganda_safari.html:602
+msgid ""
+"Contact us today to start planning your dream vacation in Uganda. Our "
+"dedicated team of travel experts is here to make your journey seamless and "
+"memorable."
+msgstr ""
+"Contact us today to start planning your dream vacation in Uganda. Our "
+"dedicated team of travel experts is here to make your journey seamless and "
+"memorable."
+
+#: tourisme_app/templates/zanzibar_destination.html:296
+msgid "Ready to Explore the Paradise of Zanzibar?"
+msgstr "Ready to Explore the Paradise of Zanzibar?"
+
+#: tourisme_app/templates/zanzibar_destination.html:300
+msgid "Customizable tours designed to showcase the beauty of Zanzibar"
+msgstr "Customizable tours designed to showcase the beauty of Zanzibar"
+
+#: tourisme_app/templates/zanzibar_destination.html:303
+msgid "Experience pristine beaches, rich culture, and exotic wildlife"
+msgstr "Experience pristine beaches, rich culture, and exotic wildlife"
+
+#: tourisme_app/templates/zanzibar_destination.html:321
+msgid "Discover Zanzibar's Beautiful Beaches"
+msgstr "Discover Zanzibar's Beautiful Beaches"
+
+#: tourisme_app/templates/zanzibar_destination.html:325
+msgid "Relax on white sandy shores with clear turquoise waters"
+msgstr "Relax on white sandy shores with clear turquoise waters"
+
+#: tourisme_app/templates/zanzibar_destination.html:328
+msgid "Unwind in the most stunning coastal paradise"
+msgstr "Unwind in the most stunning coastal paradise"
+
+#: tourisme_app/templates/zanzibar_destination.html:346
+msgid "Experience Zanzibar's Rich Culture"
+msgstr "Experience Zanzibar's Rich Culture"
+
+#: tourisme_app/templates/zanzibar_destination.html:350
+msgid "Visit historical sites and vibrant local markets"
+msgstr "Visit historical sites and vibrant local markets"
+
+#: tourisme_app/templates/zanzibar_destination.html:353
+msgid "Immerse yourself in the cultural essence of Zanzibar"
+msgstr "Immerse yourself in the cultural essence of Zanzibar"
+
+#: tourisme_app/templates/zanzibar_destination.html:371
+msgid "Explore Zanzibar's Natural Wonders"
+msgstr "Explore Zanzibar's Natural Wonders"
+
+#: tourisme_app/templates/zanzibar_destination.html:375
+msgid "Discover exotic wildlife and breathtaking landscapes"
+msgstr "Discover exotic wildlife and breathtaking landscapes"
+
+#: tourisme_app/templates/zanzibar_destination.html:378
+msgid "Adventure through lush forests and pristine nature"
+msgstr "Adventure through lush forests and pristine nature"
+
+#: tourisme_app/templates/zanzibar_destination.html:399
+msgid "Discover Zanzibar"
+msgstr "Discover Zanzibar"
+
+#: tourisme_app/templates/zanzibar_destination.html:405
+#: tourisme_app/templates/zanzibar_destination.html:406
+msgid "Mnemba Island Excursion"
+msgstr "Mnemba Island Excursion"
+
+#: tourisme_app/templates/zanzibar_destination.html:407
+msgid ""
+"Explore Mnemba Island with scuba diving and snorkeling activities around a "
+"spectacular reef."
+msgstr ""
+"Explore Mnemba Island with scuba diving and snorkeling activities around a "
+"spectacular reef."
+
+#: tourisme_app/templates/zanzibar_destination.html:412
+#: tourisme_app/templates/zanzibar_destination.html:413
+msgid "Stone Town Visit"
+msgstr "Stone Town Visit"
+
+#: tourisme_app/templates/zanzibar_destination.html:414
+msgid ""
+"Discover the history and culture of Stone Town, a UNESCO World Heritage Site."
+msgstr ""
+"Discover the history and culture of Stone Town, a UNESCO World Heritage Site."
+
+#: tourisme_app/templates/zanzibar_destination.html:419
+#: tourisme_app/templates/zanzibar_destination.html:420
+msgid "Safari Blue"
+msgstr "Safari Blue"
+
+#: tourisme_app/templates/zanzibar_destination.html:421
+msgid ""
+"Enjoy a day at sea with Safari Blue, including swimming, snorkeling, and a "
+"barbecue lunch."
+msgstr ""
+"Enjoy a day at sea with Safari Blue, including swimming, snorkeling, and a "
+"barbecue lunch."
+
+#: tourisme_app/templates/zanzibar_destination.html:426
+#: tourisme_app/templates/zanzibar_destination.html:427
+msgid "Nungwi Beach"
+msgstr "Nungwi Beach"
+
+#: tourisme_app/templates/zanzibar_destination.html:428
+msgid ""
+"Relax on one of Zanzibar's most beautiful beaches, famous for its stunning "
+"sunsets."
+msgstr ""
+"Relax on one of Zanzibar's most beautiful beaches, famous for its stunning "
+"sunsets."
+
+#: tourisme_app/templates/zanzibar_destination.html:433
+#: tourisme_app/templates/zanzibar_destination.html:434
+msgid "Jozani Forest"
+msgstr "Jozani Forest"
+
+#: tourisme_app/templates/zanzibar_destination.html:435
+msgid ""
+"Explore Jozani Forest and observe the endemic Red Colobus monkeys of "
+"Zanzibar."
+msgstr ""
+"Explore Jozani Forest and observe the endemic Red Colobus monkeys of "
+"Zanzibar."
+
+#: tourisme_app/templates/zanzibar_destination.html:440
+#: tourisme_app/templates/zanzibar_destination.html:441
+msgid "Prison Island"
+msgstr "Prison Island"
+
+#: tourisme_app/templates/zanzibar_destination.html:442
+msgid ""
+"Visit Prison Island to see giant tortoises and learn about the island's "
+"history."
+msgstr ""
+"Visit Prison Island to see giant tortoises and learn about the island's "
+"history."
+
+#: tourisme_app/templates/zanzibar_destination.html:447
+#: tourisme_app/templates/zanzibar_destination.html:448
+msgid "Spice Tour"
+msgstr "Spice Tour"
+
+#: tourisme_app/templates/zanzibar_destination.html:449
+msgid "Discover Zanzibar's famous spice plantations with guided tours."
+msgstr "Discover Zanzibar's famous spice plantations with guided tours."
+
+#: tourisme_app/templates/zanzibar_destination.html:454
+#: tourisme_app/templates/zanzibar_destination.html:455
+msgid "Kitesurfing at Paje"
+msgstr "Kitesurfing at Paje"
+
+#: tourisme_app/templates/zanzibar_destination.html:456
+msgid ""
+"Go kitesurfing at Paje, one of the best beaches for this sport in Zanzibar."
+msgstr ""
+"Go kitesurfing at Paje, one of the best beaches for this sport in Zanzibar."
+
+#: tourisme_app/templates/zanzibar_destination.html:461
+#: tourisme_app/templates/zanzibar_destination.html:462
+msgid "Sunset Dhow Cruise"
+msgstr "Sunset Dhow Cruise"
+
+#: tourisme_app/templates/zanzibar_destination.html:463
+msgid "End your day with a dhow cruise at sunset."
+msgstr "End your day with a dhow cruise at sunset."
+
+#: tourisme_app/templates/zanzibar_destination.html:478
+msgid "Zanzibar Safari Adventures"
+msgstr "Zanzibar Safari Adventures"
+
+#: tourisme_app/templates/zanzibar_destination.html:480
+msgid ""
+"Embark on a safari adventure to explore Zanzibar’s wildlife and natural "
+"beauty. Visit Jozani Forest to encounter the endangered red colobus monkeys, "
+"or take a boat ride to swim with dolphins in the turquoise waters of Menai "
+"Bay."
+msgstr ""
+"Embark on a safari adventure to explore Zanzibar’s wildlife and natural "
+"beauty. Visit Jozani Forest to encounter the endangered red colobus monkeys, "
+"or take a boat ride to swim with dolphins in the turquoise waters of Menai "
+"Bay."
+
+#: tourisme_app/templates/zanzibar_destination.html:481
+msgid ""
+"Our safari packages offer something for every traveler, from laid-back "
+"exploration to adrenaline-filled water sports."
+msgstr ""
+"Our safari packages offer something for every traveler, from laid-back "
+"exploration to adrenaline-filled water sports."
+
+#: tourisme_app/templates/zanzibar_destination.html:485
+msgid "Zanzibar Safari"
+msgstr "Zanzibar Safari"
+
+#: tourisme_app/templates/zanzibar_destination.html:485
+msgid "Explore Zanzibar"
+msgstr "Explore Zanzibar"
+
+#: tourisme_app/templates/zanzibar_destination.html:490
+msgid "Why Choose Zanzibar?"
+msgstr "Why Choose Zanzibar?"
+
+#: tourisme_app/templates/zanzibar_destination.html:494
+msgid "Breathtaking Beaches"
+msgstr "Breathtaking Beaches"
+
+#: tourisme_app/templates/zanzibar_destination.html:494
+msgid ""
+"Zanzibar is famous for its pristine white-sand beaches and crystal-clear "
+"waters, perfect for sunbathing, swimming, and snorkeling."
+msgstr ""
+"Zanzibar is famous for its pristine white-sand beaches and crystal-clear "
+"waters, perfect for sunbathing, swimming, and snorkeling."
+
+#: tourisme_app/templates/zanzibar_destination.html:495
+msgid ""
+"Explore the historic Stone Town, a UNESCO World Heritage Site, and immerse "
+"yourself in Zanzibar’s diverse cultural heritage."
+msgstr ""
+"Explore the historic Stone Town, a UNESCO World Heritage Site, and immerse "
+"yourself in Zanzibar’s diverse cultural heritage."
+
+#: tourisme_app/templates/zanzibar_destination.html:496
+msgid "Exotic Wildlife"
+msgstr "Exotic Wildlife"
+
+#: tourisme_app/templates/zanzibar_destination.html:496
+msgid ""
+"From rare species in Jozani Forest to the vibrant coral reefs, Zanzibar is a "
+"haven for nature and wildlife enthusiasts."
+msgstr ""
+"From rare species in Jozani Forest to the vibrant coral reefs, Zanzibar is a "
+"haven for nature and wildlife enthusiasts."
+
+#: tourisme_app/templates/zanzibar_destination.html:503
+msgid ""
+"Let us help you design the perfect Zanzibari getaway. Whether you're looking "
+"for a luxurious beach holiday, a cultural exploration, or an adventurous "
+"safari, we will tailor the trip to your preferences and ensure an "
+"unforgettable experience."
+msgstr ""
+"Let us help you design the perfect Zanzibari getaway. Whether you're looking "
+"for a luxurious beach holiday, a cultural exploration, or an adventurous "
+"safari, we will tailor the trip to your preferences and ensure an "
+"unforgettable experience."
+
+#: tourisme_app/templates/zanzibar_destination.html:504
+msgid ""
+"Contact us today to start planning your dream vacation in Zanzibar. Our "
+"dedicated team of travel experts is here to assist you every step of the "
+"way, making sure your experience is seamless and extraordinary."
+msgstr ""
+"Contact us today to start planning your dream vacation in Zanzibar. Our "
+"dedicated team of travel experts is here to assist you every step of the "
+"way, making sure your experience is seamless and extraordinary."
+
+#: tourisme_app/templates/index.html:643
+msgid ""
+"testimonials"
+msgstr ""
+"testimonials"
+
+#: tourisme_app/templates/index.html:547
+msgid ""
+"our services"
+msgstr ""
+"our services"
+
+#~ msgid "l"
+#~ msgstr "l"

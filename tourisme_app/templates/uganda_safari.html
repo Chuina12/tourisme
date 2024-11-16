@@ -1,0 +1,677 @@
+{% extends 'index.html' %}
+{% load i18n %}
+
+{% load static %}
+
+{% block body %}
+<style>
+   /* Container principal */
+.container_set {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 85vh;
+    color: white;
+    padding: 20px;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Style du titre */
+.content1 h1 {
+    color: #ffffff;
+    font-size: 4em;
+    font-weight: bold;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.content1 p {
+    color: #ffffff;
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Bouton */
+.bton {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #dfdd4e;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.bton:hover {
+    background-color: #dbcb39;
+    color: #000000;
+}
+
+/* Style du body */
+.body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+/* Slider Container */
+.slider-contain {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    background-color: #ffffff;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+}
+
+/* Ligne de cartes d'activités */
+.slider-activities {
+    display: flex;
+    transition: transform 0.5s ease;
+    width: calc(280px * 9); /* Largeur totale pour s'adapter aux cartes */
+}
+
+/* Boutons de navigation */
+.slider-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 1.5em;
+    z-index: 2;
+}
+
+.left-button {
+    left: 0;
+}
+
+.right-button {
+    right: 0;
+}
+
+/* Cartes de services */
+.service-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 280px;
+    margin: 10px;
+    padding: 15px;
+    text-align: center;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Image dans les cartes */
+.service-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-bottom: 3px solid #fbc531; /* Couleur jaune */
+    border-radius: 6px;
+    margin-bottom: 15px;
+}
+
+/* Style des titres */
+.slider-contain h2 {
+    color: #504e2c;
+    font-size: 2.2em;
+    margin-bottom: 20px;
+}
+
+.service-card h3 {
+    color: #e9d83d;
+    font-size: 1.4em;
+    margin-bottom: 10px;
+}
+
+/* Texte dans les cartes */
+.service-card p {
+    color: #333;
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+/* Responsive Design */
+
+/* Ajustements pour tablettes */
+@media (max-width: 768px) {
+    .container_set {
+        flex-direction: column;
+        padding: 15px;
+        height: auto;
+    }
+
+    .content1 h1 {
+        font-size: 2.5em;
+        text-align: center;
+    }
+
+    .content1 p {
+        font-size: 1.1em;
+        text-align: center;
+    }
+
+    .bton {
+        font-size: 1em;
+    }
+
+    /* Slider */
+    .slider-activities {
+        flex-wrap: nowrap;
+        width: 100%;
+    }
+
+    .slider-button {
+        padding: 5px;
+        font-size: 1.2em;
+    }
+}
+
+/* Ajustements pour mobiles */
+@media (max-width: 480px) {
+    .content1 h1 {
+        font-size: 1.8em;
+    }
+
+    .content1 p {
+        font-size: 1em;
+    }
+
+    .bton {
+        font-size: 0.9em;
+        padding: 8px 18px;
+    }
+
+    /* Cartes pour mobiles */
+    .slider-activities {
+        width: 100%; /* Largeur de la première carte */
+        transform: translateX(0); /* Position de départ */
+    }
+
+    /* Permet de voir une carte à la fois */
+    .service-card {
+        min-width: 100%;
+        flex: 0 0 auto;
+        margin: 10px 0;
+    }
+}
+
+
+/* compete journey */
+.header h1 {
+    border-bottom: 6px solid #ffa900;
+    margin-left: 1%;
+    margin-right: 10%;
+    text-align: left;
+    font-size: 15px;
+    font-style: italic;
+    /* Adjust for small screens */
+    font-size: clamp(15px, 8vw, 33px); /* Use clamp for responsive font size */
+}
+
+.header h1 span {
+    font-size: 35px;
+    font-style: italic;
+    /* Adjust for small screens */
+    font-size: clamp(18px, 4vw, 35px); /* Use clamp for responsive font size */
+}
+
+/* Ensure the header margins adjust on smaller screens */
+@media (max-width: 768px) {
+    .header h1 {
+        margin-left: 8%;
+        margin-right: 8%;
+    }
+}
+
+@media (max-width: 480px) {
+    .header h1 {
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+}
+
+.crucial-info {
+    display: block;
+    max-width: 900px; /* ou tout autre valeur appropriée */
+    margin-left: 2%;
+    margin-right: 12%;
+    text-align: justify; /* pour s'assurer que le texte est bien aligné */
+    font-size: 20px; /* taille de police relative pour la balise <small> */
+    font-weight: bolder;
+    color: #555555;
+}
+
+@media (max-width: 768px) {
+    .crucial-info {
+        margin-left: 8%;
+        margin-right: 8%;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .crucial-info {
+        margin-left: 5%;
+        margin-right: 5%;
+        max-width: 100%;
+    }
+}
+
+.pricing p {
+    margin-left: 2%;
+}
+
+/* start container_left */
+.container_left {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-size: cover;
+    color: #000000;
+    padding: 0 20px;
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+}
+
+.container_left .container {
+    margin-bottom: 2%;
+}
+
+.container_left .content1 h1 {
+    color: #000000;
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+
+.container_left .content1 p {
+    color: #000000;
+    margin-bottom: 30px;
+    font-size: 1.2em;
+}
+
+.content2 {
+    text-align: center;
+    margin-top: 20px; /* Add margin to separate content on smaller screens */
+}
+
+.content2 img {
+    border-radius: 10px;
+    width: 500px;
+    height: auto;
+}
+
+/* Responsive design adjustments */
+@media (max-width: 1200px) {
+    .container_left {
+        flex-direction: column; /* Stack items vertically */
+        padding: 10px; /* Adjust padding */
+    }
+
+    .container_left .content1 h1 {
+        font-size: 1.8em; /* Adjust font size for large tablets and smaller desktops */
+    }
+
+    .container_left .content1 p {
+        font-size: 1.1em; /* Adjust font size for large tablets and smaller desktops */
+    }
+
+    .content2 img {
+        width: 400px; /* Adjust image size */
+    }
+}
+
+@media (max-width: 768px) {
+    .container_left {
+        padding: 5px; /* Adjust padding for tablets and smaller screens */
+    }
+
+    .container_left .content1 h1 {
+        font-size: 1.6em; /* Adjust font size for tablets */
+    }
+
+    .container_left .content1 p {
+        font-size: 1em; /* Adjust font size for tablets */
+    }
+
+    .content2 img {
+        width: 100%; /* Make image responsive */
+        max-width: 300px; /* Limit max-width for tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    .container_left .content1 h1 {
+        font-size: 1.4em; /* Further adjust font size for very small screens */
+    }
+
+    .container_left .content1 p {
+        font-size: 0.9em; /* Further adjust font size for very small screens */
+        margin-bottom: 20px; /* Reduce bottom margin */
+    }
+
+    .content2 img {
+        width: 100%; /* Ensure image takes full width */
+        max-width: 250px; /* Limit max-width for very small screens */
+    }
+}
+
+
+/* end block-text */
+</style>
+<!-- Swiper container for Uganda slider -->
+<div class="container_set swiper-container">
+    <div class="swiper-wrapper">
+      <!-- Slide 1 -->
+      <div class="swiper-slide" style="background-image: url('{% static 'images/uganda_buganda_palace.jpg' %}');">
+        <div class="container">
+          <div class="row w-100">
+            <div class="col-md-8 content1">
+              <h1>{% blocktrans %}Discover the Wilderness of Uganda{% endblocktrans %}</h1>
+              <p>
+                <ul>
+                    <li>
+                        {% blocktrans %}Guided tours through Uganda's national parks{% endblocktrans %}
+                    </li>
+                    <li>
+                        {% blocktrans %}Witness the majestic wildlife in its natural habitat{% endblocktrans %}
+                    </li>
+                </ul>
+                
+              </p>
+              <a href="{% url 'request_devis' %}">
+                <button class="bton">{% blocktrans %}Get a Quick Quote{% endblocktrans %}</button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Slide 2 -->
+      <div class="swiper-slide" style="background-image: url('{% static 'images/uganda_gorillas.jpg' %}');">
+        <div class="container">
+          <div class="row w-100">
+            <div class="col-md-8 content1">
+              <h1>{% blocktrans %}Meet Uganda's Iconic Gorillas{% endblocktrans %}</h1>
+              <p>
+                <ul>
+                    <li>
+                        {% blocktrans %}Experience a unique gorilla trekking adventure{% endblocktrans %}
+                    </li>
+                    <li>
+                        {% blocktrans %}Get close to endangered mountain gorillas{% endblocktrans %}
+                    </li>
+                </ul>
+                
+              </p>
+              <a href="{% url 'request_devis' %}">
+                <button class="bton">{% blocktrans %}Get a Quick Quote{% endblocktrans %}</button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Slide 3 -->
+      <div class="swiper-slide" style="background-image: url('{% static 'images/uganda_nile.jpg' %}');">
+        <div class="container">
+          <div class="row w-100">
+            <div class="col-md-8 content1">
+              <h1>{% blocktrans %}Adventure on the Nile{% endblocktrans %}</h1>
+              <p>
+                <ul>
+                    <li>
+                        {% blocktrans %}Enjoy thrilling rafting and water sports{% endblocktrans %}
+                    </li>
+                    <li>
+                        {% blocktrans %}Explore the scenic views of the Nile River{% endblocktrans %}
+                    </li>
+                </ul>
+                
+              </p>
+              <a href="{% url 'request_devis' %}">
+                <button class="bton">{% blocktrans %}Get a Quick Quote{% endblocktrans %}</button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Slide 4 -->
+      <div class="swiper-slide" style="background-image: url('{% static 'images/uganda_birdwatching.jpg' %}');">
+        <div class="container">
+          <div class="row w-100">
+            <div class="col-md-8 content1">
+              <h1>{% blocktrans %}Experience Ugandan Culture{% endblocktrans %}</h1>
+              <p>
+                <ul>
+                    <li>
+                        {% blocktrans %}Engage with local communities and traditions{% endblocktrans %}
+                    </li>
+                    <li>
+                        {% blocktrans %}Discover the vibrant culture of Uganda{% endblocktrans %}
+                    </li>
+                </ul>
+                
+              </p>
+              <a href="{% url 'request_devis' %}">
+                <button class="bton">{% blocktrans %}Get a Quick Quote{% endblocktrans %}</button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Swiper controls-->
+    <div class="swiper-pagination"></div>
+  </div>
+
+<!-- start text -->
+<div class="body">
+    <div class="slider-contain">
+        <h2>{% trans "Discover Uganda" %}</h2>
+        
+        <button class="slider-button left-button">&#10094;</button>
+        <section class="slider-activities">
+            <!-- Existing activities -->
+            <div class="service-card">
+                <img src="{% static 'images/uganda_gorillas.jpg' %}" alt="{% trans 'Gorilla Trekking' %}">
+                <h3>{% trans "Gorilla Trekking" %}</h3>
+                <p>
+                    {% blocktrans %}Venture into the misty jungles of Bwindi to come face-to-face with the majestic mountain gorillas, one of the most unforgettable wildlife experiences in Africa.{% endblocktrans %}
+                </p>
+            </div>
+            
+            <div class="service-card">
+                <img src="{% static 'images/uganda_nile.jpg' %}" alt="{% trans 'Nile River Adventure' %}">
+                <h3>{% trans "Nile River Adventure" %}</h3>
+                <p>
+                    {% blocktrans %}Explore the source of the Nile River with thrilling activities such as white-water rafting, kayaking, and boat cruises in Jinja, the adrenaline capital of East Africa.{% endblocktrans %}
+                </p>
+            </div>
+            
+            <div class="service-card">
+                <img src="{% static 'images/uganda_safari.jpg' %}" alt="{% trans 'Savannah Safari' %}">
+                <h3>{% trans "Savannah Safari" %}</h3>
+                <p>
+                    {% blocktrans %}Discover the wildlife treasures of Uganda with game drives in Queen Elizabeth National Park, where you can spot lions, elephants, hippos, and other iconic African animals.{% endblocktrans %}
+                </p>
+            </div>
+
+            <!-- New activities -->
+            <div class="service-card">
+                <img src="{% static 'images/uganda_rwenzori.jpg' %}" alt="{% trans 'Rwenzori Mountains Hiking' %}">
+                <h3>{% trans "Rwenzori Mountains Hiking" %}</h3>
+                <p>
+                    {% blocktrans %}Embark on an adventurous hike through the Rwenzori Mountains, also known as the "Mountains of the Moon," offering breathtaking views and diverse landscapes from tropical rainforests to snow-capped peaks.{% endblocktrans %}
+                </p>
+            </div>
+
+            <div class="service-card">
+                <img src="{% static 'images/uganda_chimpanzees.jpg' %}" alt="{% trans 'Chimpanzee Tracking' %}">
+                <h3>{% trans "Chimpanzee Tracking" %}</h3>
+                <p>
+                    {% blocktrans %}Experience the thrill of tracking wild chimpanzees in Kibale Forest National Park, where you can observe these fascinating primates in their natural habitat.{% endblocktrans %}
+                </p>
+            </div>
+
+            <div class="service-card">
+                <img src="{% static 'images/uganda_crater_lakes.jpg' %}" alt="{% trans 'Crater Lakes Exploration' %}">
+                <h3>{% trans "Crater Lakes Exploration" %}</h3>
+                <p>
+                    {% blocktrans %}Discover the stunning crater lakes of western Uganda, where scenic hikes, bird-watching, and peaceful boat rides offer a tranquil escape amid lush greenery and volcanic landscapes.{% endblocktrans %}
+                </p>
+            </div>
+
+            <div class="service-card">
+                <img src="{% static 'images/uganda_buganda_palace.jpg' %}" alt="{% trans 'Cultural Visit to Buganda Kingdom' %}">
+                <h3>{% trans "Cultural Visit to Buganda Kingdom" %}</h3>
+                <p>
+                    {% blocktrans %}Immerse yourself in the rich culture of the Buganda Kingdom with visits to the royal palaces, traditional dances, and historical sites around Kampala, Uganda's vibrant capital.{% endblocktrans %}
+                </p>
+            </div>
+
+            <div class="service-card">
+                <img src="{% static 'images/uganda_birdwatching.jpg' %}" alt="{% trans 'Birdwatching Safari' %}">
+                <h3>{% trans "Birdwatching Safari" %}</h3>
+                <p>
+                    {% blocktrans %}Discover why Uganda is a top birding destination with guided birdwatching tours in Murchison Falls National Park, spotting diverse species from colorful kingfishers to the rare shoebill.{% endblocktrans %}
+                </p>
+            </div>
+
+            <div class="service-card">
+                <img src="{% static 'images/uganda_hot_air_balloon.jpg' %}" alt="{% trans 'Hot Air Balloon Safari' %}">
+                <h3>{% trans "Hot Air Balloon Safari" %}</h3>
+                <p>
+                    {% blocktrans %}Soar above the plains of Murchison Falls National Park in a hot air balloon, taking in sweeping views of the savannah and spotting wildlife from above at sunrise.{% endblocktrans %}
+                </p>
+            </div>
+        </section>
+        <button class="slider-button right-button">&#10095;</button>
+    </div>
+</div>
+
+<!-- start block-text -->
+<div class="contain">
+    <div class="content-wrapper">
+        <div class="row">
+            <div class="col-xl-6">
+                <h2>
+                    <span style="font-weight: normal;">{% blocktrans %}Uganda Safari Adventures{% endblocktrans %}</span>
+                </h2>
+                <p>{% blocktrans %}Experience the adventure of a lifetime as you embark on safaris to witness Uganda’s extraordinary wildlife. Trek through the Bwindi Forest to see mountain gorillas, or explore Murchison Falls National Park for spectacular views and diverse wildlife.{% endblocktrans %}</p>
+                <p>{% blocktrans %}Our safari packages cater to all preferences, from wildlife observation to cultural and outdoor adventures.{% endblocktrans %}</p>
+            </div>
+            <div class="col-sm-6">
+                <p>
+                    <img src="{% static 'images/uganda_kibale.jpg' %}">
+                </p>
+            </div>
+            <div class="col-sm-12">
+                <h2>
+                    <span style="font-weight: normal;">{% blocktrans %}Why Choose Uganda?{% endblocktrans %}</span>
+                </h2>
+                <p>
+                    <ul>
+                        <li><b>{% trans "Incredible Wildlife" %}</b>: {% blocktrans %}Uganda is home to some of the world's most rare and impressive wildlife, including mountain gorillas, chimpanzees, and diverse bird species.{% endblocktrans %}</li>
+                        <li><b>{% trans "Rich Culture" %}</b>: {% blocktrans %}Discover Uganda’s unique cultural heritage through local villages, traditional music, and historic sites.{% endblocktrans %}</li>
+                        <li><b>{% trans "Stunning Landscapes" %}</b>: {% blocktrans %}From the Rwenzori Mountains to the shores of Lake Victoria, Uganda boasts some of Africa's most scenic landscapes.{% endblocktrans %}</li>
+                    </ul>
+                </p>
+            </div>
+            <div class="row">
+                <div class="col-xl-6">
+                    <h2>{% blocktrans %}Plan Your Journey{% endblocktrans %}</h2>
+                    <p>{% blocktrans %}Let us help you craft the ideal Ugandan adventure. Whether you're seeking a wildlife safari, a cultural immersion, or a mountain trek, we will create a personalized itinerary to ensure an unforgettable experience.{% endblocktrans %}</p>
+                    <p>{% blocktrans %}Contact us today to start planning your dream vacation in Uganda. Our dedicated team of travel experts is here to make your journey seamless and memorable.{% endblocktrans %}</p>
+                    <div class="rd-navbar-aside-right"><a class="button button-sm button-secondary button-nina" id="btn-requestQuote" style="background-color: rgb(43, 42, 42); color: aliceblue; border-color: black;" href="/request_devis">{% blocktrans %}request a quote{% endblocktrans %}</a></div>
+                </div>
+                <div class="col-sm-6">
+                    <p>
+                        <img src="{% static 'images/uganda_gorillas_family.jpg' %}">
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script>
+var swiper = new Swiper('.swiper-container', {
+    loop: true,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+  });
+
+document.addEventListener('DOMContentLoaded', function () {
+    const sliderActivities = document.querySelector('.slider-activities');
+    const leftButton = document.querySelector('.left-button');
+    const rightButton = document.querySelector('.right-button');
+    const cardWidth = 280; // Largeur de chaque carte
+    let currentIndex = 0; // Index pour suivre la position actuelle
+    let intervalId;
+
+    // Fonction pour décaler les cartes
+    function updateSliderPosition() {
+        sliderActivities.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+    }
+
+    // Fonction de défilement automatique
+    function startAutoScroll() {
+        intervalId = setInterval(() => {
+            currentIndex++;
+            if (currentIndex >= sliderActivities.children.length) {
+                currentIndex = 0; // Retour au début
+            }
+            updateSliderPosition();
+        }, 3000); // Défilement toutes les 3 secondes
+    }
+
+    // Stopper le défilement automatique lorsqu'on utilise les boutons
+    function stopAutoScroll() {
+        clearInterval(intervalId);
+        startAutoScroll(); // Reprendre après interaction
+    }
+
+    // Événements de clic pour les boutons de navigation
+    leftButton.addEventListener('click', () => {
+        stopAutoScroll();
+        currentIndex = (currentIndex === 0) ? sliderActivities.children.length - 1 : currentIndex - 1;
+        updateSliderPosition();
+    });
+
+    rightButton.addEventListener('click', () => {
+        stopAutoScroll();
+        currentIndex = (currentIndex + 1) % sliderActivities.children.length;
+        updateSliderPosition();
+    });
+
+    // Démarrer le défilement automatique
+    startAutoScroll();
+});
+</script>
+{% endblock %}

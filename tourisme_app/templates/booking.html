@@ -1,0 +1,311 @@
+{% extends 'index.html' %}
+{% load i18n %}
+
+{% block body %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% trans 'Travel Quote Request Form' %}</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .form-container {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            margin-bottom: 20px;
+        }
+        .btn-submit {
+            background-color: #007bff;
+            color: white;
+        }
+        a{
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container mt-5">
+    <div class="form-container">
+        <h2>{% trans 'Travel Quote Request' %}</h2>
+        <form action="/request_devis" method="POST">
+            {% csrf_token %}
+            <div class="mb-3">
+                <label>{% trans 'Full Name' %}</label>
+                <input type="text" class="form-control" id="name" name="name" required>
+            </div>
+            <div class="mb-3">
+                <label for="email">{% trans 'Email Address' %}</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+            <div class="mb-3">
+                <label for="phone">{% trans 'Phone Number' %}</label>
+                <input type="tel" class="form-control" id="phone" name="phone" required>
+            </div>
+            <div class="mb-3">
+                <label for="country">{% trans 'Country of Origin' %}</label>
+                <select class="form-control" id="country" name="country" required>
+                    <option value="" disabled selected>{% trans 'Select your country' %}</option>
+                    <option value="Afghanistan">{% trans "Afghanistan" %}</option>
+                    <option value="Albania">{% trans "Albania" %}</option>
+                    <option value="Algeria">{% trans "Algeria" %}</option>
+                    <option value="Andorra">{% trans "Andorra" %}</option>
+                    <option value="Angola">{% trans "Angola" %}</option>
+                    <option value="Antigua and Barbuda">{% trans "Antigua and Barbuda" %}</option>
+                    <option value="Argentina">{% trans "Argentina" %}</option>
+                    <option value="Armenia">{% trans "Armenia" %}</option>
+                    <option value="Australia">{% trans "Australia" %}</option>
+                    <option value="Austria">{% trans "Austria" %}</option>
+                    <option value="Azerbaijan">{% trans "Azerbaijan" %}</option>
+                    <option value="Bahamas">{% trans "Bahamas" %}</option>
+                    <option value="Bahrain">{% trans "Bahrain" %}</option>
+                    <option value="Bangladesh">{% trans "Bangladesh" %}</option>
+                    <option value="Barbados">{% trans "Barbados" %}</option>
+                    <option value="Belarus">{% trans "Belarus" %}</option>
+                    <option value="Belgium">{% trans "Belgium" %}</option>
+                    <option value="Belize">{% trans "Belize" %}</option>
+                    <option value="Benin">{% trans "Benin" %}</option>
+                    <option value="Bhutan">{% trans "Bhutan" %}</option>
+                    <option value="Bolivia">{% trans "Bolivia" %}</option>
+                    <option value="Bosnia and Herzegovina">{% trans "Bosnia and Herzegovina" %}</option>
+                    <option value="Botswana">{% trans "Botswana" %}</option>
+                    <option value="Brazil">{% trans "Brazil" %}</option>
+                    <option value="Brunei">{% trans "Brunei" %}</option>
+                    <option value="Bulgaria">{% trans "Bulgaria" %}</option>
+                    <option value="Burkina Faso">{% trans "Burkina Faso" %}</option>
+                    <option value="Burundi">{% trans "Burundi" %}</option>
+                    <option value="Cabo Verde">{% trans "Cabo Verde" %}</option>
+                    <option value="Cambodia">{% trans "Cambodia" %}</option>
+                    <option value="Cameroon">{% trans "Cameroon" %}</option>
+                    <option value="Canada">{% trans "Canada" %}</option>
+                    <option value="Central African Republic">{% trans "Central African Republic" %}</option>
+                    <option value="Chad">{% trans "Chad" %}</option>
+                    <option value="Chile">{% trans "Chile" %}</option>
+                    <option value="China">{% trans "China" %}</option>
+                    <option value="Colombia">{% trans "Colombia" %}</option>
+                    <option value="Comoros">{% trans "Comoros" %}</option>
+                    <option value="Congo">{% trans "Congo" %}</option>
+                    <option value="Congo, Democratic Republic of the">{% trans "Congo, Democratic Republic of the" %}</option>
+                    <option value="Costa Rica">{% trans "Costa Rica" %}</option>
+                    <option value="Croatia">{% trans "Croatia" %}</option>
+                    <option value="Cuba">{% trans "Cuba" %}</option>
+                    <option value="Cyprus">{% trans "Cyprus" %}</option>
+                    <option value="Czech Republic">{% trans "Czech Republic" %}</option>
+                    <option value="Denmark">{% trans "Denmark" %}</option>
+                    <option value="Djibouti">{% trans "Djibouti" %}</option>
+                    <option value="Dominica">{% trans "Dominica" %}</option>
+                    <option value="Dominican Republic">{% trans "Dominican Republic" %}</option>
+                    <option value="Ecuador">{% trans "Ecuador" %}</option>
+                    <option value="Egypt">{% trans "Egypt" %}</option>
+                    <option value="El Salvador">{% trans "El Salvador" %}</option>
+                    <option value="Equatorial Guinea">{% trans "Equatorial Guinea" %}</option>
+                    <option value="Eritrea">{% trans "Eritrea" %}</option>
+                    <option value="Estonia">{% trans "Estonia" %}</option>
+                    <option value="Eswatini">{% trans "Eswatini" %}</option>
+                    <option value="Ethiopia">{% trans "Ethiopia" %}</option>
+                    <option value="Fiji">{% trans "Fiji" %}</option>
+                    <option value="Finland">{% trans "Finland" %}</option>
+                    <option value="France">{% trans "France" %}</option>
+                    <option value="Gabon">{% trans "Gabon" %}</option>
+                    <option value="Gambia">{% trans "Gambia" %}</option>
+                    <option value="Georgia">{% trans "Georgia" %}</option>
+                    <option value="Germany">{% trans "Germany" %}</option>
+                    <option value="Ghana">{% trans "Ghana" %}</option>
+                    <option value="Greece">{% trans "Greece" %}</option>
+                    <option value="Grenada">{% trans "Grenada" %}</option>
+                    <option value="Guatemala">{% trans "Guatemala" %}</option>
+                    <option value="Guinea">{% trans "Guinea" %}</option>
+                    <option value="Guinea-Bissau">{% trans "Guinea-Bissau" %}</option>
+                    <option value="Guyana">{% trans "Guyana" %}</option>
+                    <option value="Haiti">{% trans "Haiti" %}</option>
+                    <option value="Honduras">{% trans "Honduras" %}</option>
+                    <option value="Hungary">{% trans "Hungary" %}</option>
+                    <option value="Iceland">{% trans "Iceland" %}</option>
+                    <option value="India">{% trans "India" %}</option>
+                    <option value="Indonesia">{% trans "Indonesia" %}</option>
+                    <option value="Iran">{% trans "Iran" %}</option>
+                    <option value="Iraq">{% trans "Iraq" %}</option>
+                    <option value="Ireland">{% trans "Ireland" %}</option>
+                    <option value="Israel">{% trans "Israel" %}</option>
+                    <option value="Italy">{% trans "Italy" %}</option>
+                    <option value="Jamaica">{% trans "Jamaica" %}</option>
+                    <option value="Japan">{% trans "Japan" %}</option>
+                    <option value="Jordan">{% trans "Jordan" %}</option>
+                    <option value="Kazakhstan">{% trans "Kazakhstan" %}</option>
+                    <option value="Kenya">{% trans "Kenya" %}</option>
+                    <option value="Kiribati">{% trans "Kiribati" %}</option>
+                    <option value="Korea, North">{% trans "Korea, North" %}</option>
+                    <option value="Korea, South">{% trans "Korea, South" %}</option>
+                    <option value="Kuwait">{% trans "Kuwait" %}</option>
+                    <option value="Kyrgyzstan">{% trans "Kyrgyzstan" %}</option>
+                    <option value="Laos">{% trans "Laos" %}</option>
+                    <option value="Latvia">{% trans "Latvia" %}</option>
+                    <option value="Lebanon">{% trans "Lebanon" %}</option>
+                    <option value="Lesotho">{% trans "Lesotho" %}</option>
+                    <option value="Liberia">{% trans "Liberia" %}</option>
+                    <option value="Libya">{% trans "Libya" %}</option>
+                    <option value="Liechtenstein">{% trans "Liechtenstein" %}</option>
+                    <option value="Lithuania">{% trans "Lithuania" %}</option>
+                    <option value="Luxembourg">{% trans "Luxembourg" %}</option>
+                    <option value="Madagascar">{% trans "Madagascar" %}</option>
+                    <option value="Malawi">{% trans "Malawi" %}</option>
+                    <option value="Malaysia">{% trans "Malaysia" %}</option>
+                    <option value="Maldives">{% trans "Maldives" %}</option>
+                    <option value="Mali">{% trans "Mali" %}</option>
+                    <option value="Malta">{% trans "Malta" %}</option>
+                    <option value="Marshall Islands">{% trans "Marshall Islands" %}</option>
+                    <option value="Mauritania">{% trans "Mauritania" %}</option>
+                    <option value="Mauritius">{% trans "Mauritius" %}</option>
+                    <option value="Mexico">{% trans "Mexico" %}</option>
+                    <option value="Micronesia">{% trans "Micronesia" %}</option>
+                    <option value="Moldova">{% trans "Moldova" %}</option>
+                    <option value="Monaco">{% trans "Monaco" %}</option>
+                    <option value="Mongolia">{% trans "Mongolia" %}</option>
+                    <option value="Montenegro">{% trans "Montenegro" %}</option>
+                    <option value="Morocco">{% trans "Morocco" %}</option>
+                    <option value="Mozambique">{% trans "Mozambique" %}</option>
+                    <option value="Myanmar">{% trans "Myanmar" %}</option>
+                    <option value="Namibia">{% trans "Namibia" %}</option>
+                    <option value="Nauru">{% trans "Nauru" %}</option>
+                    <option value="Nepal">{% trans "Nepal" %}</option>
+                    <option value="Netherlands">{% trans "Netherlands" %}</option>
+                    <option value="New Zealand">{% trans "New Zealand" %}</option>
+                    <option value="Nicaragua">{% trans "Nicaragua" %}</option>
+                    <option value="Niger">{% trans "Niger" %}</option>
+                    <option value="Nigeria">{% trans "Nigeria" %}</option>
+                    <option value="North Macedonia">{% trans "North Macedonia" %}</option>
+                    <option value="Norway">{% trans "Norway" %}</option>
+                    <option value="Oman">{% trans "Oman" %}</option>
+                    <option value="Pakistan">{% trans "Pakistan" %}</option>
+                    <option value="Palau">{% trans "Palau" %}</option>
+                    <option value="Panama">{% trans "Panama" %}</option>
+                    <option value="Papua New Guinea">{% trans "Papua New Guinea" %}</option>
+                    <option value="Paraguay">{% trans "Paraguay" %}</option>
+                    <option value="Peru">{% trans "Peru" %}</option>
+                    <option value="Philippines">{% trans "Philippines" %}</option>
+                    <option value="Poland">{% trans "Poland" %}</option>
+                    <option value="Portugal">{% trans "Portugal" %}</option>
+                    <option value="Qatar">{% trans "Qatar" %}</option>
+                    <option value="Romania">{% trans "Romania" %}</option>
+                    <option value="Russia">{% trans "Russia" %}</option>
+                    <option value="Rwanda">{% trans "Rwanda" %}</option>
+                    <option value="Saint Kitts and Nevis">{% trans "Saint Kitts and Nevis" %}</option>
+                    <option value="Saint Lucia">{% trans "Saint Lucia" %}</option>
+                    <option value="Saint Vincent and the Grenadines">{% trans "Saint Vincent and the Grenadines" %}</option>
+                    <option value="Samoa">{% trans "Samoa" %}</option>
+                    <option value="San Marino">{% trans "San Marino" %}</option>
+                    <option value="Sao Tome and Principe">{% trans "Sao Tome and Principe" %}</option>
+                    <option value="Saudi Arabia">{% trans "Saudi Arabia" %}</option>
+                    <option value="Senegal">{% trans "Senegal" %}</option>
+                    <option value="Serbia">{% trans "Serbia" %}</option>
+                    <option value="Seychelles">{% trans "Seychelles" %}</option>
+                    <option value="Sierra Leone">{% trans "Sierra Leone" %}</option>
+                    <option value="Singapore">{% trans "Singapore" %}</option>
+                    <option value="Slovakia">{% trans "Slovakia" %}</option>
+                    <option value="Slovenia">{% trans "Slovenia" %}</option>
+                    <option value="Solomon Islands">{% trans "Solomon Islands" %}</option>
+                    <option value="Somalia">{% trans "Somalia" %}</option>
+                    <option value="South Africa">{% trans "South Africa" %}</option>
+                    <option value="South Sudan">{% trans "South Sudan" %}</option>
+                    <option value="Spain">{% trans "Spain" %}</option>
+                    <option value="Sri Lanka">{% trans "Sri Lanka" %}</option>
+                    <option value="Sudan">{% trans "Sudan" %}</option>
+                    <option value="Suriname">{% trans "Suriname" %}</option>
+                    <option value="Sweden">{% trans "Sweden" %}</option>
+                    <option value="Switzerland">{% trans "Switzerland" %}</option>
+                    <option value="Syria">{% trans "Syria" %}</option>
+                    <option value="Taiwan">{% trans "Taiwan" %}</option>
+                    <option value="Tajikistan">{% trans "Tajikistan" %}</option>
+                    <option value="Tanzania">{% trans "Tanzania" %}</option>
+                    <option value="Thailand">{% trans "Thailand" %}</option>
+                    <option value="Timor-Leste">{% trans "Timor-Leste" %}</option>
+                    <option value="Togo">{% trans "Togo" %}</option>
+                    <option value="Tonga">{% trans "Tonga" %}</option>
+                    <option value="Trinidad and Tobago">{% trans "Trinidad and Tobago" %}</option>
+                    <option value="Tunisia">{% trans "Tunisia" %}</option>
+                    <option value="Turkey">{% trans "Turkey" %}</option>
+                    <option value="Turkmenistan">{% trans "Turkmenistan" %}</option>
+                    <option value="Tuvalu">{% trans "Tuvalu" %}</option>
+                    <option value="Uganda">{% trans "Uganda" %}</option>
+                    <option value="Ukraine">{% trans "Ukraine" %}</option>
+                    <option value="United Arab Emirates">{% trans "United Arab Emirates" %}</option>
+                    <option value="United Kingdom">{% trans "United Kingdom" %}</option>
+                    <option value="United States">{% trans "United States" %}</option>
+                    <option value="Uruguay">{% trans "Uruguay" %}</option>
+                    <option value="Uzbekistan">{% trans "Uzbekistan" %}</option>
+                    <option value="Vanuatu">{% trans "Vanuatu" %}</option>
+                    <option value="Venezuela">{% trans "Venezuela" %}</option>
+                    <option value="Vietnam">{% trans "Vietnam" %}</option>
+                    <option value="Yemen">{% trans "Yemen" %}</option>
+                    <option value="Zambia">{% trans "Zambia" %}</option>
+                    <option value="Zimbabwe">{% trans "Zimbabwe" %}</option>
+                </select>
+            </div>
+            
+            
+            <div class="mb-3">
+                <label for="destination">{% trans 'Desired Destination' %}</label>
+                <select class="form-select" id="destination" name="destination" required>
+               
+                    <option value="MALDIVES">{{service.pays}}</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="prix">{% trans 'from the' %}</label>
+                <select class="form-select" id="prix" name="prix" required>
+
+
+                    <option value="{{service.prix}}"> $ {{service.prix}}</option>
+             
+                 
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label for="start_date">{% trans 'Start Date' %}</label>
+                <input type="date" class="form-control" id="start_date" name="start_date" required>
+            </div>
+            <div class="mb-3">
+                <label for="end_date">{% trans 'End Date' %}</label>
+                <input type="date" class="form-control" id="end_date" name="end_date" required>
+            </div>
+            <div class="mb-3">
+                <label for="num_adults">{% trans 'Number of Adults' %}</label>
+                <input type="number" class="form-control" id="num_adults" name="num_adults" min="0" required>
+            </div>
+            <div class="mb-3">
+                <label for="num_minors">{% trans 'Number of Minors' %}</label>
+                <input type="number" class="form-control" id="num_minors" name="num_minors" min="0" required>
+            </div>
+            <div class="mb-3">
+                <label for="num_babies">{% trans 'Number of Babies' %}</label>
+                <input type="number" class="form-control" id="num_babies" name="num_babies" min="0" required>
+            </div>
+            <div class="mb-3">
+                <label for="details">{% trans 'Specific Details' %}</label>
+                <textarea class="form-control" id="details" name="details" rows="4" placeholder="Please indicate your preferences, special requirements, etc."></textarea>
+            </div>
+            <button type="submit" class="btn btn-submit">{% trans 'Submit Request' %}</button>
+        </form>
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+
+
+
+
+{% endblock %}

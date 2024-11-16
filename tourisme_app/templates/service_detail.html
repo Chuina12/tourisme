@@ -1,0 +1,209 @@
+{% extends 'index.html' %}
+{% load i18n %}
+{% load static %}
+
+{% block body %}
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+
+
+<section class="" style="position: relative; overflow: hidden; width: 100%; height: 50vh;">
+<!-- Carrousel de bannière avec images de destinations touristiques africaines -->
+<div id="tourismBanner" class="carousel slide" data-bs-ride="carousel" style="position: relative;">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="{% static 'images/maldives_resort.jpg' %}" class="d-block w-100" alt="Plage Africaine 1">
+    </div>
+    <div class="carousel-item">
+      <img src="{% static 'images/desert_safari.webp' %}" class="d-block w-100" alt="Plage Africaine 2">
+    </div>
+    <div class="carousel-item">
+      <img src="{% static 'images/dubai_burj_khalifa.jpg' %}" class="d-block w-100" alt="Destination Touristique Africaine 1">
+    </div>
+    <!-- Ajoute d'autres images selon tes besoins -->
+  </div>
+  <!-- Contrôles du carrousel (facultatif) -->
+  <button class="carousel-control-prev" type="button" data-bs-target="#tourismBanner" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">{% trans 'Previous' %}</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#tourismBanner" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">{%'Next' %}</span>
+  </button>
+</div>
+
+<!-- Styles CSS pour le carrousel (personnalisé selon tes besoins) -->
+<style>
+  #tourismBanner {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    z-index: -1;
+    overflow: hidden;
+  }
+
+  .carousel-item img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+  }
+</style>
+
+
+  <!-- Contenu superposé de la bannière -->
+  {% comment %} <div class="container" style="position: relative; z-index: 1; text-align: center; color: #ffffff;">
+    <p class="breadcrumbs-custom-subtitle">{% trans 'Découvrez nos services en détail' %}</p>
+    <p class="heading-1 breadcrumbs-custom-title" style="font-size: 2.5rem; font-weight: bold;">{{ service.pays }}</p>
+    <ul class="breadcrumbs-custom-path" style="list-style: none; padding: 0;">
+      <li style="display: inline;"><a href="/" style="color: #ffffff;">{% trans 'Accueil' %}</a> &gt; </li>
+      <li style="display: inline;" class="active">{{ service.pays }} - {% trans 'Détail' %}</li>
+    </ul>
+  </div> {% endcomment %}
+
+  <!-- Overlay semi-transparent pour améliorer la lisibilité du texte -->
+  <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.4); z-index: 0;"></div>
+</section>
+
+
+
+
+
+<!-- Service Detail Section -->
+<section class="section section-md bg-default">
+  <div class="container">
+    <div class="row row-50">
+      <div class="col-md-6">
+        <!-- Image de couverture -->
+        {% comment %} {% if service.image_couverture %}
+          <div class="service-image">
+            <img src="{{ service.image_couverture.url }}" alt="Image de couverture" class="img-fluid">
+          </div>
+        {% else %}
+          <div class="service-image">
+            <img src="{% static 'images/default-image.jpg' %}" alt="Image par défaut" class="img-fluid">
+          </div>
+        {% endif %} {% endcomment %}
+      </div>
+
+      <div class="col-md-12">
+        <!-- Service Details -->
+        <h3>{{ service.pays }}</h3>
+        <p><strong>Prix :</strong> {{ service.prix }} $</p>
+        <div class="rd-navbar-aside-right">
+          <a href="/booking/{{service.pk}}" class="button button-sm button-secondary button-nina" style="background-color: rgb(43, 42, 42); color: aliceblue; border-color: black;">request a quote</a> 
+        </div>
+        <hr style="color: #f7e70d; border-bottom: 3px solid #fce302de;">
+        <p><strong>Description :</strong></p>
+        <div class="rich-text-content">
+          {{ service.description|safe }}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-variant-1 bg-default novi-background bg-cover"> 
+  <div class="container container-wide">
+    <div class="row row-fix justify-content-xl-end row-30 text-center text-xl-left">
+      <div class="col-xl-8">
+        <div class="parallax-text-wrap">
+          <h3>{% blocktrans %}Our most popular African safari itineraries{% endblocktrans %}</h3>
+          <span class="parallax-text"></span>
+        </div>
+        <hr class="divider divider-decorate">
+      </div>
+    </div>
+    <div class="row row-50">
+      
+      {% for serv in service_detail %}
+      <div class="col-md-6 col-xl-4">
+        <article class="event-default-wrap">
+          <div class="event-default">
+            <figure class="event-default-image">
+              <img src="{{ serv.image.url }}" alt="Image de couverture"/>
+              <!-- Légende toujours visible avec le bouton fixe -->
+              <div class="event-default-caption visible-caption">
+                <a class="button button-xs button-secondary button-nina" href="/presesentation_detail/{{serv.pk}}">{{serv.intitule}}</a>
+              </div>
+            </figure>
+          </div>
+          <div class="event-default-inner">
+            <h5><a class="event-default-title" href="">{{ serv.titre }}</a></h5>
+          </div>
+        </article>
+      </div>    
+      {% endfor %}
+
+    </div>
+  </div>
+</section>
+
+<!-- Styles CSS -->
+<style>
+  /* Style du conteneur de l'image */
+  .event-default-image {
+      position: relative; /* Assure que les éléments enfants peuvent être positionnés absolument */
+      width: 100%;
+      height: 250px; /* Ajustez selon vos besoins */
+      overflow: hidden; /* Masque les débordements */
+  }
+
+  /* Style de l'image */
+  .event-default-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* Assure que l'image remplit le conteneur */
+      display: block;
+  }
+
+  /* Style de la légende toujours visible */
+  .event-default-caption {
+      position: absolute; /* Permet de positionner la légende à l'intérieur de l'image */
+      bottom: 10px; /* Place la légende en bas de l'image */
+      left: 50%; /* Centre horizontalement */
+      transform: translateX(-50%); /* Centre horizontalement */
+      text-align: center;
+      background: rgba(0, 0, 0, 0.5); /* Fond semi-transparent pour lisibilité */
+      color: #fff; /* Couleur du texte */
+      padding: 10px; /* Espace autour du bouton */
+      border-radius: 4px; /* Coins légèrement arrondis */
+      visibility: visible; /* Toujours visible */
+      z-index: 10; /* Assure que le bouton reste au premier plan */
+  }
+
+  /* Style du bouton fixe */
+  .event-default-caption .button {
+      margin: 0; /* Supprime les marges autour du bouton */
+      padding: 10px 20px; /* Ajuste l'espace à l'intérieur du bouton */
+      display: inline-block;
+      text-decoration: none; /* Supprime la décoration de texte */
+      color: #fff; /* Couleur du texte */
+      background-color: #3498db; /* Couleur de fond du bouton */
+      border-radius: 4px; /* Coins arrondis */
+      border: 1px solid transparent; /* Ajoute une bordure par défaut */
+  }
+
+  /* Effet sur le bouton au survol */
+  .event-default-caption .button:hover {
+      background-color: #2c80b4; /* Couleur de fond au survol */
+      border: 1px solid #2c80b4; /* Bordure plus foncée au survol */
+  }
+
+  /* Désactivation de l'effet de survol pour le texte de la légende */
+  .event-default:hover .event-default-caption,
+  .event-default-image:hover .event-default-caption {
+      opacity: 1; /* Garde la légende visible au survol */
+      visibility: visible; /* Évite les animations de visibilité */
+  }
+
+  /* Style du texte du titre */
+  .event-default-inner h5 {
+      margin-top: 15px; /* Espacement supérieur du titre */
+      font-size: 16px; /* Taille du texte */
+  }
+</style>
+
+
+{% endblock %}

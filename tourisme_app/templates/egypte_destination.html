@@ -1,0 +1,555 @@
+{% extends 'index.html' %}
+{% load i18n %}
+
+{% load static %}
+
+{% block body %}
+<style>
+   /* Container principal */
+.container_set {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 85vh;
+    color: white;
+    padding: 20px;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Style du titre */
+.content1 h1 {
+    color: #ffffff;
+    font-size: 4em;
+    font-weight: bold;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.content1 p {
+    color: #ffffff;
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Bouton */
+.bton {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #dfdd4e;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.bton:hover {
+    background-color: #dbcb39;
+    color: #000000;
+}
+
+/* Style du body */
+.body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+/* Slider Container */
+.slider-contain {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    background-color: #ffffff;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+}
+
+/* Ligne de cartes d'activités */
+.slider-activities {
+    display: flex;
+    transition: transform 0.5s ease;
+    width: calc(280px * 9); /* Largeur totale pour s'adapter aux cartes */
+}
+
+/* Boutons de navigation */
+.slider-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 1.5em;
+    z-index: 2;
+}
+
+.left-button {
+    left: 0;
+}
+
+.right-button {
+    right: 0;
+}
+
+/* Cartes de services */
+.service-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 280px;
+    margin: 10px;
+    padding: 15px;
+    text-align: center;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Image dans les cartes */
+.service-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-bottom: 3px solid #fbc531; /* Couleur jaune */
+    border-radius: 6px;
+    margin-bottom: 15px;
+}
+
+/* Style des titres */
+.slider-contain h2 {
+    color: #504e2c;
+    font-size: 2.2em;
+    margin-bottom: 20px;
+}
+
+.service-card h3 {
+    color: #e9d83d;
+    font-size: 1.4em;
+    margin-bottom: 10px;
+}
+
+/* Texte dans les cartes */
+.service-card p {
+    color: #333;
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+/* Responsive Design */
+
+/* Ajustements pour tablettes */
+@media (max-width: 768px) {
+    .container_set {
+        flex-direction: column;
+        padding: 15px;
+        height: auto;
+    }
+
+    .content1 h1 {
+        font-size: 2.5em;
+        text-align: center;
+    }
+
+    .content1 p {
+        font-size: 1.1em;
+        text-align: center;
+    }
+
+    .bton {
+        font-size: 1em;
+    }
+
+    /* Slider */
+    .slider-activities {
+        flex-wrap: nowrap;
+        width: 100%;
+    }
+
+    .slider-button {
+        padding: 5px;
+        font-size: 1.2em;
+    }
+}
+
+/* Ajustements pour mobiles */
+@media (max-width: 480px) {
+    .content1 h1 {
+        font-size: 1.8em;
+    }
+
+    .content1 p {
+        font-size: 1em;
+    }
+
+    .bton {
+        font-size: 0.9em;
+        padding: 8px 18px;
+    }
+
+    /* Cartes pour mobiles */
+    .slider-activities {
+        width: 100%; /* Largeur de la première carte */
+        transform: translateX(0); /* Position de départ */
+    }
+
+    /* Permet de voir une carte à la fois */
+    .service-card {
+        min-width: 100%;
+        flex: 0 0 auto;
+        margin: 10px 0;
+    }
+}
+
+
+/* Block Text Section */
+.contain {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #504e2c;
+    font-weight: normal;
+}
+
+p,
+ul {
+    font-weight: normal;
+    line-height: 1.6;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+.content-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.col-xl-6 {
+    flex: 1 1 48%;
+}
+
+#img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+a {
+    color: #ffa900;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Adjustments for Block Section */
+@media (max-width: 768px) {
+    .col-xl-6 {
+        flex: 1 1 100%;
+    }
+}
+
+    /* end block-text */
+</style>
+<!-- Swiper container for Egypt destination slider -->
+<div class="container_set swiper-container">
+    <div class="swiper-wrapper">
+      
+      <!-- Slide 1: Pyramids of Giza -->
+      <div class="swiper-slide" style="background-image: url('{% static 'images/giza_pyramids.jpg' %}');">
+        <div class="container">
+          <div class="row w-100">
+            <div class="col-md-8 content1">
+              <h1>{% blocktrans %}Explore the Ancient Pyramids of Giza{% endblocktrans %}</h1>
+              <p>
+                <ul>
+                  <li>{% trans "Stand in awe before the majestic Pyramids" %}</li>
+                  <li>{% trans "Uncover secrets of one of the world's wonders" %}</li>
+                </ul>
+              </p>
+              <a href="{% url 'request_devis' %}">
+                <button class="bton">{% blocktrans %}Get a Quick Quote{% endblocktrans %}</button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Slide 2: Nile River Cruise -->
+      <div class="swiper-slide" style="background-image: url('{% static 'images/nile_cruise.jpg' %}');">
+        <div class="container">
+          <div class="row w-100">
+            <div class="col-md-8 content1">
+              <h1>{% blocktrans %}Sail the Legendary Nile River{% endblocktrans %}</h1>
+              <p>
+                <ul>
+                  <li>{% trans "Enjoy a luxurious cruise with breathtaking views" %}</li>
+                  <li>{% trans "Experience the tranquility of Egypt’s ancient river" %}</li>
+                </ul>
+              </p>
+              <a href="{% url 'request_devis' %}">
+                <button class="bton">{% blocktrans %}Get a Quick Quote{% endblocktrans %}</button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Slide 3: Egyptian Museum -->
+      <div class="swiper-slide" style="background-image: url('{% static 'images/egyptian_museum.jpg' %}');">
+        <div class="container">
+          <div class="row w-100">
+            <div class="col-md-8 content1">
+              <h1>{% blocktrans %}Discover Egypt’s Rich History{% endblocktrans %}</h1>
+              <p>
+                <ul>
+                  <li>{% trans "Marvel at artifacts from ancient Egypt" %}</li>
+                  <li>{% trans "Explore the mysteries of the Pharaohs" %}</li>
+                </ul>
+              </p>
+              <a href="{% url 'request_devis' %}">
+                <button class="bton">{% blocktrans %}Get a Quick Quote{% endblocktrans %}</button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Slide 4: Red Sea Beaches -->
+      <div class="swiper-slide" style="background-image: url('{% static 'images/red_sea_diving.jpg' %}');">
+        <div class="container">
+          <div class="row w-100">
+            <div class="col-md-8 content1">
+              <h1>{% blocktrans %}Relax on the Red Sea Shores{% endblocktrans %}</h1>
+              <p>
+                <ul>
+                  <li>{% trans "Crystal-clear waters perfect for diving" %}</li>
+                  <li>{% trans "Unwind on pristine, golden beaches" %}</li>
+                </ul>
+              </p>
+              <a href="{% url 'request_devis' %}">
+                <button class="bton">{% blocktrans %}Get a Quick Quote{% endblocktrans %}</button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Swiper controls-->
+    <div class="swiper-pagination"></div>
+  </div>
+
+
+<div class="body">
+    <div class="slider-contain">
+        <h2>{% trans "Discover Egypt" %}</h2>
+        <button class="slider-button left-button">&#10094;</button>
+        
+        <section class="slider-activities">
+            <!-- 1. Pyramids of Giza -->
+            <div class="service-card">
+                <img src="{% static 'images/giza_pyramids.jpg' %}" alt="{% blocktrans %}Pyramids of Giza{% endblocktrans %}">
+                <h3>{% blocktrans %}Pyramids of Giza{% endblocktrans %}</h3>
+                <p>{% blocktrans %}Visit the iconic Pyramids of Giza and the Sphinx, marvels of ancient Egypt and wonders of the world.{% endblocktrans %}</p>
+            </div>
+            
+            <!-- 2. Nile River Cruise -->
+            <div class="service-card">
+                <img src="{% static 'images/nile_cruise.jpg' %}" alt="{% blocktrans %}Nile River Cruise{% endblocktrans %}">
+                <h3>{% blocktrans %}Nile River Cruise{% endblocktrans %}</h3>
+                <p>{% blocktrans %}Experience a relaxing cruise along the Nile River with breathtaking views and ancient sites along the way.{% endblocktrans %}</p>
+            </div>
+            
+            <!-- 3. Valley of the Kings -->
+            <div class="service-card">
+                <img src="{% static 'images/valley_of_the_kings.jpg' %}" alt="{% blocktrans %}Valley of the Kings{% endblocktrans %}">
+                <h3>{% blocktrans %}Valley of the Kings{% endblocktrans %}</h3>
+                <p>{% blocktrans %}Explore the tombs of pharaohs in the Valley of the Kings and discover the rich history of ancient Egypt.{% endblocktrans %}</p>
+            </div>
+            
+            <!-- 4. Abu Simbel Temples -->
+            <div class="service-card">
+                <img src="{% static 'images/abu_simbel.jpg' %}" alt="{% blocktrans %}Abu Simbel Temples{% endblocktrans %}">
+                <h3>{% blocktrans %}Abu Simbel Temples{% endblocktrans %}</h3>
+                <p>{% blocktrans %}Visit the remarkable Abu Simbel temples, dedicated to Ramses II, and witness the grandeur of ancient architecture.{% endblocktrans %}</p>
+            </div>
+            
+            <!-- 5. Red Sea Diving -->
+            <div class="service-card">
+                <img src="{% static 'images/red_sea_diving.jpg' %}" alt="{% blocktrans %}Red Sea Diving{% endblocktrans %}">
+                <h3>{% blocktrans %}Red Sea Diving{% endblocktrans %}</h3>
+                <p>{% blocktrans %}Dive into the vibrant waters of the Red Sea, home to stunning coral reefs and diverse marine life.{% endblocktrans %}</p>
+            </div>
+            
+            <!-- 6. Egyptian Museum -->
+            <div class="service-card">
+                <img src="{% static 'images/egyptian_museum.jpg' %}" alt="{% blocktrans %}Egyptian Museum{% endblocktrans %}">
+                <h3>{% blocktrans %}Egyptian Museum{% endblocktrans %}</h3>
+                <p>{% blocktrans %}Explore the Egyptian Museum in Cairo, housing a vast collection of ancient Egyptian artifacts and treasures.{% endblocktrans %}</p>
+            </div>
+            
+            <!-- 7. Hot Air Balloon over Luxor -->
+            <div class="service-card">
+                <img src="{% static 'images/luxor_balloon.jpg' %}" alt="{% blocktrans %}Hot Air Balloon over Luxor{% endblocktrans %}">
+                <h3>{% blocktrans %}Hot Air Balloon over Luxor{% endblocktrans %}</h3>
+                <p>{% blocktrans %}Soar over Luxor's ancient temples and valleys in a hot air balloon for a unique aerial perspective.{% endblocktrans %}</p>
+            </div>
+            
+            <!-- 8. Siwa Oasis -->
+            <div class="service-card">
+                <img src="{% static 'images/siwa_oasis.jpg' %}" alt="{% blocktrans %}Siwa Oasis{% endblocktrans %}">
+                <h3>{% blocktrans %}Siwa Oasis{% endblocktrans %}</h3>
+                <p>{% blocktrans %}Discover the serene beauty of Siwa Oasis, an isolated paradise surrounded by desert landscapes.{% endblocktrans %}</p>
+            </div>
+            
+            <!-- 9. Khan El Khalili Bazaar -->
+            <div class="service-card">
+                <img src="{% static 'images/khan_el_khalili.jpg' %}" alt="{% blocktrans %}Khan El Khalili Bazaar{% endblocktrans %}">
+                <h3>{% blocktrans %}Khan El Khalili Bazaar{% endblocktrans %}</h3>
+                <p>{% blocktrans %}Shop for unique souvenirs and handicrafts in Cairo's bustling Khan El Khalili Bazaar, a historic marketplace.{% endblocktrans %}</p>
+            </div>
+        </section>
+        <button class="slider-button right-button">&#10095;</button>
+    </div>
+</div>
+
+
+<!-- start block-text -->
+<div class="contain">
+    <div class="content-wrapper">
+        <div class="row">
+            <div class="col-sm-6">
+                <h2>
+                    <span style="font-weight: normal;">{% blocktrans %}Egypt Safari Adventures{% endblocktrans %}</span>
+                </h2>
+                <p>{% blocktrans %}Embark on a thrilling safari to uncover Egypt’s hidden gems. Discover the beauty of the White Desert, explore the ancient ruins of Luxor, or snorkel in the crystal-clear waters of the Red Sea. Our expert guides ensure your experience is both educational and unforgettable.{% endblocktrans %}</p>
+                <p>{% blocktrans %}Our safari packages are designed to suit all kinds of travelers, whether you're seeking a luxurious experience or a more adventurous journey.{% endblocktrans %}</p>
+            </div>
+            <div class="col-sm-6">
+                <p>
+                    <img class="img" alt="{% trans 'Egypt Desert Safari' %}" src="{% static 'images/desert_safari.webp' %}" title="{% trans 'Explore Egypt' %}">
+                </p>
+            </div>
+            <div class="col-sm-12">
+                <h2>
+                    <span style="font-weight: normal;">{% blocktrans %}Why Choose Egypt?{% endblocktrans %}</span>
+                </h2>
+                <p>
+                    <ul>
+                        <li><b>{% trans "History and Culture" %}</b>: {% blocktrans %}Egypt is home to some of the world's oldest and most fascinating historical sites, from the pyramids to the temples of Karnak.{% endblocktrans %}</li>
+                        <li><b>{% trans "Natural Wonders" %}</b>: {% blocktrans %}From the vast deserts to the tranquil Nile River, Egypt offers natural beauty at every turn.{% endblocktrans %}</li>
+                        <li><b>{% trans "Adventure" %}</b>: {% blocktrans %}Whether it's diving in the Red Sea or riding camels through the desert, Egypt is perfect for thrill-seekers.{% endblocktrans %}</li>
+                    </ul>
+                </p>
+            </div>
+            <div class="row">
+                <div class="col-sm-6">
+                    <h2>{% blocktrans %}Plan Your Journey{% endblocktrans %}</h2>
+                    <p>{% blocktrans %}Let us help you create a personalized itinerary. Whether you're interested in historical tours, desert safaris, or beach vacations, we can tailor your trip to make your Egyptian adventure unforgettable.{% endblocktrans %}</p>
+                    <p>{% blocktrans %}Contact us today to start planning your dream trip to Egypt. Our team of experts is ready to guide you through every step of the process, ensuring a seamless and enriching travel experience.{% endblocktrans %}</p> <br>
+                    <div class="rd-navbar-aside-right"><a class="button button-sm button-secondary button-nina" id="btn-requestQuote" style="background-color: rgb(43, 42, 42); color: aliceblue; border-color: black;" href="/request_devis">{% blocktrans %}request a quote{% endblocktrans %}</a></div>
+                </div>
+                <div class="col-sm-6">
+                    <p>
+                        <img class="img" alt="{% trans 'Nile Cruise' %}" src="{% static 'images/egypt.jpg' %}" title="{% trans 'Cruise along the Nile' %}">
+                    </p>
+                
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Swiper JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+<script>
+     var swiper = new Swiper('.swiper-container', {
+    loop: true,
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false,
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+  });
+
+    document.addEventListener('DOMContentLoaded', function () {
+        const sliderActivities = document.querySelector('.slider-activities');
+        const leftButton = document.querySelector('.left-button');
+        const rightButton = document.querySelector('.right-button');
+        const cardWidth = 280; // Largeur de chaque carte
+        let currentIndex = 0; // Index pour suivre la position actuelle
+        let intervalId;
+    
+        // Fonction pour décaler les cartes
+        function updateSliderPosition() {
+            sliderActivities.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+        }
+    
+        // Fonction de défilement automatique
+        function startAutoScroll() {
+            intervalId = setInterval(() => {
+                currentIndex++;
+                if (currentIndex >= sliderActivities.children.length) {
+                    currentIndex = 0; // Retour au début
+                }
+                updateSliderPosition();
+            }, 3000); // Défilement toutes les 3 secondes
+        }
+    
+        // Stopper le défilement automatique lorsqu'on utilise les boutons
+        function stopAutoScroll() {
+            clearInterval(intervalId);
+            startAutoScroll(); // Reprendre après interaction
+        }
+    
+        // Événements de clic pour les boutons de navigation
+        leftButton.addEventListener('click', () => {
+            stopAutoScroll();
+            currentIndex = (currentIndex === 0) ? sliderActivities.children.length - 1 : currentIndex - 1;
+            updateSliderPosition();
+        });
+    
+        rightButton.addEventListener('click', () => {
+            stopAutoScroll();
+            currentIndex = (currentIndex + 1) % sliderActivities.children.length;
+            updateSliderPosition();
+        });
+    
+        // Démarrer le défilement automatique
+        startAutoScroll();
+    });
+    
+    
+</script>
+<!-- end block-text -->
+{% endblock %}

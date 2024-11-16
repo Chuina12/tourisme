@@ -1,0 +1,23 @@
+{% load i18n %}
+
+
+<div class="media mb-3">
+    <img src="{% static 'images/user.jpg' %}" class="mr-3 rounded-circle" alt="User image" style="width: 50px;">
+    <div class="media-body">
+        <h6 class="mt-0">{{ comment.user.username }}</h6>
+        <p>{{ comment.content }}</p>
+        <button class="btn btn-link btn-sm text-primary" onclick="toggleReplyForm(this)">{% trans 'Répondre' %}</button>
+
+        <!-- Formulaire de réponse -->
+        <form method="post" action="{% url 'add_reply' comment.id %}" class="reply-form mb-3" style="display: none;">
+            {% csrf_token %}
+            <textarea name="content" class="form-control" rows="2" placeholder="Votre réponse..."></textarea>
+            <button type="submit" class="btn btn-sm btn-primary">{% trans 'Répondre' %}</button>
+        </form>
+
+        <!-- Affichage des réponses imbriquées -->
+        {% for reply in comment.replies.all %}
+            {% include "comment.html" with comment=reply %}
+        {% endfor %}
+    </div>
+</div>

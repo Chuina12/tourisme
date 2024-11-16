@@ -1,0 +1,176 @@
+{% extends 'index.html' %}
+{% load i18n %}
+
+{% block body %}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Quote Request Form</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .form-container {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            margin-bottom: 20px;
+        }
+        .btn-submit {
+            background-color: #ffd900d3;
+            color: rgb(0, 0, 0);
+        }
+        a{
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+
+    {% for message in messages %}
+        <h1 class="alert alert-warning">{{message}}</h1>
+    {% endfor %}
+
+<div class="container mt-5">
+    <div class="form-container">
+      <h2>{% blocktrans %}Travel Quote Request{% endblocktrans %}</h2>
+      <form method="POST" onsubmit="return validateForm(event)">
+          {% csrf_token %}
+          
+          <div class="mb-3">
+              <label>{% blocktrans %}Full Name{% endblocktrans %}<span style="color: red;"> *</span></label>
+              <input type="text" class="form-control" id="name" name="name" required>
+          </div>
+          
+          <div class="mb-3">
+              <label for="email">{% blocktrans %}Email Address{% endblocktrans %}<span style="color: red;"> *</span></label>
+              <input type="email" class="form-control" id="email" name="email" required>
+          </div>
+          
+          <div class="mb-3">
+              <label for="phone">{% blocktrans %}Phone Number{% endblocktrans %}<span style="color: red;"> *</span></label>
+              <input type="tel" class="form-control" id="phone" name="phone" required>
+          </div>
+          
+          <div class="mb-3">
+              <label for="country">{% blocktrans %}Country of Origin{% endblocktrans %}<span style="color: red;"> *</span></label>
+              <select class="form-control" id="country" name="country" required>
+                  <option value="" disabled selected>{% blocktrans %}Select your country{% endblocktrans %}</option>
+              </select>
+          </div>
+          
+          <div class="mb-3">
+              <label for="destination">{% blocktrans %}Desired Destination{% endblocktrans %}<span style="color: red;"> *</span></label>
+              <select class="form-select" id="destination" name="destination" required>
+                  <option value="" disabled selected>{% blocktrans %}Select your destination{% endblocktrans %}</option>
+                  {% for devs in devis %}
+                      <option value="{{devs.pays}}">{{devs.pays}}</option>
+                  {% endfor %}
+              </select>
+          </div>
+        
+          <div class="mb-3">
+              <label for="start_date">{% blocktrans %}Start Date{% endblocktrans %}<span style="color: red;"> *</span></label>
+              <input type="date" class="form-control" id="start_date" name="start_date" required>
+          </div>
+        
+          <div class="mb-3">
+              <label for="end_date">{% blocktrans %}End Date{% endblocktrans %}<span style="color: red;"> *</span></label>
+              <input type="date" class="form-control" id="end_date" name="end_date" required>
+          </div>
+        
+          <div class="mb-3">
+              <label for="num_adults">{% blocktrans %}Number of Adults{% endblocktrans %}<span style="color: red;"> *</span></label>
+              <input type="number" class="form-control" id="num_adults" name="num_adults" min="0" required>
+          </div>
+        
+          <div class="mb-3">
+              <label for="num_minors">{% blocktrans %}Number of Minors{% endblocktrans %}<span style="color: red;"> *</span></label>
+              <input type="number" class="form-control" id="num_minors" name="num_minors" min="0" required>
+          </div>
+        
+          <div class="mb-3">
+              <label for="num_babies">{% blocktrans %}Number of Babies{% endblocktrans %}<span style="color: red;"> *</span></label>
+              <input type="number" class="form-control" id="num_babies" name="num_babies" min="0" required>
+          </div>
+        
+          <div class="mb-3">
+              <label for="details">{% blocktrans %}Specific Details{% endblocktrans %}</label>
+              <textarea class="form-control" id="details" name="details" rows="4" placeholder="{% blocktrans %}Please indicate your preferences, special requirements, etc.{% endblocktrans %}"></textarea>
+          </div>
+        
+          <button type="submit" class="btn btn-submit">{% blocktrans %}Submit Request{% endblocktrans %}</button>
+      </form>
+      
+          
+          <script>
+            function validateForm(event) {
+              const inputs = document.querySelectorAll('.form-control');
+              let isValid = true;
+          
+              // Reset border styles before validation
+              inputs.forEach(input => {
+                input.style.border = '';
+              });
+          
+              // Check each input
+              inputs.forEach(input => {
+                if (input.hasAttribute('required') && !input.value.trim()) {
+                  // Apply red border if field is empty
+                  input.style.border = '2px solid red';
+                  isValid = false;
+                }
+              });
+          
+              // Prevent form submission if any field is invalid
+              if (!isValid) {
+                event.preventDefault();
+              }
+            }
+          </script>
+          
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+
+<!-- Ajoutez jQuery via CDN -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+    $(document).ready(function() {
+        // Appel à l'API REST Countries
+        $.ajax({
+            url: "https://restcountries.com/v3.1/all",
+            method: "GET",
+            success: function(data) {
+                // Trier les pays par ordre alphabétique
+                data.sort((a, b) => a.name.common.localeCompare(b.name.common));
+
+                // Pour chaque pays dans la réponse, ajouter une option au select
+                data.forEach(function(country) {
+                    $('#country').append(`<option value="${country.name.common}">${country.name.common}</option>`);
+                });
+            },
+            error: function() {
+                alert('Unable to load countries. Please try again later.');
+            }
+        });
+    });
+</script>
+
+
+
+{% endblock %}

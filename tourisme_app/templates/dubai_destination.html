@@ -1,0 +1,697 @@
+{% extends 'index.html' %}
+{% load i18n %}
+
+{% load static %}
+
+{% block body %}
+<style>
+   /* Container principal */
+.container_set {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 85vh;
+    color: white;
+    padding: 20px;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Style du titre */
+.content1 h1 {
+    color: #ffffff;
+    font-size: 4em;
+    font-weight: bold;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.content1 p {
+    color: #ffffff;
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Bouton */
+.bton {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #dfdd4e;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.bton:hover {
+    background-color: #dbcb39;
+    color: #000000;
+}
+
+/* Style du body */
+.body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+/* Slider Container */
+.slider-contain {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    background-color: #ffffff;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+}
+
+/* Ligne de cartes d'activités */
+.slider-activities {
+    display: flex;
+    transition: transform 0.5s ease;
+    width: calc(280px * 9); /* Largeur totale pour s'adapter aux cartes */
+}
+
+/* Boutons de navigation */
+.slider-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 1.5em;
+    z-index: 2;
+}
+
+.left-button {
+    left: 0;
+}
+
+.right-button {
+    right: 0;
+}
+
+/* Cartes de services */
+.service-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 280px;
+    margin: 10px;
+    padding: 15px;
+    text-align: center;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Image dans les cartes */
+.service-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-bottom: 3px solid #fbc531; /* Couleur jaune */
+    border-radius: 6px;
+    margin-bottom: 15px;
+}
+
+/* Style des titres */
+.slider-contain h2 {
+    color: #504e2c;
+    font-size: 2.2em;
+    margin-bottom: 20px;
+}
+
+.service-card h3 {
+    color: #e9d83d;
+    font-size: 1.4em;
+    margin-bottom: 10px;
+}
+
+/* Texte dans les cartes */
+.service-card p {
+    color: #333;
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+/* Responsive Design */
+
+/* Ajustements pour tablettes */
+@media (max-width: 768px) {
+    .container_set {
+        flex-direction: column;
+        padding: 15px;
+        height: auto;
+    }
+
+    .content1 h1 {
+        font-size: 2.5em;
+        text-align: center;
+    }
+
+    .content1 p {
+        font-size: 1.1em;
+        text-align: center;
+    }
+
+    .bton {
+        font-size: 1em;
+    }
+
+    /* Slider */
+    .slider-activities {
+        flex-wrap: nowrap;
+        width: 100%;
+    }
+
+    .slider-button {
+        padding: 5px;
+        font-size: 1.2em;
+    }
+}
+
+/* Ajustements pour mobiles */
+@media (max-width: 480px) {
+    .content1 h1 {
+        font-size: 1.8em;
+    }
+
+    .content1 p {
+        font-size: 1em;
+    }
+
+    .bton {
+        font-size: 0.9em;
+        padding: 8px 18px;
+    }
+
+    /* Cartes pour mobiles */
+    .slider-activities {
+        width: 100%; /* Largeur de la première carte */
+        transform: translateX(0); /* Position de départ */
+    }
+
+    /* Permet de voir une carte à la fois */
+    .service-card {
+        min-width: 100%;
+        flex: 0 0 auto;
+        margin: 10px 0;
+    }
+}
+
+
+    /* card start */
+    .body1 {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+    }
+    
+    .header h1 {
+        border-bottom: 6px solid #ffa900;
+        margin-left: 1%;
+        margin-right: 10%;
+        text-align: left;
+        font-size: 15px;
+        font-style: italic;
+        /* Adjust for small screens */
+        font-size: clamp(15px, 8vw, 33px); /* Use clamp for responsive font size */
+    }
+
+    .header h1 span {
+        font-size: 35px;
+        font-style: italic;
+        /* Adjust for small screens */
+        font-size: clamp(18px, 4vw, 35px); /* Use clamp for responsive font size */
+    }
+
+    /* Ensure the header margins adjust on smaller screens */
+    @media (max-width: 768px) {
+        .header h1 {
+            margin-left: 8%;
+            margin-right: 8%;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .header h1 {
+            margin-left: 5%;
+            margin-right: 5%;
+        }
+    }
+
+    .crucial-info {
+        display: block;
+        max-width: 900px; /* ou tout autre valeur appropriée */
+        margin-left: 2%;
+        margin-right: 12%;
+        text-align: justify; /* pour s'assurer que le texte est bien aligné */
+        font-size: 20px; /* taille de police relative pour la balise <small> */
+        font-weight: bolder;
+        color: #555555;
+    }
+
+    @media (max-width: 768px) {
+        .crucial-info {
+            margin-left: 8%;
+            margin-right: 8%;
+            max-width: 100%;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .crucial-info {
+            margin-left: 5%;
+            margin-right: 5%;
+            max-width: 100%;
+        }
+    }
+    
+    .pricing p {
+        margin-left: 2%;
+    }
+
+    /* Keyframes for slide-in animation */
+    @keyframes slideInUp {
+        from {
+            opacity: 0;
+            transform: translateY(50px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    /* start container_left */
+    .container_left {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-size: cover;
+        color: #000000;
+        padding: 0 20px;
+        flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+    }
+
+    .container_left .container {
+        margin-bottom: 2%;
+    }
+
+    .container_left .content1 h1 {
+        color: #000000;
+        margin-bottom: 20px;
+        font-size: 2em;
+    }
+
+    .container_left .content1 p {
+        color: #000000;
+        margin-bottom: 30px;
+        font-size: 1.2em;
+    }
+
+    .content2 {
+        text-align: center;
+        margin-top: 20px; /* Add margin to separate content on smaller screens */
+    }
+
+    .content2 img {
+        border-radius: 10px;
+        width: 500px;
+        height: auto;
+    }
+
+    /* Responsive design adjustments */
+    @media (max-width: 1200px) {
+        .container_left {
+            flex-direction: column; /* Stack items vertically */
+            padding: 10px; /* Adjust padding */
+        }
+
+        .container_left .content1 h1 {
+            font-size: 1.8em; /* Adjust font size for large tablets and smaller desktops */
+        }
+
+        .container_left .content1 p {
+            font-size: 1.1em; /* Adjust font size for large tablets and smaller desktops */
+        }
+
+        .content2 img {
+            width: 400px; /* Adjust image size */
+        }
+    }
+
+    @media (max-width: 768px) {
+        .container_left {
+            padding: 5px; /* Adjust padding for tablets and smaller screens */
+        }
+
+        .container_left .content1 h1 {
+            font-size: 1.6em; /* Adjust font size for tablets */
+        }
+
+        .container_left .content1 p {
+            font-size: 1em; /* Adjust font size for tablets */
+        }
+
+        .content2 img {
+            width: 100%; /* Make image responsive */
+            max-width: 300px; /* Limit max-width for tablets */
+        }
+    }
+
+    @media (max-width: 480px) {
+        .container_left .content1 h1 {
+            font-size: 1.4em; /* Further adjust font size for very small screens */
+        }
+
+        .container_left .content1 p {
+            font-size: 0.9em; /* Further adjust font size for very small screens */
+            margin-bottom: 20px; /* Reduce bottom margin */
+        }
+
+        .content2 img {
+            width: 100%; /* Ensure image takes full width */
+            max-width: 250px; /* Limit max-width for very small screens */
+        }
+    }
+    /* end block-text */
+</style>
+<!-- Swiper container for Dubai slider -->
+<div class="container_set swiper-container">
+    <div class="swiper-wrapper">
+      
+      <!-- Slide 1: Burj Khalifa -->
+      <div class="swiper-slide" style="background-image: url('{% static 'images/dubai_burj_khalifa.jpg' %}');">
+        <div class="container">
+          <div class="row w-100">
+            <div class="col-md-8 content1">
+              <h1>{% blocktrans %}Ascend the Iconic Burj Khalifa{% endblocktrans %}</h1>
+              <p>
+                <ul>
+                  <li>{% blocktrans %}Enjoy breathtaking panoramic views of Dubai from the top{% endblocktrans %}</li>
+                  <li>{% trans "A must-see architectural marvel" %}</li>
+                </ul>
+              </p>
+              <a href="{% url 'request_devis' %}">
+                <button class="bton">{% blocktrans %}Get a Quick Quote{% endblocktrans %}</button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Slide 2: Desert Safari -->
+      <div class="swiper-slide" style="background-image: url('{% static 'images/dubai_desert_safari.jpg' %}');">
+        <div class="container">
+          <div class="row w-100">
+            <div class="col-md-8 content1">
+              <h1>{% blocktrans %}Experience a Thrilling Desert Safari{% endblocktrans %}</h1>
+              <p>
+                <ul>
+                  <li>{% blocktrans %}Adventure through the golden sands with dune bashing{% endblocktrans %}</li>
+                  <li>{% trans "Enjoy an authentic Arabian night experience" %}</li>
+                </ul>
+              </p>
+              <a href="{% url 'request_devis' %}">
+                <button class="bton">{% blocktrans %}Get a Quick Quote{% endblocktrans %}</button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Slide 3: Dubai Marina Cruise -->
+      <div class="swiper-slide" style="background-image: url('{% static 'images/dubai_skydiving.jpg' %}');">
+        <div class="container">
+          <div class="row w-100">
+            <div class="col-md-8 content1">
+              <h1>{% blocktrans %}Sail Through Dubai Marina{% endblocktrans %}</h1>
+              <p>
+                <ul>
+                    <li>
+                        {% blocktrans %}Take in stunning cityscapes on a luxury dhow cruise{% endblocktrans %}
+                    </li>
+                    <li>
+                        {% blocktrans %}An unforgettable evening with great food and ambiance{% endblocktrans %}
+                    </li>
+                </ul>
+              </p>
+              <a href="{% url 'request_devis' %}">
+                <button class="bton">{% blocktrans %}Get a Quick Quote{% endblocktrans %}</button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Slide 4: Palm Jumeirah -->
+      <div class="swiper-slide" style="background-image: url('{% static 'images/dubai_frame.jpg' %}');">
+        <div class="container">
+          <div class="row w-100">
+            <div class="col-md-8 content1">
+              <h1>{% blocktrans %}Discover the Palm Jumeirah{% endblocktrans %}</h1>
+              <p>
+                <ul>
+                    <li>
+                        {% blocktrans %}Explore the famous man-made island, a marvel of design{% endblocktrans %}
+                    </li>
+                    <li>
+                        {% blocktrans %}Luxurious experiences await at every corner{% endblocktrans %}
+                    </li>
+                </ul>
+              </p>
+              <a href="{% url 'request_devis' %}">
+                <button class="bton">{% blocktrans %}Get a Quick Quote{% endblocktrans %}</button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+    </div>
+    
+    <!-- Swiper controls-->
+    <div class="swiper-pagination"></div>
+  </div>
+
+<div class="body">
+    <div class="slider-contain">
+        <h2>{% blocktrans %}Our Tourism Experiences{% endblocktrans %}</h2><br>
+        <button class="slider-button left-button">&#10094;</button>
+
+        <div class="slider-activities">
+            <div class="service-card">
+                <img src="{% static 'images/dubai_burj_khalifa.jpg' %}" alt="{% trans 'Burj Khalifa Tour' %}">
+                <h3>{% trans "Burj Khalifa Tour" %}</h3>
+                <p>
+                    {% blocktrans %}Ascend to the top of the world’s tallest building and enjoy panoramic views of the entire city of Dubai.{% endblocktrans %}
+                </p>
+            </div>
+    
+            <div class="service-card">
+                <img src="{% static 'images/dubai_croisiere.jpg' %}" alt="{% trans 'Dhow Cruise' %}">
+                <h3>{% trans "Dhow Cruise" %}</h3>
+                <p>
+                    {% blocktrans %}Sail through Dubai Marina aboard a traditional dhow for a luxurious evening with stunning views.{% endblocktrans %}
+                </p>
+            </div>
+    
+            <div class="service-card">
+                <img src="{% static 'images/dubai_palais.jpg' %}" alt="{% trans 'Cultural Discovery' %}">
+                <h3>{% trans "Cultural Tour" %}</h3>
+                <p>
+                    {% blocktrans %}Discover Dubai's rich cultural heritage with visits to museums, palaces, and contemporary art galleries.{% endblocktrans %}
+                </p>
+            </div>
+            <!-- new activity for dubai -->
+            <div class="service-card">
+                <img src="{% static 'images/dubai_desert_safari.jpg' %}" alt="{% trans 'Desert Safari' %}">
+                <h3>{% trans "Desert Safari" %}</h3>
+                <p>
+                    {% blocktrans %}Experience thrilling dune bashing, camel rides, and a traditional Bedouin camp in the Dubai desert.{% endblocktrans %}
+                </p>
+            </div>
+            
+            <div class="service-card">
+                <img src="{% static 'images/dubai_mall.jpg' %}" alt="{% trans 'Dubai Mall' %}">
+                <h3>{% trans "Dubai Mall" %}</h3>
+                <p>
+                    {% blocktrans %}Explore the world’s largest mall with luxury stores, an aquarium, an ice rink, and endless dining options.{% endblocktrans %}
+                </p>
+            </div>
+            
+            <div class="service-card">
+                <img src="{% static 'images/dubai_palm_island.jpg' %}" alt="{% trans 'Palm Jumeirah' %}">
+                <h3>{% trans "Palm Jumeirah" %}</h3>
+                <p>
+                    {% blocktrans %}Visit the iconic palm-shaped island for luxury hotels, beach clubs, and water sports experiences.{% endblocktrans %}
+                </p>
+            </div>
+            
+            <div class="service-card">
+                <img src="{% static 'images/dubai_skydiving.jpg' %}" alt="{% trans 'Skydiving' %}">
+                <h3>{% trans "Skydiving" %}</h3>
+                <p>
+                    {% blocktrans %}Enjoy a thrilling skydive over Palm Jumeirah, with stunning views of Dubai from above.{% endblocktrans %}
+                </p>
+            </div>
+            
+            <div class="service-card">
+                <img src="{% static 'images/dubai_global_village.jpg' %}" alt="{% trans 'Global Village' %}">
+                <h3>{% trans "Global Village" %}</h3>
+                <p>
+                    {% blocktrans %}Experience cultures from around the world with pavilions, shows, and international cuisine.{% endblocktrans %}
+                </p>
+            </div>
+            
+            <div class="service-card">
+                <img src="{% static 'images/dubai_frame.jpg' %}" alt="{% trans 'Dubai Frame' %}">
+                <h3>{% trans "Dubai Frame" %}</h3>
+                <p>
+                    {% blocktrans %}Step into a massive frame offering incredible views of old and new Dubai from its sky deck.{% endblocktrans %}
+                </p>
+            </div>
+        </div>
+        <button class="slider-button right-button">&#10095;</button>
+    </div>
+</div>        
+        
+    <section class="pricing">
+        <header class="header">
+            <h1>{% blocktrans %}A Complete Journey for Your Trip{% endblocktrans %}</h1>
+            <small class="crucial-info">
+                {% blocktrans %}By choosing our agency, you benefit from personalized service, local experts, and tailor-made experiences to discover Dubai like never before.{% endblocktrans %}
+            </small>
+        </header>
+        <p></p>
+    </section>
+
+    <!-- start container_left -->
+    <div class="container_left">
+        <div class="container">
+            <div class="row w-100">
+                <div class="col-md-6 content1">
+                    <h1><br>{% blocktrans %}Fully Organized Tours{% endblocktrans %}</h1>
+                    <p>
+                        {% blocktrans %}We offer complete tour packages that cover all aspects to ensure a smooth and enjoyable experience in Dubai. Our local experts guide you throughout your stay to maximize your discovery.{% endblocktrans %}
+                    </p>
+                </div>
+                <div class="col-md-6 content2">
+                    <img src="{% static 'images/dubai_skyline.jpg' %}">
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row w-100">
+                <div class="col-md-6 content2">
+                    <img src="{% static 'images/dubai_mosquee.jpg' %}">
+                </div>
+                <div class="col-md-6 content1">
+                    <h1><br>{% blocktrans %}Personalized Guided Tours{% endblocktrans %}</h1>
+                    <p>
+                        {% blocktrans %}Each journey is unique, which is why we create personalized guided tours based on your preferences. Whether you're passionate about architecture, shopping, or adventure, we have the perfect itinerary for you.{% endblocktrans %}
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row w-100">
+                <div class="col-md-6 content1">
+                    <h1><br>{% blocktrans %}Achieve Your Travel Dreams{% endblocktrans %}</h1>
+                    <p>
+                        {% blocktrans %}Have a dream trip to Dubai but don't know where to start? Let us guide you. We put our expertise at your disposal to organize a stay that meets your expectations.{% endblocktrans %}
+                    </p>
+                    <div class="rd-navbar-aside-right"><a class="button button-sm button-secondary button-nina" id="btn-requestQuote" style="background-color: rgb(43, 42, 42); color: aliceblue; border-color: black;" href="/request_devis">{% blocktrans %}request a quote{% endblocktrans %}</a></div>
+                </div>
+                <div class="col-md-6 content2">
+                    <img src="{% static 'images/dubai_fountain.jpg' %}">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end container_left -->  
+
+</div>
+
+
+<!-- Swiper JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        loop: true,
+        autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+        },
+        pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+        },
+    });
+
+    document.addEventListener('DOMContentLoaded', function () {
+        const sliderActivities = document.querySelector('.slider-activities');
+        const leftButton = document.querySelector('.left-button');
+        const rightButton = document.querySelector('.right-button');
+        const cardWidth = 280; // Largeur de chaque carte
+        let currentIndex = 0; // Index pour suivre la position actuelle
+        let intervalId;
+    
+        // Fonction pour décaler les cartes
+        function updateSliderPosition() {
+            sliderActivities.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+        }
+    
+        // Fonction de défilement automatique
+        function startAutoScroll() {
+            intervalId = setInterval(() => {
+                currentIndex++;
+                if (currentIndex >= sliderActivities.children.length) {
+                    currentIndex = 0; // Retour au début
+                }
+                updateSliderPosition();
+            }, 3000); // Défilement toutes les 3 secondes
+        }
+    
+        // Stopper le défilement automatique lorsqu'on utilise les boutons
+        function stopAutoScroll() {
+            clearInterval(intervalId);
+            startAutoScroll(); // Reprendre après interaction
+        }
+    
+        // Événements de clic pour les boutons de navigation
+        leftButton.addEventListener('click', () => {
+            stopAutoScroll();
+            currentIndex = (currentIndex === 0) ? sliderActivities.children.length - 1 : currentIndex - 1;
+            updateSliderPosition();
+        });
+    
+        rightButton.addEventListener('click', () => {
+            stopAutoScroll();
+            currentIndex = (currentIndex + 1) % sliderActivities.children.length;
+            updateSliderPosition();
+        });
+    
+        // Démarrer le défilement automatique
+        startAutoScroll();
+    });
+</script>
+{% endblock %}

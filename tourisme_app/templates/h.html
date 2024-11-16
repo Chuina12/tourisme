@@ -1,0 +1,95 @@
+{% load i18n %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% trans 'Travel Quote Request Form' %}</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .form-container {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            margin-bottom: 20px;
+        }
+        .btn-submit {
+            background-color: #007bff;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container mt-5">
+        <div class="form-container">
+            <h2>{% trans "Travel Quote Request" %}</h2>
+            <form action="/submit_quote" method="POST">
+                <div class="mb-3">
+                    <label for="name" class="form-label">{% trans "Full Name" %}</label>
+                    <input type="text" class="form-control" id="name" name="name" required>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">{% trans "Email Address" %}</label>
+                    <input type="email" class="form-control" id="email" name="email" required>
+                </div>
+                <div class="mb-3">
+                    <label for="phone" class="form-label">{% trans "Phone Number" %}</label>
+                    <input type="tel" class="form-control" id="phone" name="phone" required>
+                </div>
+                <div class="mb-3">
+                    <label for="country" class="form-label">{% trans "Country of Origin" %}</label>
+                    <input type="text" class="form-control" id="country" name="country" required>
+                </div>
+                <div class="mb-3">
+                    <label for="destination" class="form-label">{% trans "Desired Destination" %}</label>
+                    <select class="form-select" id="destination" name="destination" required>
+                        <option value="" disabled selected>{% trans "Select your destination" %}</option>
+                        <option value="ZANZIBAR">{% trans "Zanzibar" %}</option>
+                        <option value="OUGANDA">{% trans "Uganda" %}</option>
+                        <option value="KENYA">{% trans "Kenya" %}</option>
+                        <option value="EGYPT">{% trans "Egypt" %}</option>
+                        <option value="DUBAI">{% trans "Dubai" %}</option>
+                        <option value="MALDIVES">{% trans "Maldives" %}</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label for="start_date" class="form-label">{% trans "Start Date" %}</label>
+                    <input type="date" class="form-control" id="start_date" name="start_date" required>
+                </div>
+                <div class="mb-3">
+                    <label for="end_date" class="form-label">{% trans "End Date" %}</label>
+                    <input type="date" class="form-control" id="end_date" name="end_date" required>
+                </div>
+                <div class="mb-3">
+                    <label for="num_adults" class="form-label">{% trans "Number of Adults" %}</label>
+                    <input type="number" class="form-control" id="num_adults" name="num_adults" min="0" required>
+                </div>
+                <div class="mb-3">
+                    <label for="num_minors" class="form-label">{% trans "Number of Minors" %}</label>
+                    <input type="number" class="form-control" id="num_minors" name="num_minors" min="0" required>
+                </div>
+                <div class="mb-3">
+                    <label for="num_babies" class="form-label">{% trans "Number of Babies" %}</label>
+                    <input type="number" class="form-control" id="num_babies" name="num_babies" min="0" required>
+                </div>
+                <div class="mb-3">
+                    <label for="details" class="form-label">{% trans "Specific Details" %}</label>
+                    <textarea class="form-control" id="details" name="details" rows="4" placeholder="{% trans 'Please indicate your preferences, special requirements, etc.' %}"></textarea>
+                </div>
+                <button type="submit" class="btn btn-submit">{% trans "Submit Request" %}</button>
+            </form>
+        </div>
+    </div>
+    
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

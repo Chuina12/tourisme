@@ -1,0 +1,456 @@
+{% extends 'index.html' %}
+{% load i18n %}
+
+{% load static %}
+
+{% block body %}
+<style>
+    /* start box */
+    /* Universal Styling for Better Adaptation */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Container principal */
+.container_set {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 85vh;
+    color: white;
+    padding: 20px;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Style du titre */
+.content1 h1 {
+    color: #ffffff;
+    font-size: 4em;
+    font-weight: bold;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.content1 p {
+    color: #ffffff;
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Bouton */
+.bton {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #dfdd4e;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    transition: background-color 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.bton:hover {
+    background-color: #dbcb39;
+    color: #000000;
+}
+
+/* Style du body */
+.body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+/* Slider Container */
+.slider-contain {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    background-color: #ffffff;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+}
+
+/* Ligne de cartes d'activités */
+.slider-activities {
+    display: flex;
+    transition: transform 0.5s ease;
+    width: calc(280px * 9); /* Largeur totale pour s'adapter aux cartes */
+}
+
+/* Boutons de navigation */
+.slider-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 1.5em;
+    z-index: 2;
+}
+
+.left-button {
+    left: 0;
+}
+
+.right-button {
+    right: 0;
+}
+
+/* Cartes de services */
+.service-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    width: 280px;
+    margin: 10px;
+    padding: 15px;
+    text-align: center;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Image dans les cartes */
+.service-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-bottom: 3px solid #fbc531; /* Couleur jaune */
+    border-radius: 6px;
+    margin-bottom: 15px;
+}
+
+/* Style des titres */
+.slider-contain h2 {
+    color: #504e2c;
+    font-size: 2.2em;
+    margin-bottom: 20px;
+}
+
+.service-card h3 {
+    color: #e9d83d;
+    font-size: 1.4em;
+    margin-bottom: 10px;
+}
+
+/* Texte dans les cartes */
+.service-card p {
+    color: #333;
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+/* Responsive Design */
+
+/* Ajustements pour tablettes */
+@media (max-width: 768px) {
+    .container_set {
+        flex-direction: column;
+        padding: 15px;
+        height: auto;
+    }
+
+    .content1 h1 {
+        font-size: 2.5em;
+        text-align: center;
+    }
+
+    .content1 p {
+        font-size: 1.1em;
+        text-align: center;
+    }
+
+    .bton {
+        font-size: 1em;
+    }
+
+    /* Slider */
+    .slider-activities {
+        flex-wrap: nowrap;
+        width: 100%;
+    }
+
+    .slider-button {
+        padding: 5px;
+        font-size: 1.2em;
+    }
+}
+
+/* Ajustements pour mobiles */
+@media (max-width: 480px) {
+    .content1 h1 {
+        font-size: 1.8em;
+    }
+
+    .content1 p {
+        font-size: 1em;
+    }
+
+    .bton {
+        font-size: 0.9em;
+        padding: 8px 18px;
+    }
+
+    /* Cartes pour mobiles */
+    .slider-activities {
+        width: 100%; /* Largeur de la première carte */
+        transform: translateX(0); /* Position de départ */
+    }
+
+    /* Permet de voir une carte à la fois */
+    .service-card {
+        min-width: 100%;
+        flex: 0 0 auto;
+        margin: 10px 0;
+    }
+}
+
+
+/* Block Text Section */
+.contain {
+    width: 90%;
+    max-width: 1200px;
+    margin: 20px auto;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #504e2c;
+    font-weight: normal;
+}
+
+p,
+ul {
+    font-weight: normal;
+    line-height: 1.6;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+ul li {
+    margin-bottom: 10px;
+}
+
+.content-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.col-xl-6 {
+    flex: 1 1 48%;
+}
+
+#img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+a {
+    color: #ffa900;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Adjustments for Block Section */
+@media (max-width: 768px) {
+    .col-xl-6 {
+        flex: 1 1 100%;
+    }
+}
+
+    /* end block-text */
+</style>
+<!-- start box -->
+<!-- Swiper container for the slider -->
+<div class="container_set swiper-container">
+    <div class="swiper-wrapper">
+        {% for baniereDestinate in destination.baniereDestination.all %}
+            <!-- Slide 1 -->
+            <div class="swiper-slide" style="background-image: url('{{ baniereDestinate.image.url }}');">
+                <div class="container">
+                <div class="row w-100">
+                    <div class="col-md-8 content1">
+                    <h1>{{ baniereDestinate.title }}</h1>
+                    <p>
+                        <ul>
+                            <li>
+                                {{ baniereDestinate.content|safe }}
+                            </li>
+                        </ul>
+                    </p>
+                    <a href="{% url 'request_devis' %}">
+                        <button class="bton">{% blocktrans %}Get a Quick Quote{% endblocktrans %}</button>
+                    </a>
+                    </div>
+                </div>
+                </div>
+            </div>
+            
+        {% endfor %}        
+    </div>
+    <!-- Swiper controls-->
+    <div class="swiper-pagination"></div>
+</div>
+
+<!-- start text -->
+<div class="body">
+    <div class="slider-contain">
+        <h2>{% trans "Discover Zanzibar" %}</h2>
+        
+        <button class="slider-button left-button">&#10094;</button>
+        <section class="slider-activities">
+            {% for activity in destination.activities.all %}
+                <!-- 1. Mnemba Island Excursion -->
+                <div class="service-card">
+                    <img src="{{ activity.image.url }}" alt="{% trans "Mnemba Island Excursion" %}">
+                    <h3>{{ activity.name }}</h3>
+                    <p>{{ activity.description|safe }}</p>
+                </div>
+                
+            {% endfor %}
+        </section>
+        <button class="slider-button right-button">&#10095;</button>
+    </div>
+</div>
+
+
+<!-- start block-text -->
+<div class="contain">
+    <div class="content-wrapper">
+        <div class="row">
+            <div class="col-xl-6">
+                <h2>
+                    <span style="font-weight: normal;">{{ destination.title }}</span>
+                </h2>
+                <p>{{ destination.description|safe }}</p>
+                <!-- <p>{% blocktrans %}Our safari packages offer something for every traveler, from laid-back exploration to adrenaline-filled water sports.{% endblocktrans %}</p> -->
+            </div>
+            <div class="col-sm-6">
+                <p>
+                    <img class="img" alt="{% trans 'Zanzibar Safari' %}" src="{{ destination.image.url }}" title="{% trans 'Explore Zanzibar' %}">
+                </p>
+            </div>
+            <!-- <div class="col-sm-12">
+                <h2>
+                    <span style="font-weight: normal;">{% blocktrans %}Why Choose Zanzibar?{% endblocktrans %}</span>
+                </h2>
+                <p>
+                    <ul>
+                        <li><b>{% trans "Breathtaking Beaches" %}</b>: {% blocktrans %}Zanzibar is famous for its pristine white-sand beaches and crystal-clear waters, perfect for sunbathing, swimming, and snorkeling.{% endblocktrans %}</li>
+                        <li><b>{% trans "Rich Culture" %}</b>: {% blocktrans %}Explore the historic Stone Town, a UNESCO World Heritage Site, and immerse yourself in Zanzibar’s diverse cultural heritage.{% endblocktrans %}</li>
+                        <li><b>{% trans "Exotic Wildlife" %}</b>: {% blocktrans %}From rare species in Jozani Forest to the vibrant coral reefs, Zanzibar is a haven for nature and wildlife enthusiasts.{% endblocktrans %}</li>
+                    </ul>
+                </p>
+            </div>
+            <div class="row">
+                <div class="col-xl-6">
+                    <h2>{% blocktrans %}Plan Your Journey{% endblocktrans %}</h2>
+                    <p>{% blocktrans %}Let us help you design the perfect Zanzibari getaway. Whether you're looking for a luxurious beach holiday, a cultural exploration, or an adventurous safari, we will tailor the trip to your preferences and ensure an unforgettable experience.{% endblocktrans %}</p>
+                    <p>{% blocktrans %}Contact us today to start planning your dream vacation in Zanzibar. Our dedicated team of travel experts is here to assist you every step of the way, making sure your experience is seamless and extraordinary.{% endblocktrans %}</p>
+                    <div class="rd-navbar-aside-right"><a class="button button-sm button-secondary button-nina" id="btn-requestQuote" style="background-color: rgb(43, 42, 42); color: aliceblue; border-color: black;" href="/request_devis">{% blocktrans %}request a quote{% endblocktrans %}</a></div>
+                </div>
+                <div class="col-sm-6">
+                    <p>
+                        <img class="img" alt="{% trans 'Zanzibar Sunset Cruise' %}" src="{% static 'images/sunset_cruise.jpg' %}" title="{% trans 'Sail along Zanzibar’s stunning coast' %}">
+                    </p>
+                </div>
+            </div> -->
+        </div>
+        <div class="rd-navbar-aside-right"><a class="button button-sm button-secondary button-nina" id="btn-requestQuote" style="background-color: rgb(43, 42, 42); color: aliceblue; border-color: black;" href="/request_devis">{% blocktrans %}request a quote{% endblocktrans %}</a></div>
+
+    </div>
+</div>
+
+
+<!-- Swiper JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+<script>
+    var swiper = new Swiper('.swiper-container', {
+      loop: true,
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+    });
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    const sliderActivities = document.querySelector('.slider-activities');
+    const leftButton = document.querySelector('.left-button');
+    const rightButton = document.querySelector('.right-button');
+    const cardWidth = 280; // Largeur de chaque carte
+    let currentIndex = 0; // Index pour suivre la position actuelle
+    let intervalId;
+
+    // Fonction pour décaler les cartes
+    function updateSliderPosition() {
+        sliderActivities.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+    }
+
+    // Fonction de défilement automatique
+    function startAutoScroll() {
+        intervalId = setInterval(() => {
+            currentIndex++;
+            if (currentIndex >= sliderActivities.children.length) {
+                currentIndex = 0; // Retour au début
+            }
+            updateSliderPosition();
+        }, 3000); // Défilement toutes les 3 secondes
+    }
+
+    // Stopper le défilement automatique lorsqu'on utilise les boutons
+    function stopAutoScroll() {
+        clearInterval(intervalId);
+        startAutoScroll(); // Reprendre après interaction
+    }
+
+    // Événements de clic pour les boutons de navigation
+    leftButton.addEventListener('click', () => {
+        stopAutoScroll();
+        currentIndex = (currentIndex === 0) ? sliderActivities.children.length - 1 : currentIndex - 1;
+        updateSliderPosition();
+    });
+
+    rightButton.addEventListener('click', () => {
+        stopAutoScroll();
+        currentIndex = (currentIndex + 1) % sliderActivities.children.length;
+        updateSliderPosition();
+    });
+
+    // Démarrer le défilement automatique
+    startAutoScroll();
+});
+
+
+</script>
+<!-- end block-text -->
+{% endblock %}

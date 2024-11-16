@@ -1,0 +1,815 @@
+{% load i18n %}
+{% load static %}
+
+<!DOCTYPE html>
+<html class="wide wow-animation" lang="en"> 
+  <head>
+    <script src="//code.tidio.co/3paqyrukwm1hmgk483xr8hqpv4ipjhmh.js" async></script>
+    <!-- Site Title-->
+    <title>welcometosafari !</title>
+    <meta name="format-detection" content="telephone=no">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <!-- Stylesheets -->
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Oswald:200,400%7CLato:300,400,300italic,700%7CMontserrat:900">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/fonts.css' %}">
+		<!--[if lt IE 10]>
+    <div style="background: #212121; padding: 10px 0; box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3); clear: both; text-align:center; position: relative; z-index:1;"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img src="images/ie8-panel/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div>
+    <script src="js/html5shiv.min.js"> </script>
+		<![endif]--> 
+  </head>
+  <body>
+    
+    <!-- Page preloader-->
+    <div class="page-loader"> 
+      <div class="page-loader-body"> 
+        <div class="preloader-wrapper big active"> 
+          <div class="spinner-layer spinner-blue"> 
+            <div class="circle-clipper left">
+              <div class="circle"> </div>
+            </div>
+            <div class="gap-patch">
+              <div class="circle"> </div>
+            </div>
+            <div class="circle-clipper right">
+              <div class="circle"></div>
+            </div>
+          </div>
+          <div class="spinner-layer spinner-red">
+            <div class="circle-clipper left">
+              <div class="circle"></div>
+            </div>
+            <div class="gap-patch">
+              <div class="circle"> </div>
+            </div>
+            <div class="circle-clipper right">
+              <div class="circle"></div>
+            </div>
+          </div>
+          <div class="spinner-layer spinner-yellow"> 
+            <div class="circle-clipper left">
+              <div class="circle"></div>
+            </div>
+            <div class="gap-patch">
+              <div class="circle"></div>
+            </div>
+            <div class="circle-clipper right">
+              <div class="circle"> </div>
+            </div>
+          </div>
+          <div class="spinner-layer spinner-green"> 
+            <div class="circle-clipper left">
+              <div class="circle"></div>
+            </div>
+            <div class="gap-patch">
+              <div class="circle"></div>
+            </div>
+            <div class="circle-clipper right">
+              <div class="circle"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Page-->
+
+    <div class="page">
+      <!-- Page Header-->
+      {% block header %} 
+      <header class="section page-header">
+        <!-- RD Navbar-->
+        <div class="rd-navbar-wrap rd-navbar-corporate">
+          <nav class="rd-navbar" data-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-fixed" data-md-layout="rd-navbar-fixed" data-md-device-layout="rd-navbar-fixed" data-lg-layout="rd-navbar-fullwidth" data-xl-layout="rd-navbar-static" data-lg-device-layout="rd-navbar-fixed" data-xl-device-layout="rd-navbar-static" data-md-stick-up-offset="130px" data-lg-stick-up-offset="100px" data-stick-up="true" data-sm-stick-up="true" data-md-stick-up="true" data-lg-stick-up="true" data-xl-stick-up="true">
+            <div class="rd-navbar-collapse-toggle" data-rd-navbar-toggle=".rd-navbar-collapse"><span></span></div>
+            <div class="rd-navbar-top-panel rd-navbar-collapse novi-background">
+              <div class="rd-navbar-top-panel-inner">
+                <ul class="list-inline">
+                  <!-- <li class="box-inline list-inline-item"><span class="icon novi-icon icon-md-smaller icon-secondary mdi mdi-phone"></span>
+                    <ul class="list-comma">
+                      <li><a href="tel:+1 409 995 3496">+1 409 995 3496</a></li>
+                      {% comment %} <li><a href="tel:#">1-800-6780-345</a></li> {% endcomment %}
+                    </ul>
+                  </li> -->
+                  <li class="box-inline list-inline-item">
+                    <span class="icon novi-icon icon-md-smaller icon-secondary mdi mdi-whatsapp"></span>
+                    <a href="https://wa.me/+33759449968" target="_blank">+33759449968</a>
+                  </li>
+                
+                  {% comment %} <li class="box-inline list-inline-item"><span class="icon novi-icon icon-md-smaller icon-secondary mdi mdi-map-marker"></span><a href="#">30 N GOULD STREET STE, SHERIDAN, 82801, WY</a></li> {% endcomment %}
+                  <li class="box-inline list-inline-item"><span class="icon novi-icon icon-md-smaller icon-secondary mdi mdi-email"></span><a href="mailto:support@welcometosafari.com">support@welcometosafari.com</a></li>
+                </ul>
+                <ul class="list-inline">
+                  <li>
+                      {% if request.user.is_authenticated %}
+                          <div class="btn-group">
+                              <form action="{% url 'set_language' %}" method="post">
+                                  {% csrf_token %}
+                                  <select name="language" onchange="this.form.submit()">
+                                      {% get_current_language as LANGUAGE_CODE %}
+                                      {% get_available_languages as LANGUAGES %}
+                                      {% get_language_info_list for LANGUAGES as languages %}
+                                      {% for language in languages %}
+                                          <option value="{{ language.code }}" {% if language.code == LANGUAGE_CODE %}selected{% endif %}>
+                                              <img src="{% static 'flags/' %}{{ language.code }}.png" alt="{{ language.name_local }} flag" style="width: 16px; height: 12px; vertical-align: middle;">
+                                              {{ language.name_local }}
+                                          </option>
+                                      {% endfor %}
+                                  </select>
+                              </form>
+                          </div>
+                      {% else %}
+                          <div class="btn-group">
+                              <form action="{% url 'set_language' %}" method="post">
+                                  {% csrf_token %}
+                                  <select name="language" onchange="this.form.submit()">
+                                      {% get_current_language as LANGUAGE_CODE %}
+                                      {% get_available_languages as LANGUAGES %}
+                                      {% get_language_info_list for LANGUAGES as languages %}
+                                      {% for language in languages %}
+                                          <option value="{{ language.code }}" {% if language.code == LANGUAGE_CODE %}selected{% endif %}>
+                                              <img src="{% static 'flags/' %}{{ language.code }}.png" alt="{{ language.name_local }} flag" style="width: 16px; height: 12px; vertical-align: middle;">
+                                              {{ language.name_local }}
+                                          </option>
+                                      {% endfor %}
+                                  </select>
+                              </form>
+                          </div>
+                      {% endif %}
+                  </li>
+                </ul>
+
+                <ul class="list-inline">
+                  <!-- Facebook icon -->
+                  <li class="list-inline-item">
+                     <a class="icon novi-icon icon-md-middle icon-circle icon-secondary-5-filled mdi mdi-facebook" href="https://www.facebook.com/welcometosaf"></a>
+                  </li>
+               
+                  <!-- TikTok icon from Font Awesome -->
+                  <li class="list-inline-item">
+                    <a class="icon novi-icon icon-md-middle icon-circle icon-secondary-5-filled fab fa-tiktok" href="https://www.tiktok.com/@welcome_safari"></a>
+                  </li>
+               
+                  <!-- Pinterest icon -->
+                  <li class="list-inline-item">
+                     <a class="icon novi-icon icon-md-middle icon-circle icon-secondary-5-filled mdi mdi-pinterest" href="https://www.pinterest.com/welcometosafari/"></a>
+                  </li>
+               
+                  <!-- Instagram icon (remplace LinkedIn) -->
+                  <li class="list-inline-item">
+                     <a class="icon novi-icon icon-md-middle icon-circle icon-secondary-5-filled mdi mdi-instagram" href="https://www.instagram.com/welcometosafari"></a>
+                  </li>
+               
+                  <!-- WhatsApp icon (nouvelle icône) -->
+                  <li class="list-inline-item">
+                     <a class="icon novi-icon icon-md-middle icon-circle icon-secondary-5-filled mdi mdi-whatsapp" href="https://wa.me/+33759449968"></a>
+                  </li>
+               </ul>
+               
+              </div>
+              <div class="rd-navbar-top-panel-inner"><a class="button button-sm button-secondary button-nina" href="/request_devis" target="_blank">{% trans 'request a quote' %}</a></div>
+            </div>
+            <div class="rd-navbar-inner">
+              <!-- RD Navbar Panel-->
+              <div class="rd-navbar-panel">
+                <!-- RD Navbar Toggle-->
+                <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
+                <!-- RD Navbar Brand-->
+                <div class="rd-navbar-brand"><a class="brand-name" href="/"><img class="logo-default" src="{% static 'logo/logo_welcome.png' %}" alt="" width="208" height="46"/><img class="logo-inverse" src="{% static 'images/logo-inverse-208x46.png' %}" alt="" width="208" height="46"/></a></div>
+              </div>
+              <div class="rd-navbar-aside-center">
+                <div class="rd-navbar-nav-wrap">
+                    <!-- RD Navbar Nav-->
+                    <ul class="rd-navbar-nav">
+                        <li class="active">
+                            <a href="{% url 'index' %}">{% trans 'Home' %}</a>
+                        </li>
+                        <li>
+                            <a href="/about">{% trans 'About Us' %}</a>
+                        </li>
+            
+                        <!-- Dropdown for Destinations -->
+                        <li class="dropdown">
+                          <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">{% trans 'Destinations' %}</a>
+                          <ul class="dropdown-menu rounded-0 m-0">
+                            <li><a class="dropdown-item" href="/zanzibar_destination">{% trans "Zanzibar" %}</a></li>
+                            <li><a class="dropdown-item" href="/uganda_safari">{% trans "Ouganda" %}</a></li>
+                            <li><a class="dropdown-item" href="/kenya_safari">{% trans "Kenya" %}</a></li>
+                            <li><a class="dropdown-item" href="/dubai_destination">{% trans "Dubaï" %}</a></li>
+                            <li><a class="dropdown-item" href="/egypte_destination">{% trans "Egypte" %}</a></li>
+                            <li><a class="dropdown-item" href="/maldives_destination">{% trans "Maldives" %}</a></li>
+                            {% comment %} <li><a class="dropdown-item" href="/tanzania_safari">Tanzanie</a></li> {% endcomment %}
+                            <!-- Ajoutez plus de destinations ici -->
+                          </ul>
+                        </li>
+
+                        <!-- Dropdown for Safari -->
+                        <li class="dropdown">
+                          <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Safari</a>
+                          <ul class="dropdown-menu rounded-0 m-0">
+                              <li><a class="dropdown-item" href="/tanzania_safari">{% trans "Tanzanie" %}</a></li>
+                              <li><a class="dropdown-item" href="/uganda_safari">{% trans "Ouganda" %}</a></li>
+                              <li><a class="dropdown-item" href="/kenya_safari">{% trans "Kenya" %}</a></li>
+                              <!-- Ajoutez plus de safaris ici -->
+                          </ul>
+                        </li>
+
+                        <li>
+                          <a href="/blog">{% trans 'Actualite' %}</a>
+                        </li>
+                        <li>
+                          <a href="/contacts">{% trans 'Contacts' %}</a>
+                        </li>
+                        
+                      
+                    </ul>
+                </div>
+              </div>
+              
+
+
+              <div class="rd-navbar-aside-right"><a class="button button-sm button-secondary button-nina" id="btn-requestQuote" style="background-color: rgb(43, 42, 42); color: aliceblue; border-color: black;" href="/request_devis">{% trans 'request a quote' %}</a></div>
+            </div>
+          </nav>
+        </div>
+      </header>
+      {% endblock %}
+
+      {% block body %}
+      <section class="section">
+        <div class="swiper-form-wrap">
+          <!-- Swiper-->
+          <div class="swiper-container swiper-slider swiper-slider_height-1 swiper-align-left swiper-align-left-custom context-dark bg-gray-darker" data-loop="false" data-autoplay="5500" data-simulate-touch="false" data-slide-effect="fade">
+            <div class="swiper-wrapper">
+              {% for slide in baniere %}
+              <div class="swiper-slide" data-slide-bg="{{slide.image.url}}">
+                <div class="swiper-slide-caption">
+                  <div class="container container-bigger swiper-main-section">
+                    <div class="row row-fix justify-content-sm-center justify-content-md-start">
+                      <a href="{% url 'zanzibar_destination' %}">
+                        <div class="col-md-6 col-lg-5 col-xl-4 col-xxl-5">
+                          <h3>{{slide.title}}</h3>
+                          <div class="divider divider-decorate"></div>
+                          <p style="color: rgb(0, 0, 0);" class="text-spacing-sm"> {{slide.content|safe}}</p><a class="button button-default-outline button-nina button-sm" href="{% url 'zanzibar_destination' %}">{% trans 'learn more' %}</a>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- <div class="swiper-slide" data-slide-bg="{% static 'images/ouganda.jpg' %}">
+                <div class="swiper-slide-caption">
+                  <div class="container container-bigger swiper-main-section">
+                    <div class="row row-fix justify-content-sm-center justify-content-md-start">
+                      <a href="{% url 'uganda_safari' %}">
+                        <div class="col-md-6 col-lg-5 col-xl-4 col-xxl-5">
+                          <h3>{% blocktrans %}Looking to explore Ouganda in a unique and memorable way?{% endblocktrans %}</h3>
+                          <div class="divider divider-decorate"></div>
+                          <p style="color: rgb(247, 245, 243);" class="text-spacing-sm" >{% blocktrans %}Our mission is to offer you unforgettable experiences in Ouganda, combining nature, adventure, and cultural immersion to create exceptional moments.{% endblocktrans %}</p><a class="button button-default-outline button-nina button-sm" href="{% url 'uganda_safari' %}">{% trans 'learn more' %}</a>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div> -->
+              <!-- <div class="swiper-slide" data-slide-bg="{% static 'images/kenya.jpg' %}">
+                <div class="swiper-slide-caption">
+                  <div class="container container-bigger swiper-main-section">
+                    <div class="row row-fix justify-content-sm-center justify-content-md-start">
+                      <a href="{% url 'kenya_safari' %}">
+                        <div class="col-md-6 col-lg-5 col-xl-4 col-xxl-5">
+                          <h3>{% blocktrans %}Looking to explore Kenya in a unique and memorable way?{% endblocktrans %}</h3>
+                          <div class="divider divider-decorate"></div>
+                          <p style="color: rgb(0, 0, 0);" class="text-spacing-sm">{% blocktrans %}Our mission is to offer you unforgettable experiences in Kenya, combining wildlife safaris, adventure, and cultural immersion to create exceptional moments.{% endblocktrans %}</p><a class="button button-default-outline button-nina button-sm" href="{% url 'kenya_safari' %}">{% trans 'learn more' %}</a>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div> -->
+
+              <!-- <div class="swiper-slide" data-slide-bg="{% static 'images/dubai.jpg' %}">
+                <div class="swiper-slide-caption">
+                  <div class="container container-bigger swiper-main-section">
+                    <div class="row row-fix justify-content-sm-center justify-content-md-start">
+                      <a href="{% url 'dubai_destination' %}">
+                        <div class="col-md-6 col-lg-5 col-xl-4 col-xxl-5">
+                          <h3>{% blocktrans %}Looking to explore Dubai in a unique and memorable way?{% endblocktrans %}</h3>
+                          <div class="divider divider-decorate"></div>
+                          <p style="color: rgb(243, 240, 240);" class="text-spacing-sm">{% blocktrans %}Our mission is to offer you unforgettable experiences in Dubai, combining luxury, adventure, and cultural immersion to create exceptional moments.{% endblocktrans %}</p><a class="button button-default-outline button-nina button-sm" href="{% url 'dubai_destination' %}">{% trans 'learn more' %}</a>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div> -->
+              <!-- <div class="swiper-slide" data-slide-bg="{% static 'images/egypte.jpg' %}">
+                <div class="swiper-slide-caption">
+                  <div class="container container-bigger swiper-main-section">
+                    <div class="row row-fix justify-content-sm-center justify-content-md-start">
+                      <a href="{% url 'egypte_destination' %}">
+                        <div class="col-md-6 col-lg-5 col-xl-4 col-xxl-5">
+                          <h3>{% blocktrans %}Are you ready to discover the wonders of Egypt?{% endblocktrans %}</h3>
+                          <div class="divider divider-decorate"></div>
+                          <p style="color: rgb(250, 247, 247);" class="text-spacing-sm">{% blocktrans %}Expert-guided tours tailored for you. Explore ancient history and modern culture{% endblocktrans %}</p><a class="button button-default-outline button-nina button-sm" href="{% url 'egypte_destination' %}">learn more</a>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div> -->
+              <!-- <div class="swiper-slide" data-slide-bg="{% static 'images/maldives2.jpg' %}">
+                <div class="swiper-slide-caption">
+                  <div class="container container-bigger swiper-main-section">
+                    <div class="row row-fix justify-content-sm-center justify-content-md-start">
+                      <a href="{% url 'maldives_destination' %}">
+                        <div class="col-md-6 col-lg-5 col-xl-4 col-xxl-5">
+                          <h3>{% blocktrans %}Looking for a Paradise Getaway?{% endblocktrans %}</h3>
+                          <div class="divider divider-decorate"></div>
+                          <p style="color: rgb(250, 248, 248);" class="text-spacing-sm">{% blocktrans %}Entrust us with your dream holiday plans; our travel agency specializes in crafting tailored experiences in the Maldives, delivering the ultimate luxury and serenity you deserve.{% endblocktrans %}</p><a class="button button-default-outline button-nina button-sm" href="{% url 'maldives_destination' %}">{% trans 'learn more' %}</a>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div> -->
+              {% endfor %}
+            </div>
+            <!-- Swiper controls-->
+            <div class="swiper-pagination-wrap">
+              <div class="container container-bigger">
+                <div class="row">
+                  <div class="col-sm-12">
+                    <div class="swiper-pagination"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="container container-bigger form-request-wrap form-request-wrap-modern" >
+            <div class="row row-fix justify-content-sm-center justify-content-lg-end">
+              <div class="col-lg-6 col-xxl-5">
+                <div class="form-request form-request-modern bg-gray-lighter" style=" background-color:orange">
+                  <h4>{% blocktrans %}Let’s plan your dream trip together!{% endblocktrans %}</h4>
+                  <!-- RD Mailform-->
+                  <form class="rd-mailform form-fix">
+                    <div class="row row-20 row-fix">
+                   
+                     
+                  
+                      {% comment %} <div class="col-sm-12 col-lg-6">
+                        <label class="form-label-outside" style="color: white;">Duration</label>
+                        <div class="form-wrap form-wrap-validation">
+                          <!-- Select 2-->
+                          <select class="form-input select-filter" data-placeholder="All" data-minimum-results-for-search="Infinity" name="city">
+                            <option value="1">Any length</option>
+                            <option value="2">2 days</option>
+                            <option value="3">3 days</option>
+                            <option value="4">4 days</option>
+                          </select>
+                        </div>
+                      </div> {% endcomment %}
+                      <div class="col-lg-6">
+                        <label class="form-label-outside" style="color: black;">{% trans 'Adults' %}</label>
+                        <div class="form-wrap form-wrap-modern">
+                          <input class="form-input input-append" id="form-element-stepper" type="number" min="0" max="300" value="2">
+                        </div>
+                      </div>
+                      <div class="col-lg-6">
+                        <label class="form-label-outside" style="color: black;">{% trans 'Children' %}</label>
+                        <div class="form-wrap form-wrap-modern">
+                          <input class="form-input input-append" id="form-element-stepper-1" type="number" min="0" max="300" value="0">
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-sm-12 col-lg-12">
+                      <label class="form-label-outside" style="color: black;">{% trans 'Depart Date' %}</label>
+                      <div class="form-wrap form-wrap-validation">
+                        <!-- Select -->
+                        <input class="form-input" id="dateForm" name="date" type="text" data-time-picker="date">
+                        <label class="form-label" for="dateForm"style="color: black;" >{% trans 'Choose the date' %}</label>
+                    
+                      </div>
+                    </div>
+                    <div class="form-wrap form-button">
+                      <button class="button button-block button-secondary" type="submit">{% trans 'Start Customizing' %}</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-variant-1 bg-default novi-background bg-cover"> 
+        <div class="container container-wide">
+          <div class="row row-fix justify-content-xl-end row-30 text-center text-xl-left">
+            <div class="col-xl-8">
+              <div class="parallax-text-wrap">
+                <h3>{% trans 'Our Best Tours' %}</h3><span class="parallax-text">{% trans 'Hot tours' %}</span>
+              </div>
+              <hr class="divider divider-decorate">
+            </div>
+            <div class="col-xl-3 text-xl-right"><a class="button button-secondary button-nina" href="#">{% trans 'view all tours' %}</a></div>
+          </div>
+          <div class="row row-50">
+            {% for destinate in destination %}
+              <div class="col-md-6 col-xl-4">
+                <article class="event-default-wrap">
+                  <div class="event-default">
+                    <figure class="event-default-image">
+                      <img src="{{ destinate.image.url }}" alt="Image de couverture"/>
+                    </figure>
+                    <div class="event-default-caption">
+                      <a class="button button-xs button-secondary button-nina" href="destination_details/{{destinate.pk}}">{{ destinate.title }}</a>
+                    </div>
+                  </div>
+                  <div class="event-default-inner">
+                    <h5><a class="event-default-title" href="#">{{ destinate.title }}</a></h5>
+                    <span class="heading-5">{% trans 'from' %} ﹩{{ destinate.price }}</span>
+                  </div>
+                </article>
+              </div>
+            {% endfor %}
+              <!-- <div class="col-md-6 col-xl-4">
+                <article class="event-default-wrap">
+                  <div class="event-default">
+                    <figure class="event-default-image">
+                      <img src="{% static 'images/ouganda2.jpg' %}" alt="Image de couverture"/>
+                    </figure>
+                    <div class="event-default-caption">
+                      <a class="button button-xs button-secondary button-nina" href="{% url 'uganda_safari' %}">{% trans 'Ouganda' %}</a>
+                    </div>
+                  </div>
+                  <div class="event-default-inner">
+                    <h5><a class="event-default-title" href="#">{% trans 'Ouganda' %}</a></h5>
+                    <span class="heading-5">{% trans 'from' %} $4343.00</span>
+                  </div>
+                </article>
+              </div> -->
+              <!-- <div class="col-md-6 col-xl-4">
+                <article class="event-default-wrap">
+                  <div class="event-default">
+                    <figure class="event-default-image">
+                      <img src="{% static 'images/kenya2.jpg' %}" alt="Image de couverture"/>
+                    </figure>
+                    <div class="event-default-caption">
+                      <a class="button button-xs button-secondary button-nina" href="{% url 'kenya_safari' %}">{% trans 'Kenya' %}</a>
+                    </div>
+                  </div>
+                  <div class="event-default-inner">
+                    <h5><a class="event-default-title" href="#">{% trans 'Kenya' %}</a></h5>
+                    <span class="heading-5">{% trans 'from' %} $2323.00</span>
+                  </div>
+                </article>
+              </div> -->
+              <!-- <div class="col-md-6 col-xl-4">
+                <article class="event-default-wrap">
+                  <div class="event-default">
+                    <figure class="event-default-image">
+                      <img src="{% static 'images/dubai2.jpeg' %}" alt="Image de couverture"/>
+                    </figure>
+                    <div class="event-default-caption">
+                      <a class="button button-xs button-secondary button-nina" href="{% url 'dubai_destination' %}">{% trans 'Dubaï' %}</a>
+                    </div>
+                  </div>
+                  <div class="event-default-inner">
+                    <h5><a class="event-default-title" href="#">{% trans 'Dubaï' %}</a></h5>
+                    <span class="heading-5">{% trans 'from' %} $500.00</span>
+                  </div>
+                </article>
+              </div> -->
+              <!-- <div class="col-md-6 col-xl-4">
+                <article class="event-default-wrap">
+                  <div class="event-default">
+                    <figure class="event-default-image">
+                      <img src="{% static 'images/egypte2.jpg' %}" alt="Image de couverture"/>
+                    </figure>
+                    <div class="event-default-caption">
+                      <a class="button button-xs button-secondary button-nina" href="{% url 'egypte_destination' %}">{% trans 'Egypte' %}</a>
+                    </div>
+                  </div>
+                  <div class="event-default-inner">
+                    <h5><a class="event-default-title" href="#">{% trans 'Egypte' %}</a></h5>
+                    <span class="heading-5">{% trans 'from' %} $1111.00</span>
+                  </div>
+                </article>
+              </div> -->
+              <!-- <div class="col-md-6 col-xl-4">
+                <article class="event-default-wrap">
+                  <div class="event-default">
+                    <figure class="event-default-image">
+                      <img src="{% static 'images/maldives2.jpg' %}" alt="Image de couverture"/>
+                    </figure>
+                    <div class="event-default-caption">
+                      <a class="button button-xs button-secondary button-nina" href="{% url 'maldives_destination' %}">{% trans 'Maldives' %}</a>
+                    </div>
+                  </div>
+                  <div class="event-default-inner">
+                    <h5><a class="event-default-title" href="#">{% trans 'Maldives' %}</a></h5>
+                    <span class="heading-5">{% trans 'from' %} $400.00</span>
+                  </div>
+                </article>
+              </div> -->
+
+
+            <style>
+              .event-default-image {
+                  width: 100%;
+                  height: 250px; /* Ajustez cette valeur selon vos besoins */
+                  overflow: hidden; /* Assure que tout débordement est masqué */
+              }
+          
+              .event-default-image img {
+                  width: 100%;
+                  height: 100%;
+                  object-fit: cover; /* Recadre l'image pour qu'elle remplisse le conteneur tout en conservant le ratio */
+                  display: block;
+              }
+          </style>
+          
+          </div>
+        </div>
+      </section>
+
+      <!-- our advantages-->
+      <section class="section section-lg bg-gray-lighter novi-background bg-cover text-center">
+        <div class="container container-wide">
+          <h3>{% blocktrans %}our services{% endblocktrans %}</h3>
+          <div class="divider divider-decorate"></div>
+          <div class="row row-50 justify-content-sm-center text-left">
+            <div class="col-sm-10 col-md-6 col-xl-3">
+              <article class="box-minimal box-minimal-border">
+                <div class="box-minimal-icon novi-icon mdi mdi-airplane"></div>
+                <p class="big box-minimal-title">{% trans 'Air Tickets' %}</p>
+                <hr>
+                <div class="box-minimal-text text-spacing-sm">{% blocktrans %} At our travel agency, you can book air tickets to any world destination. We also provide online ticket booking via our website in just a couple of steps.{% endblocktrans %}</div>
+              </article>
+            </div>
+            <div class="col-sm-10 col-md-6 col-xl-3">
+              <article class="box-minimal box-minimal-border">
+                <div class="box-minimal-icon novi-icon mdi mdi-map"></div>
+                <p class="big box-minimal-title">{% trans 'Visa and Travel Insurance' %}</p>
+                <hr>
+                <div class="box-minimal-text text-spacing-sm">{% blocktrans %}Besides regular tours and excursions, we also offer a variety of cruises & sea voyages for different customers looking for awesome experiences.{% endblocktrans %}</div>
+              </article>
+            </div>
+            <div class="col-sm-10 col-md-6 col-xl-3">
+              <article class="box-minimal box-minimal-border">
+                <div class="box-minimal-icon novi-icon mdi mdi-city"></div>
+                <p class="big box-minimal-title">{% trans 'Hotel Bookings' %}</p>
+                <hr>
+                <div class="box-minimal-text text-spacing-sm">{% blocktrans %}We offer a wide selection of hotel ranging from 5-star ones to small properties located worldwide so that you could book a hotel you like.{% endblocktrans %}</div>
+              </article>
+            </div>
+            <div class="col-sm-10 col-md-6 col-xl-3">
+              <article class="box-minimal box-minimal-border">
+                <div class="box-minimal-icon novi-icon mdi mdi-beach"></div>
+                <p class="big box-minimal-title">{% trans 'Tailored Summer Tours' %}</p>
+                <hr>
+                <div class="box-minimal-text text-spacing-sm">{% blocktrans %}Our agency provides varied tours including tailored summer tours for clients who are searching for an exclusive and memorable vacation.{% endblocktrans %}</div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+<!-- Tips & tricks-->
+<section class="section section-lg novi-background bg-cover bg-default text-center">
+  <div class="container-wide">
+    <div class="row row-50">
+      <div class="col-sm-12">
+        <h3>{% trans 'Latest Presentations' %}</h3>
+        <div class="divider divider-decorate"></div>
+        <!-- Owl Carousel-->
+        <div class="owl-carousel owl-carousel-team owl-carousel-inset" data-items="1" data-md-items="2" data-xl-items="3" data-stage-padding="15" data-loop="true" data-margin="30" data-mouse-drag="false" data-dots="true" data-autoplay="true">
+          
+          <!-- Boucle à travers les présentations -->
+          {% for presentation in presentations %}
+          <article class="post-blog">
+            <a class="post-blog-image" href="/presesentation_detail/{{presentation.pk}}">
+              <!-- Affiche l'image si disponible -->
+              {% load thumbnail %}
+              {% if presentation.image %}
+                {% thumbnail presentation.image "570x415" crop="center" as thumb %}
+                  <img src="{{ thumb.url }}" alt="{{ presentation.intitule }}" width="570" height="415"/>
+                {% endthumbnail %}
+              {% else %}
+                <img src="{% static 'images/default-placeholder.png' %}" alt="No Image Available" width="570" height="415"/>
+              {% endif %}
+            </a>
+            <div class="post-blog-caption">
+              <div class="post-blog-caption-header">
+                <ul class="post-blog-tags">
+                  <li><a class="button-tags" href="/presesentation_detail/{{presentation.pk}}">{{ presentation.intitule }}</a></li>
+                </ul>
+                {% comment %} <ul class="post-blog-meta">
+                  <li><span>by</span>&nbsp;<a href="#">{{ presentation.titre }}</a></li>
+                </ul> {% endcomment %}
+              </div>
+               <div class="post-blog-caption-body">
+                <h5><a class="post-blog-title" href="#">{{ presentation.titre}}</a></h5>
+                {% comment %} <p>{{ presentation.titre}}</p> <!-- Limite à 30 mots --> {% endcomment %}
+              </div> 
+              {% comment %} <div class="post-blog-caption-footer">
+                <time datetime="{{ presentation.date }}">{{ presentation.date }}</time>
+                <a class="post-comment" href="#"><span class="icon novi-icon icon-md-middle icon-gray-1 mdi mdi-comment"></span><span>12</span></a>
+              </div> {% endcomment %}
+            </div>
+          </article>
+          {% endfor %}
+          
+        </div>
+      </div>
+      <div class="col-12">
+        <a class="button button-secondary button-nina button-offset-lg" href="#">{% trans 'view all blog posts' %}</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+      
+
+      <section class="section section-lg text-center bg-gray-lighter novi-background bg-cover">
+        <div class="container container-bigger">
+          <h3>{% blocktrans %}testimonials{% endblocktrans %}</h3>
+          <div class="divider divider-decorate"></div>
+          <!-- Owl Carousel-->
+          <div class="owl-carousel owl-layout-1" data-items="1" data-dots="true" data-nav="true" data-stage-padding="0" data-loop="true" data-margin="30" data-mouse-drag="false" data-autoplay="true">
+            <article class="quote-boxed">
+              <div class="quote-boxed-aside"><img class="quote-boxed-image" src="https://www.shutterstock.com/image-photo/young-hispanic-man-tourist-wearing-260nw-2420127189.jpg" alt="" width="210" height="210"/>
+              </div>
+              <div class="quote-boxed-main">
+                <div class="quote-boxed-text">
+                  <p>{% blocktrans %}I wanted to thank you very much for planning the trip to France for my boyfriend and me. It was amazing and exceeded my expectations! We had a wonderful time and were very pleased with the accommodations in Paris and Bayeux. Our private/small tour guides were fantastic! I appreciate all the effort to get us to the Eiffel Tower finally.{% endblocktrans %} </p>
+                </div>
+                <div class="quote-boxed-meta">
+                  <p class="quote-boxed-cite">Michel Henry</p>
+                  <p class="quote-boxed-small">{% trans 'Regular Customer' %}</p>
+                </div>
+              </div>
+            </article>
+            <article class="quote-boxed">
+              <div class="quote-boxed-aside"><img class="quote-boxed-image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQV3H1arfhLEvKK8s8TvIIiZpA0QsKeoJmtkQ&s" alt="" width="210" height="210"/>
+              </div>
+              <div class="quote-boxed-main">
+                <div class="quote-boxed-text">
+                  <p>{% blocktrans %}I had a marvelous time in our travels to Madagascar, Zimbabwe and Botswana, I had just wonderful experiences.I loved the location of the Gorges Camp as I felt like it was only the time we got to see real and rural Africans and how they truly lived. The service was amazing and everyone was very attentive!{% endblocktrans %}</p>
+                </div>
+                <div class="quote-boxed-meta">
+                  <p class="quote-boxed-cite">Debra Ortega</p>
+                  <p class="quote-boxed-small">{% trans 'Regular Customer' %}</p>
+                </div>
+              </div>
+            </article>
+            <article class="quote-boxed">
+              <div class="quote-boxed-aside"><img class="quote-boxed-image" src="https://zone-critique.com/.netlify/images?fit=cover&url=https%3A%2F%2Fbo.zone-critique.com%2Fwp-content%2Fuploads%2F2024%2F03%2F387927C4-3154-47F3-B32B-DD4013872C12_1_105_c-e1710432189708.jpeg" alt="" width="210" height="210"/>
+              </div>
+              <div class="quote-boxed-main">
+                <div class="quote-boxed-text">
+                  <p>{% blocktrans %}Just wanted to say many, many thanks for helping me set up an amazing Costa Rican adventure! My nephew and I had a blast! All of the accommodations were perfect as were the activities that we did (canopy, coffee tour, hikes, fishing, and massages!) We have such fond memories and can't thank you enough!{% endblocktrans %}</p>
+                </div>
+                <div class="quote-boxed-meta">
+                  <p class="quote-boxed-cite">Samantha Smith</p>
+                  <p class="quote-boxed-small">{% trans 'Regular Customer' %}</p>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+     
+      {% comment %} <a class="section section-banner" href="https://www.thierry.com/intense-multipurpose-html-template.html" style="background-image: url({% static 'images/banner/background-03-1920x310.jpg' %}); background-image: -webkit-image-set( url({% static 'images/banner/background-03-1920x310.jpg' %}) 1x, url({% static 'images/banner/background-03-3840x620.jpg' %}) 2x )"><img src="{% static 'images/banner/foreground-03-1600x310.png' %}" srcset="{% static 'images/banner/foreground-03-1600x310.png' %} 1x, {% static 'images/banner/foreground-03-3200x620.png' %} 2x" alt="" width="1600" height="310"></a> {% endcomment %}
+{% endblock %}
+     <!-- Footer Minimal-->
+<!-- Footer Minimal -->
+<footer class="section page-footer page-footer-minimal novi-background bg-cover text-center bg-gray-darker">
+  <div class="container container-wide">
+    <!-- Aligning the content in the grid layout -->
+    <div class="row justify-content-center align-items-center row-30 text-center">
+      <!-- Logo Section -->
+      <div class="col-md-4">
+        <a href="/"><img class="inverse-logo" src="{% static 'logo/logo_welcome1.png' %}" alt="Logo" width="208" height="46"/></a>
+      </div>
+      
+      <!-- Copyright and Links Section -->
+      <div class="col-md-4">
+        <h6>{% trans 'Informations de voyage' %}</h6>
+        <ul class="list-unstyled">
+          <li><a href="" style="color:orange">{% trans "Services de visa" %}</a></li>
+          <li><a href="" style="color:orange">{% trans "Forfaits de voyage" %}</a></li>
+          <li><a href="" style="color:orange">{% trans "Conseils de voyage" %}</a></li>
+          <li><a href="" style="color:orange">{% trans "FAQ" %}</a></li>
+        </ul>
+      </div>
+
+      <!-- Social Media Section -->
+      <div class="col-md-4">
+        <ul class="list-inline">
+          <!-- Facebook icon -->
+          <li class="list-inline-item">
+             <a class="icon novi-icon icon-md-middle icon-circle icon-secondary-5-filled mdi mdi-facebook" href="https://www.facebook.com/welcometosaf"></a>
+          </li>
+       
+          <!-- TikTok icon from Font Awesome -->
+          <li class="list-inline-item">
+            <a class="icon novi-icon icon-md-middle icon-circle icon-secondary-5-filled fab fa-tiktok" href="https://www.tiktok.com/@welcome_safari"></a>
+          </li>
+       
+          <!-- Pinterest icon -->
+          <li class="list-inline-item">
+             <a class="icon novi-icon icon-md-middle icon-circle icon-secondary-5-filled mdi mdi-pinterest" href="https://www.pinterest.com/welcometosafari/"></a>
+          </li>
+       
+          <!-- Instagram icon (remplace LinkedIn) -->
+          <li class="list-inline-item">
+             <a class="icon novi-icon icon-md-middle icon-circle icon-secondary-5-filled mdi mdi-instagram" href="https://www.instagram.com/welcometosafari"></a>
+          </li>
+       
+          <!-- WhatsApp icon (nouvelle icône) -->
+          <li class="list-inline-item">
+             <a class="icon novi-icon icon-md-middle icon-circle icon-secondary-5-filled mdi mdi-whatsapp" href="https://wa.me/+33759449968"></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- About, Travel Info, and Contact Section -->
+    <div class="row justify-content-center align-items-center row-30 text-center mt-4">
+      <div class="col-md-4">
+        <h6>À propos</h6>
+        <p style="color:orange">
+          {% blocktrans %} Nous sommes une agence spécialisée dans l'obtention de visas et la planification de voyages. Nous offrons un accompagnement personnalisé pour vos voyages d'affaires et de tourisme.{% endblocktrans %}
+        </p>
+      </div>
+   
+
+
+
+      <div class="col-md-4">
+        <h6>{% trans 'Liens rapides' %}</h6>
+        <ul class="list-unstyled">
+          <li><a href="{% url 'index' %}" style="color:orange">{% trans "HOME" %}</a></li>
+          <li><a href="{% url 'about' %}" style="color:orange">{% trans "About us" %}</a></li>
+          <li><a href="{% url 'shop' %}" style="color:orange">{% trans "Shop" %}</a></li>
+          <li><a href="{% url 'contacts' %}" style="color:orange">{% trans "Contacts" %}</a></li>
+        </ul>
+      </div>
+
+      <div class="col-md-4">
+        <a class="btn btn-primary" href="{% url 'contacts' %}" style="background-color: orange;">{% trans 'Contactez-nous' %}</a>
+      </div>
+    </div>
+
+    <!-- Payment Partners Section -->
+    <div class="row justify-content-center align-items-center row-30 text-center mt-4">
+      <div class="col-12">
+        <h6>{% trans 'Nos partenaires de paiement' %}</h6>
+        <ul class="list-inline">
+          <li class="list-inline-item"><img src="https://img.icons8.com/?size=100&id=13611&format=png&color=000000" alt="Partenaire 1" width="50" height="30"/></li>
+          <li class="list-inline-item"><img src="https://memberpress.com/wp-content/uploads/2017/09/Integrations2-768x432-1.jpg" alt="Partenaire 2" width="50" height="30"/></li>
+          <!-- <li class="list-inline-item"><img src="https://e7.pngegg.com/pngimages/308/426/png-clipart-visa-logo-credit-card-visa-logo-payment-visa-blue-text-thumbnail.png" alt="Partenaire 3" width="50" height="30"/></li> -->
+          <!-- <li class="list-inline-item"><img src="https://lobservateur.info/uploads/imported_images/uploads/2016/12/MasterCard_Logo.svg_.png" alt="Partenaire 4" width="50" height="30"/></li> -->
+          <li class="list-inline-item"><img src="{% static 'images/visa.png' %}" alt="Partenaire 5" width="50" height="30"/></li>
+          <li class="list-inline-item"><img src="{% static 'images/maestro.png' %}" alt="Partenaire 6" width="50" height="30"/></li>
+          <li class="list-inline-item"><img src="{% static 'images/western_union.png' %}" alt="Partenaire 7" width="50" height="30"/></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <br><br>
+
+  <div class="col-md-12">
+    <p class="right">
+      &#169;&nbsp;<span class="copyright-year"></span> All Rights Reserved. Design&nbsp;by&nbsp;<a href="#">thierry</a>
+    </p>
+    <ul class="list-inline">
+      <li class="list-inline-item"><a href="" style="color:orange">{% trans "Politique de confidentialité" %}</a></li>
+      <li class="list-inline-item"><a href="" style="color:orange">{% trans "Conditions d'utilisation" %}</a></li>
+      <li class="list-inline-item"><a href="" style="color:orange">{% trans "Mentions légales" %}</a></li>
+    </ul>
+  </div>
+</footer>
+
+
+    </div>
+    <!-- Global Mailform Output-->
+    <div class="snackbars" id="form-output-global"> </div>
+    <!-- Javascript-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="{% static 'js/core.min.js' %}"></script>
+    <script src="{% static 'js/script.js' %}"></script>
+    <!-- coded by barber-->
+  </body>
+</html>
