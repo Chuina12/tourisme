@@ -4,14 +4,14 @@
 <!DOCTYPE html>
 <html class="wide wow-animation" lang="en"> 
   <head>
-    <script src="//code.tidio.co/3paqyrukwm1hmgk483xr8hqpv4ipjhmh.js" async></script>
+    <script src="//code.tidio.co/v7rbwhjcsevvyccdejwiyvrmb26zvuh4.js" async></script>
     <!-- Site Title-->
     <title>welcometosafari !</title>
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="{% static 'logo/logo_welcome1.png' %}" type="image/x-icon">
     <!-- Stylesheets -->
     
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -101,7 +101,7 @@
                   </li> -->
                   <li class="box-inline list-inline-item">
                     <span class="icon novi-icon icon-md-smaller icon-secondary mdi mdi-whatsapp"></span>
-                    <a href="https://wa.me/+33759449968" target="_blank">+33759449968</a>
+                    <a href="https://wa.me/+17248198937" target="_blank"> +17248198937</a>
                   </li>
                 
                   {% comment %} <li class="box-inline list-inline-item"><span class="icon novi-icon icon-md-smaller icon-secondary mdi mdi-map-marker"></span><a href="#">30 N GOULD STREET STE, SHERIDAN, 82801, WY</a></li> {% endcomment %}
@@ -155,12 +155,12 @@
                
                   <!-- TikTok icon from Font Awesome -->
                   <li class="list-inline-item">
-                    <a class="icon novi-icon icon-md-middle icon-circle icon-secondary-5-filled fab fa-tiktok" href="https://www.tiktok.com/@welcome_safari"></a>
+                    <a class="icon novi-icon icon-md-middle icon-circle icon-secondary-5-filled fab fa-tiktok" href="www.tiktok.com/@welcome.to.safari"></a>
                   </li>
                
                   <!-- Pinterest icon -->
                   <li class="list-inline-item">
-                     <a class="icon novi-icon icon-md-middle icon-circle icon-secondary-5-filled mdi mdi-pinterest" href="https://www.pinterest.com/welcometosafari/"></a>
+                     <a class="icon novi-icon icon-md-middle icon-circle icon-secondary-5-filled mdi mdi-pinterest" href="https://www.pinterest.com/welcometo_safari/"></a>
                   </li>
                
                   <!-- Instagram icon (remplace LinkedIn) -->
@@ -170,7 +170,7 @@
                
                   <!-- WhatsApp icon (nouvelle icône) -->
                   <li class="list-inline-item">
-                     <a class="icon novi-icon icon-md-middle icon-circle icon-secondary-5-filled mdi mdi-whatsapp" href="https://wa.me/+33759449968"></a>
+                     <a class="icon novi-icon icon-md-middle icon-circle icon-secondary-5-filled mdi mdi-whatsapp" href="https://wa.me/+17248198937"></a>
                   </li>
                </ul>
                
@@ -361,7 +361,7 @@
                 <div class="form-request form-request-modern bg-gray-lighter" style=" background-color:orange">
                   <h4>{% blocktrans %}Let’s plan your dream trip together!{% endblocktrans %}</h4>
                   <!-- RD Mailform-->
-                  <form class="rd-mailform form-fix">
+                  <form class="rd-mailform form-fix" action="{% url 'request_devis'  %}">
                     <div class="row row-20 row-fix">
                    
                      
@@ -402,7 +402,7 @@
                       </div>
                     </div>
                     <div class="form-wrap form-button">
-                      <button class="button button-block button-secondary" type="submit">{% trans 'Start Customizing' %}</button>
+                      <a href="{% url 'request_devis' %}" class="button button-block button-secondary">{% trans 'Start Customizing' %}</a>
                     </div>
                   </form>
                 </div>

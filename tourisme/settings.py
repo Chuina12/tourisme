@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-)2x-%c2pcg1l@k(*b-alk+1%otv6e+4@tk^_cj9o_ssm54vr%&
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['welcometosafari.com','www.welcometosafari.com']
 
 
 # Application definition
@@ -86,13 +86,23 @@ DATABASES = {
     }
 }
 
+#EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+#EMAIL_HOST = 'smtp.gmail.com'
+#EMAIL_PORT = 587
+#EMAIL_USE_TLS = True
+#EMAIL_HOST_USER = 'thierryconsulting.1@gmail.com'
+#EMAIL_HOST_PASSWORD ='wzjozbwaenefppsl'
+#DEFAULT_FROM_EMAIL = 'thierryconsulting.1@gmail.com'
+
+# Paramètres d'e-mail pour Hostinger (Titan Email)
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_PORT = 587
-EMAIL_USE_TLS = True
-EMAIL_HOST_USER = 'thierryconsulting.1@gmail.com'
-EMAIL_HOST_PASSWORD ='wzjozbwaenefppsl'
-DEFAULT_FROM_EMAIL = 'thierryconsulting.1@gmail.com'
+EMAIL_HOST = 'smtp.titan.email'  # Serveur SMTP pour Titan Email
+EMAIL_PORT = 465  # Port pour SSL
+EMAIL_USE_TLS = False  # TLS désactivé car SSL est utilisé
+EMAIL_USE_SSL = True  # SSL activé
+EMAIL_HOST_USER = 'support@welcometosafari.com'  # Adresse e-mail complète
+EMAIL_HOST_PASSWORD = 'Safari@1'  # Mot de passe de l'adresse e-mail
+DEFAULT_FROM_EMAIL = 'support@welcometosafari.com'  # Adresse e-mail par défaut pour l'expéditeur
 
 
 # Password validation
@@ -145,6 +155,8 @@ STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+#MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 
 
