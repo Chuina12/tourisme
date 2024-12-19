@@ -1,5 +1,5 @@
 from django.shortcuts import render,redirect
-from .models import Service,Presentation,Article, Comment,Categorie,Baniere,Activity,BaniereDestination,Destination
+from .models import Service,Presentation,Article, Comment,Categorie,Baniere,Activity,BaniereDestination,Destination,LegalDocument
 # Create your views here.
 from django.shortcuts import render, get_object_or_404
 from django.core.mail import send_mail, EmailMultiAlternatives
@@ -15,7 +15,14 @@ def index(request):
     activity = Activity.objects.all()
     baniereDestination = BaniereDestination.objects.all()
     destination=Destination.objects.all()
-    return render(request,'index.html',{'service':service,'presentations': presentations,'baniere':baniere,'destination':destination})
+    legal = LegalDocument.objects.all()
+    return render(request,'index.html',
+    {'service':service,
+    'presentations': presentations,
+    'baniere':baniere,
+    'destination':destination,
+    'legal':legal
+    })
 
 def about(request):
     return render(request,'about.html')
@@ -181,3 +188,14 @@ def articles_par_categorie(request, category_id):
     articles = Article.objects.filter(categorie=categories)  # Filtre les articles de la catégorie
     categorie = Categorie.objects.all()  # Récupère toutes les catégories pour le menu latéral
     return render(request, 'articles_par_categorie.html', {'articles': articles, 'categorie': categorie, 'selected_category': categories})
+
+
+def legaldocument(request, document_type):
+    # Récupérer le document en fonction de son type
+    document = get_object_or_404(LegalDocument, title=document_type)
+    
+    # Passer les données au modèle
+    return render(request, 'legaldocument.html', {'document': document})
+
+def test(request):
+    return render(request,'test.html')

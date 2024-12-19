@@ -127,3 +127,22 @@ class Destination(models.Model):
     
     def __str__(self):
         return self.title
+    
+    
+class LegalDocument(models.Model):
+    DOCUMENT_TYPES = [
+        ('privacy_policy', 'Politique de confidentialité'),
+        ('terms_of_use', 'Conditions d\'utilisation'),
+        ('legal_notice', 'Mentions légales'),
+    ]
+
+    title = models.CharField(max_length=255, choices=DOCUMENT_TYPES, unique=True)
+    date = models.DateField(null=True, blank=True)  # Optionnel pour les documents autres que Politique de confidentialité
+    content = RichTextField()
+
+    def __str__(self):
+        return dict(self.DOCUMENT_TYPES).get(self.title, self.title)
+
+    class Meta:
+        verbose_name = "Document juridique"
+        verbose_name_plural = "Documents juridiques"

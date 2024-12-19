@@ -26,7 +26,8 @@ SECRET_KEY = 'django-insecure-)2x-%c2pcg1l@k(*b-alk+1%otv6e+4@tk^_cj9o_ssm54vr%&
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['welcometosafari.com','www.welcometosafari.com']
+ALLOWED_HOSTS = ['welcometosafari.com','www.welcometosafari.com','*']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -157,7 +158,6 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media/')
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 #MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-
 
 
 # settings.py

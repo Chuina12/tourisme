@@ -24,5 +24,6 @@ urlpatterns = [
     path('blog', views.blog, name='blog'),
     path('detail/<int:article_id>', views.detail, name='detail'),
     path('categorie/<int:category_id>/', views.articles_par_categorie, name='articles_par_categorie'),
-
+    path('legaldocument/<str:document_type>/', views.legaldocument, name='legaldocument'),
+    path('test',views.test)
 ]

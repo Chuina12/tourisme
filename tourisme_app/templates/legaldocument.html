@@ -1,0 +1,16 @@
+{% extends 'index.html' %}
+{% load i18n %}
+
+{% load static %}
+
+{% block body %}
+<br><br><br> 
+
+<h1>{{ document.get_title_display }}</h1>
+{% if document.date %}
+    <p><strong>Date:</strong> {{ document.date }}</p>
+{% endif %}
+<div>
+    {{ document.content|safe }}
+
+{% endblock %}

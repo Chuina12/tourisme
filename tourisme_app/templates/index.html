@@ -6,12 +6,12 @@
   <head>
     <script src="//code.tidio.co/v7rbwhjcsevvyccdejwiyvrmb26zvuh4.js" async></script>
     <!-- Site Title-->
-    <title>welcometosafari !</title>
+    <title>welcometosafari </title>
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
-    <link rel="icon" href="{% static 'logo/logo_welcome1.png' %}" type="image/x-icon">
+    <link rel="icon" href="{% static 'logo/t.jpeg' %}" type="image/x-icon">
     <!-- Stylesheets -->
     
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -155,7 +155,7 @@
                
                   <!-- TikTok icon from Font Awesome -->
                   <li class="list-inline-item">
-                    <a class="icon novi-icon icon-md-middle icon-circle icon-secondary-5-filled fab fa-tiktok" href="www.tiktok.com/@welcome.to.safari"></a>
+                    <a class="icon novi-icon icon-md-middle icon-circle icon-secondary-5-filled fab fa-tiktok" href="https://www.tiktok.com/@welcome.to.safari"></a>
                   </li>
                
                   <!-- Pinterest icon -->
@@ -165,7 +165,7 @@
                
                   <!-- Instagram icon (remplace LinkedIn) -->
                   <li class="list-inline-item">
-                     <a class="icon novi-icon icon-md-middle icon-circle icon-secondary-5-filled mdi mdi-instagram" href="https://www.instagram.com/welcometosafari"></a>
+                     <a class="icon novi-icon icon-md-middle icon-circle icon-secondary-5-filled mdi mdi-instagram" href="https://www.instagram.com/welcome_saf/profilecard/?igsh=OGQ5ZDc2ODk2ZA=="></a>
                   </li>
                
                   <!-- WhatsApp icon (nouvelle icône) -->
@@ -734,7 +734,7 @@
        
           <!-- Instagram icon (remplace LinkedIn) -->
           <li class="list-inline-item">
-             <a class="icon novi-icon icon-md-middle icon-circle icon-secondary-5-filled mdi mdi-instagram" href="https://www.instagram.com/welcometosafari"></a>
+             <a class="icon novi-icon icon-md-middle icon-circle icon-secondary-5-filled mdi mdi-instagram" href="https://www.instagram.com/welcome_saf/profilecard/?igsh=OGQ5ZDc2ODk2ZA=="></a>
           </li>
        
           <!-- WhatsApp icon (nouvelle icône) -->
@@ -795,9 +795,9 @@
       &#169;&nbsp;<span class="copyright-year"></span> All Rights Reserved. Design&nbsp;by&nbsp;<a href="#">thierry</a>
     </p>
     <ul class="list-inline">
-      <li class="list-inline-item"><a href="" style="color:orange">{% trans "Politique de confidentialité" %}</a></li>
-      <li class="list-inline-item"><a href="" style="color:orange">{% trans "Conditions d'utilisation" %}</a></li>
-      <li class="list-inline-item"><a href="" style="color:orange">{% trans "Mentions légales" %}</a></li>
+      {% for legale in legal %}
+      <li class="list-inline-item"><a href="/legaldocument/{{legale.title}}" style="color:orange">{{legale.title}}</a></li>
+      {% endfor %}
     </ul>
   </div>
 </footer>

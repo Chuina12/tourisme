@@ -1,7 +1,7 @@
 # admin.py
 
 from django.contrib import admin
-from .models import Service,Presentation,Baniere,BaniereDestination,Activity,Destination
+from .models import Service,Presentation,Baniere,BaniereDestination,Activity,Destination, LegalDocument
 
 @admin.register(Service)
 class ServiceAdmin(admin.ModelAdmin):
@@ -71,3 +71,18 @@ class AtivityAdmin(admin.ModelAdmin):
 @admin.register(Destination)
 class DestinationAdmin(admin.ModelAdmin):
     list_display = ('title', 'price', 'description', 'image', 'date')
+    
+@admin.register(LegalDocument)
+class LegalDocumentAdmin(admin.ModelAdmin):
+    list_display = ('get_title_display', 'date', 'content_snippet')
+    list_filter = ('title', 'date')
+    search_fields = ('title', 'content')
+    ordering = ('date',)
+
+    def get_title_display(self, obj):
+        return dict(LegalDocument.DOCUMENT_TYPES).get(obj.title, obj.title)
+    get_title_display.short_description = "Type de document"
+
+    def content_snippet(self, obj):
+        return obj.content[:50] + "..." if obj.content else "Pas de contenu"
+    content_snippet.short_description = "Aperçu du contenu"
