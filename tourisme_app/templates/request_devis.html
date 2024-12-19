@@ -496,31 +496,7 @@
       </form>
       
           
-          <script>
-            function validateForm(event) {
-              const inputs = document.querySelectorAll('.form-control');
-              let isValid = true;
-          
-              // Reset border styles before validation
-              inputs.forEach(input => {
-                input.style.border = '';
-              });
-          
-              // Check each input
-              inputs.forEach(input => {
-                if (input.hasAttribute('required') && !input.value.trim()) {
-                  // Apply red border if field is empty
-                  input.style.border = '2px solid red';
-                  isValid = false;
-                }
-              });
-          
-              // Prevent form submission if any field is invalid
-              if (!isValid) {
-                event.preventDefault();
-              }
-            }
-          </script>
+
           
     </div>
 </div>
