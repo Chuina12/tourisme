@@ -509,28 +509,6 @@
 <!-- Ajoutez jQuery via CDN -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-<script>
-    $(document).ready(function() {
-        // Appel à l'API REST Countries
-        $.ajax({
-            url: "https://restcountries.com/v3.1/all",
-            method: "GET",
-            success: function(data) {
-                // Trier les pays par ordre alphabétique
-                data.sort((a, b) => a.name.common.localeCompare(b.name.common));
-
-                // Pour chaque pays dans la réponse, ajouter une option au select
-                data.forEach(function(country) {
-                    $('#country').append(`<option value="${country.name.common}">${country.name.common}</option>`);
-                });
-            },
-            error: function() {
-                alert('Unable to load countries. Please try again later.');
-            }
-        });
-    });
-</script>
-
 
 
 {% endblock %}
