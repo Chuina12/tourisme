@@ -105,7 +105,7 @@ def request_devis(request):
         Destination: {destination}
         Price: {prix}
         Start Date: {start_date}
-        End Date: {end_date}
+        End Date: {end_date}f
         Number of Adults: {num_adults}
         Number of Minors: {num_minors}
         Number of Babies: {num_babies}
