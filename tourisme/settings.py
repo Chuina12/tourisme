@@ -24,10 +24,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-)2x-%c2pcg1l@k(*b-alk+1%otv6e+4@tk^_cj9o_ssm54vr%&'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['welcometosafari.com','www.welcometosafari.com','*']
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['welcometosafari.com','www.welcometosafari.com']
+#ALLOWED_HOSTS = ['*']
 
 
 # Application definition

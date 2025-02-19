@@ -19,7 +19,7 @@ from django.urls import path,include
 from django.conf import settings
 from django.conf.urls.static import static
 from django.conf.urls.i18n import i18n_patterns
-
+admin.site.site_header='Admin welcometosafari'
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',include('tourisme_app.urls'))
