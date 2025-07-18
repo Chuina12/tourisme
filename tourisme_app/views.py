@@ -6,6 +6,8 @@ from django.core.mail import send_mail, EmailMultiAlternatives
 from django.template.loader import render_to_string
 from django.utils.html import strip_tags
 from django.conf import settings
+from django.contrib import messages
+
 
 
 def index(request):
@@ -27,8 +29,80 @@ def index(request):
 def about(request):
     return render(request,'about.html')
 
-def contact(request):
+import requests # You'll need to import requests for CAPTCHA verification
+
+def contact(request): # Assuming this is your contact form submission view
+    if request.method == "POST":
+        # --- CAPTCHA Verification (VERY IMPORTANT!) ---
+        recaptcha_response = request.POST.get('g-recaptcha-response')
+        if not recaptcha_response:
+            messages.error(request, "Veuillez cocher la case 'Je ne suis pas un robot'.")
+            return redirect('contacts') # Or render the form with error
+
+        # Send CAPTCHA response to Google for verification
+        # Replace 'YOUR_RECAPTCHA_SECRET_KEY' with your actual secret key
+        data = {
+            'secret': settings.RECAPTCHA_PRIVATE_KEY, # Define this in your settings.py
+            'response': recaptcha_response
+        }
+        r = requests.post('https://www.google.com/recaptcha/api/siteverify', data=data)
+        result = r.json()
+
+        if not result['success']:
+            messages.error(request, "La vérification reCAPTCHA a échoué. Veuillez réessayer.")
+            # You can log result['error-codes'] for more details if needed
+            return redirect('contacts') # Or render the form with error
+        # --- End CAPTCHA Verification ---
+
+        # Retrieve form data
+        name = request.POST.get('name')
+        last_name = request.POST.get('last-name') # Don't forget last name
+        email = request.POST.get('email')
+        phone = request.POST.get('phone')
+        object_field = request.POST.get('object') # New 'object' field
+        message = request.POST.get('message')
+
+        # Email for the administrator
+        subject_admin = f"Nouveau message de contact: {object_field} de {name} {last_name}"
+        message_admin = f"""
+        Vous avez reçu un nouveau message de contact avec les détails suivants :
+
+        Nom Complet: {name} {last_name}
+        Email: {email}
+        Téléphone: {phone}
+        Objet: {object_field}
+        Message:
+        {message}
+        """
+        send_mail(
+            subject_admin,
+            message_admin,
+            settings.DEFAULT_FROM_EMAIL,
+            [settings.DEFAULT_FROM_EMAIL], # Or your admin email list
+            fail_silently=False,
+        )
+
+        # Prepare the HTML email for the client (optional, but good practice)
+        subject_client = f"Confirmation of your contact message: {object_field}"
+        html_content = render_to_string('emails/contact_confirmation_template.html', {
+            'name': name,
+            'last_name': last_name,
+            'email': email,
+            'phone': phone,
+            'object_field': object_field,
+            'message': message,
+        })
+        text_content = strip_tags(html_content) # Plain text content
+
+        # HTML email with attachment
+        email_client = EmailMultiAlternatives(subject_client, text_content, settings.DEFAULT_FROM_EMAIL, [email])
+        email_client.attach_alternative(html_content, "text/html")
+        email_client.send()
+
+        messages.success(request, 'Thank you for your message. We will contact you as soon as possible.')
+        return redirect('contacts') # Redirect to the same page after success
     return render(request,'contacts.html')
+
 
 def destination_details(request, pk):
     activity = Activity.objects.all()

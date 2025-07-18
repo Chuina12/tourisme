@@ -24,10 +24,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-)2x-%c2pcg1l@k(*b-alk+1%otv6e+4@tk^_cj9o_ssm54vr%&'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['welcometosafari.com','www.welcometosafari.com']
-#ALLOWED_HOSTS = ['*']
+# ALLOWED_HOSTS = ['welcometosafari.com','www.welcometosafari.com']
+ALLOWED_HOSTS = ['*']
+CSRF_TRUSTED_ORIGINS = [
+    "https://welcometosafari.com",
+    "https://www.welcometosafari.com",
+]
 
 
 # Application definition
@@ -42,7 +46,19 @@ INSTALLED_APPS = [
     'ckeditor',
     'tourisme_app',
     'sorl.thumbnail',
+    'snowpenguin.django.recaptcha3',
+
 ]
+
+RECAPTCHA_PRIVATE_KEY = '6LcqFlkrAAAAAEZoJlg_a9woW6nYar0vAh-B-i90'
+RECAPTCHA_PUBLIC_KEY = '6LcqFlkrAAAAAB-6jEKHAYDtA0bNvnULT4muecc-'
+RECAPTCHA_DEFAULT_ACTION = 'generic'
+RECAPTCHA_SCORE_THRESHOLD = 0.5
+RECAPTCHA_LANGUAGE = 'en' # for auto detection language, remove this from your settings
+# If you require reCaptcha to be loaded from somewhere other than https://google.com
+# (e.g. to bypass firewall restrictions), you can specify what proxy to use.
+# RECAPTCHA_FRONTEND_PROXY_HOST = 'https://recaptcha.net'
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

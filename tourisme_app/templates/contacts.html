@@ -1,152 +1,20 @@
 {% extends 'index.html' %}
 {% load i18n %}
-
 {% load static %}
-{% block header %} 
-      <header class="section page-header">
-        <!-- RD Navbar-->
-        <div class="rd-navbar-wrap rd-navbar-corporate">
-          <nav class="rd-navbar" data-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-fixed" data-md-layout="rd-navbar-fixed" data-md-device-layout="rd-navbar-fixed" data-lg-layout="rd-navbar-fullwidth" data-xl-layout="rd-navbar-static" data-lg-device-layout="rd-navbar-fixed" data-xl-device-layout="rd-navbar-static" data-md-stick-up-offset="130px" data-lg-stick-up-offset="100px" data-stick-up="true" data-sm-stick-up="true" data-md-stick-up="true" data-lg-stick-up="true" data-xl-stick-up="true">
-            <div class="rd-navbar-collapse-toggle" data-rd-navbar-toggle=".rd-navbar-collapse"><span></span></div>
-            <div class="rd-navbar-top-panel rd-navbar-collapse novi-background">
-              <div class="rd-navbar-top-panel-inner">
-                <ul class="list-inline">
-                  <!-- <li class="box-inline list-inline-item"><span class="icon novi-icon icon-md-smaller icon-secondary mdi mdi-phone"></span>
-                    <ul class="list-comma">
-                      <li><a href="tel:+1 409 995 3496">+1 409 995 3496</a></li>
-                      {% comment %} <li><a href="tel:#">1-800-6780-345</a></li> {% endcomment %}
-                    </ul>
-                  </li> -->
-                  <li class="box-inline list-inline-item">
-                    <span class="icon novi-icon icon-md-smaller icon-secondary mdi mdi-whatsapp"></span>
-                    <a href="https://wa.me/14099953496" target="_blank">+1 409 995 3496</a>
-                  </li>
-                
-                  {% comment %} <li class="box-inline list-inline-item"><span class="icon novi-icon icon-md-smaller icon-secondary mdi mdi-map-marker"></span><a href="#">30 N GOULD STREET STE, SHERIDAN, 82801, WY</a></li> {% endcomment %}
-                  <li class="box-inline list-inline-item"><span class="icon novi-icon icon-md-smaller icon-secondary mdi mdi-email"></span><a href="mailto:support@welcometosafari.com">support@welcometosafari.com</a></li>
-                </ul>
-                <ul class="list-inline">
-                  <!-- Facebook icon -->
-                  <li class="list-inline-item">
-                     <a class="icon novi-icon icon-md-middle icon-circle icon-secondary-5-filled mdi mdi-facebook" href="https://www.facebook.com/welcometosaf"></a>
-                  </li>
-               
-                  <!-- TikTok icon from Font Awesome -->
-                  <li class="list-inline-item">
-                    <a class="icon novi-icon icon-md-middle icon-circle icon-secondary-5-filled fab fa-tiktok" href="https://www.tiktok.com/@welcome_safari"></a>
-                  </li>
-               
-                  <!-- Pinterest icon -->
-                  <li class="list-inline-item">
-                     <a class="icon novi-icon icon-md-middle icon-circle icon-secondary-5-filled mdi mdi-pinterest" href="https://www.pinterest.com/welcometosafari/"></a>
-                  </li>
-               
-                  <!-- Instagram icon (remplace LinkedIn) -->
-                  <li class="list-inline-item">
-                     <a class="icon novi-icon icon-md-middle icon-circle icon-secondary-5-filled mdi mdi-instagram" href="https://www.instagram.com/welcometosafari"></a>
-                  </li>
-               
-                  <!-- WhatsApp icon (nouvelle icône) -->
-                  <li class="list-inline-item">
-                     <a class="icon novi-icon icon-md-middle icon-circle icon-secondary-5-filled mdi mdi-whatsapp" href="https://wa.me/yourphonenumber"></a>
-                  </li>
-               </ul>
-               
-              </div>
-              <div class="rd-navbar-top-panel-inner"><a class="button button-sm button-secondary button-nina" href="https://www.thierry.com/website-templates/62466.html" target="_blank">buy template now</a></div>
-            </div>
-            <div class="rd-navbar-inner">
-              <!-- RD Navbar Panel-->
-              <div class="rd-navbar-panel">
-                <!-- RD Navbar Toggle-->
-                <button class="rd-navbar-toggle" data-rd-navbar-toggle=".rd-navbar-nav-wrap"><span></span></button>
-                <!-- RD Navbar Brand-->
-                <div class="rd-navbar-brand"><a class="brand-name" href="/"><img class="logo-default" src="{% static 'logo/logo_welcome.png' %}" alt="" width="208" height="46"/><img class="logo-inverse" src="{% static 'images/logo-inverse-208x46.png' %}" alt="" width="208" height="46"/></a></div>
-              </div>
-              <div class="rd-navbar-aside-center">
-                <div class="rd-navbar-nav-wrap">
-                    <!-- RD Navbar Nav-->
-                    <ul class="rd-navbar-nav">
-                        <li>
-                            <a href="{% url 'index' %}">{% trans 'Home' %}</a>
-                        </li>
-                        <li>
-                            <a href="/about">{% trans 'About Us' %}</a>
-                        </li>
-            
-                        <!-- Dropdown for Destinations -->
-                        <li class="dropdown">
-                          <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">{% trans 'Destinations' %}</a>
-                          <ul class="dropdown-menu rounded-0 m-0">
-                            <li><a class="dropdown-item" href="/zanzibar_destination">{% trans "Zanzibar" %}</a></li>
-                            <li><a class="dropdown-item" href="/uganda_safari">{% trans "Ouganda" %}</a></li>
-                            <li><a class="dropdown-item" href="/kenya_safari">{% trans "Kenya" %}</a></li>
-                            <li><a class="dropdown-item" href="/dubai_destination">{% trans "Dubaï" %}</a></li>
-                            <li><a class="dropdown-item" href="/egypte_destination">{% trans "Egypte" %}</a></li>
-                            <li><a class="dropdown-item" href="/maldives_destination">{% trans "Maldives" %}</a></li>
-                            {% comment %} <li><a class="dropdown-item" href="/tanzania_safari">Tanzanie</a></li> {% endcomment %}
-                            <!-- Ajoutez plus de destinations ici -->
-                          </ul>
-                        </li>
 
-                        <!-- Dropdown for Safari -->
-                        <li class="dropdown">
-                          <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Safari</a>
-                          <ul class="dropdown-menu rounded-0 m-0">
-                              <li><a class="dropdown-item" href="/tanzania_safari">{% trans "Tanzanie" %}</a></li>
-                              <li><a class="dropdown-item" href="/uganda_safari">{% trans "Ouganda" %}</a></li>
-                              <li><a class="dropdown-item" href="/kenya_safari">{% trans "Kenya" %}</a></li>
-                              <!-- Ajoutez plus de safaris ici -->
-                          </ul>
-                        </li>
+{% block body %}
 
-            
-                        <li>
-                          <a href="/#">Shop</a>
-                        </li>
-                        <li class="active">
-                          <a href="/contacts">Contacts</a>
-                        </li>
-                    </ul>
-                </div>
-              </div>
-            
-              <div class="rd-navbar-aside-right"><a class="button button-sm button-secondary button-nina" id="btn-requestQuote" style="background-color: rgb(43, 42, 42); color: aliceblue; border-color: black;" href="/request_devis">request a quote</a></div>
-            </div>
-          </nav>
-        </div>
-      </header>
-      {% endblock %} <br>
-
-     {% block body %}
-
- <!-- Contact info-->
- <section class="section section-lg bg-default text-center">
+<section class="section section-lg bg-default text-center">
   <div class="container container-wide">
     <div class="row row-fix row-50 row-custom-bordered">
       <div class="col-sm-6 col-lg-4">
-        <!-- Box minimal-->
         <article class="box-simple">
           <div class="box-simple-icon novi-icon mdi mdi-map-marker"></div>
           <h6>{% trans 'Address' %}</h6>
           <div class="box-simple-text"><a href="#">30N Gould Street, Ste R, Sheridan, <br> 82801, WY, USA</a></div>
         </article>
       </div>
-      <!-- <div class="col-sm-6 col-lg-3">
-        -- Box simple--
-        <article class="box-simple">
-          <div class="box-simple-icon novi-icon mdi mdi-phone"></div>
-          <h6>phones</h6>
-          <div class="box-simple-text">
-            <ul class="list-comma list-0">
-              <li><a href="tel:#">1-800-6543-765</a></li>
-              <li><a href="tel:#">1-800-3434-876</a></li>
-            </ul>
-          </div>
-        </article>
-      </div> -->
       <div class="col-sm-6 col-lg-4">
-        <!-- Box simple-->
         <article class="box-simple">
           <div class="box-simple-icon novi-icon mdi mdi-email-open"></div>
           <h6>e-mail</h6>
@@ -158,7 +26,6 @@
         </article>
       </div>
       <div class="col-sm-6 col-lg-4">
-        <!-- Box simple-->
         <article class="box-simple">
           <div class="box-simple-icon novi-icon mdi mdi-calendar-clock"></div>
           <h6>{% trans 'opening hours' %}</h6>
@@ -174,7 +41,6 @@
   </div>
 </section>
 
-<!-- Contact us-->
 <section class="section section-wrap bg-gray-lighter novi-background bg-cover">
   <div class="section-wrap-inner">
     <div class="container container-bigger">
@@ -184,93 +50,136 @@
             <h3>Contact us</h3>
             <hr class="divider divider-left divider-secondary">
             <p class="big">
-             {% blocktrans %} You can contact us any way
+              {% blocktrans %} You can contact us any way
               that is convenient for you. We are available 24/7 via whatsapp or
               email. You can also use a quick contact form below or visit our
               office personally. {% endblocktrans %}
             </p>
-            <!-- RD Mailform-->
-            <form class="rd-mailform" data-form-output="form-output-global" data-form-type="contact" method="post" action="bat/rd-mailform.php" onsubmit="return validateForm(event)">
-              <div class="row row-fix row-20">
-                <div class="col-md-6">
-                  <div class="form-wrap form-wrap-validation">
-                    <label class="form-label-outside" for="form-1-name">{% trans 'First name' %}<span style="color: red;"> *</span></label>
-                    <input class="form-input" id="form-1-name" type="text" name="name" data-constraints="@Required"/>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="form-wrap form-wrap-validation">
-                    <label class="form-label-outside" for="form-1-last-name">{% trans 'Last name' %}<span style="color: red;"> *</span></label>
-                    <input class="form-input" id="form-1-last-name" type="text" name="last-name" data-constraints="@Required"/>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="form-wrap form-wrap-validation">
-                    <label class="form-label-outside" for="form-1-email">E-mail<span style="color: red;"> *</span></label>
-                    <input class="form-input" id="form-1-email" type="email" name="email" data-constraints="@Email @Required"/>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="form-wrap form-wrap-validation">
-                    <label class="form-label-outside" for="form-1-phone">{% trans 'Phone' %}<span style="color: red;"> *</span></label>
-                    <input class="form-input" id="form-1-phone" type="text" name="phone" data-constraints="@Numeric @Required"/>
-                  </div>
-                </div>
-                <div class="col-sm-12">
-                  <div class="form-wrap form-wrap-validation">
-                    <label class="form-label-outside" for="form-1-message">Message<span style="color: red;"> *</span></label>
-                    <textarea class="form-input" id="form-1-message" name="message" data-constraints="@Required"></textarea>
-                  </div>
-                </div>
-                <div class="col-sm-12 offset-custom-1">
-                  <div class="form-button">
-                    <button class="button button-secondary button-nina" type="submit">{% trans 'send message' %}</button>
-                  </div>
-                </div>
-              </div>
-            </form>
-            
-            <script>
-              function validateForm(event) {
-                const inputs = document.querySelectorAll('.form-input');
-                let isValid = true;
-            
-                // Reset border styles before validation
-                inputs.forEach(input => {
-                  input.style.border = '';
-                });
-            
-                // Check each input
-                inputs.forEach(input => {
-                  if (input.hasAttribute('data-constraints') && input.getAttribute('data-constraints').includes('@Required') && !input.value.trim()) {
-                    // Apply red border if field is empty
-                    input.style.border = '2px solid red';
-                    isValid = false;
-                  }
-                });
-            
-                // Prevent form submission if any field is invalid
-                if (!isValid) {
-                  event.preventDefault();
+            <br>
+
+            {% if messages %}
+              {% for message in messages %}
+                <div class="alert alert-success">{{ message }}</div>
+              {% endfor %}
+            {% endif %}
+
+            <style>
+                /* CSS pour styliser la bordure rouge et le message d'erreur */
+                .recaptcha-container {
+                    border: 1px solid transparent; /* Bordure transparente par défaut */
+                    padding: 5px; /* Un peu d'espace autour du CAPTCHA */
+                    display: inline-block; /* Pour que la bordure n'occupe pas toute la largeur */
                 }
-              }
+
+                .recaptcha-container.error {
+                    border-color: red; /* Bordure rouge quand il y a une erreur */
+                }
+
+                .recaptcha-error-message {
+                    color: red;
+                    font-size: 0.9em;
+                    margin-top: 5px;
+                    display: none; /* Caché par défaut */
+                }
+            </style>
+
+            <form id="myForm" action="{% url 'contacts' %}" method="post">
+                <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+                {% csrf_token %}
+                <div class="row row-fix row-20">
+                  <div class="col-md-6">
+                    <div class="form-wrap form-wrap-validation">
+                      <label class="form-label-outside" for="form-1-name">{% trans 'First name' %}<span style="color: red;"> *</span></label>
+                      <input class="form-input" id="form-1-name" type="text" name="name" Required/>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-wrap form-wrap-validation">
+                      <label class="form-label-outside" for="form-1-last-name">{% trans 'Last name' %}<span style="color: red;"> *</span></label>
+                      <input class="form-input" id="form-1-last-name" type="text" name="last-name" Required/>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-wrap form-wrap-validation">
+                      <label class="form-label-outside" for="form-1-email">E-mail<span style="color: red;"> *</span></label>
+                      <input class="form-input" id="form-1-email" type="email" name="email" Required/>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-wrap form-wrap-validation">
+                      <label class="form-label-outside" for="form-1-phone">{% trans 'Phone' %}<span style="color: red;"> *</span></label>
+                      <input class="form-input" id="form-1-phone" type="text" name="phone" Required/>
+                    </div>
+                  </div>
+                  <div class="col-sm-12">
+                      <div class="form-wrap form-wrap-validation">
+                          <label class="form-label-outside" for="form-1-object">{% trans 'Object' %}<span style="color: red;"> *</span></label>
+                          <input class="form-input" id="form-1-object" type="text" name="object" Required/>
+                      </div>
+                  </div>
+                  <div class="col-sm-12">
+                    <div class="form-wrap form-wrap-validation">
+                      <label class="form-label-outside" for="form-1-message">Message<span style="color: red;"> *</span></label>
+                      <textarea class="form-input" id="form-1-message" name="message" Required/></textarea>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-12">
+                    <div class="form-button">
+                        <div class="recaptcha-container" id="recaptchaContainer">
+                            <div class="g-recaptcha" data-sitekey="6LcqFlkrAAAAAB-6jEKHAYDtA0bNvnULT4muecc-" data-callback="recaptchaCallback"></div>
+                        </div>
+                        <div class="recaptcha-error-message" id="recaptchaErrorMessage">
+                            Please check the box "I am not a robot".
+                        </div>
+                    </div>
+                  </div>
+
+                  <div class="col-sm-12 offset-custom-1">
+                    <div class="form-button">
+                      <button class="button button-secondary button-nina" type="submit">{% trans 'send message' %}</button>
+                    </div>
+                  </div>
+                </div>
+            </form>
+
+            <script>
+                document.getElementById('myForm').addEventListener('submit', function(event) {
+                    const recaptchaResponse = grecaptcha.getResponse();
+                    const recaptchaContainer = document.getElementById('recaptchaContainer');
+                    const recaptchaErrorMessage = document.getElementById('recaptchaErrorMessage');
+
+                    if (recaptchaResponse.length === 0) {
+                        event.preventDefault(); // Empêche l'envoi du formulaire
+
+                        // Ajoute la classe 'error' pour la bordure rouge
+                        recaptchaContainer.classList.add('error');
+                        // Affiche le message d'erreur
+                        recaptchaErrorMessage.style.display = 'block';
+
+                        // Défiler jusqu'au CAPTCHA
+                        recaptchaContainer.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    } else {
+                        // Si le reCAPTCHA est rempli, assurez-vous que la bordure rouge et le message sont retirés
+                        recaptchaContainer.classList.remove('error');
+                        recaptchaErrorMessage.style.display = 'none';
+                    }
+                });
+
+                // Fonction appelée par reCAPTCHA quand il est complété
+                window.recaptchaCallback = function() {
+                    const recaptchaContainer = document.getElementById('recaptchaContainer');
+                    const recaptchaErrorMessage = document.getElementById('recaptchaErrorMessage');
+                    recaptchaContainer.classList.remove('error');
+                    recaptchaErrorMessage.style.display = 'none';
+                };
             </script>
-            
           </div>
         </div>
       </div>
     </div>
-    <!-- <div class="section-wrap-aside">
-      < RD Google Map >
-      <div class="google-map-container google-map-with-icon rd-google-map__model" data-zoom="5" data-center="9870 St Vincent Place, Glasgow, DC 45 Fr 45." data-icon="images/gmap_marker.png" data-icon-active="images/gmap_marker_active.png" data-styles="[{&quot;featureType&quot;:&quot;landscape&quot;,&quot;stylers&quot;:[{&quot;saturation&quot;:-100},{&quot;lightness&quot;:60}]},{&quot;featureType&quot;:&quot;road.local&quot;,&quot;stylers&quot;:[{&quot;saturation&quot;:-100},{&quot;lightness&quot;:40},{&quot;visibility&quot;:&quot;on&quot;}]},{&quot;featureType&quot;:&quot;transit&quot;,&quot;stylers&quot;:[{&quot;saturation&quot;:-100},{&quot;visibility&quot;:&quot;simplified&quot;}]},{&quot;featureType&quot;:&quot;administrative.province&quot;,&quot;stylers&quot;:[{&quot;visibility&quot;:&quot;off&quot;}]},{&quot;featureType&quot;:&quot;water&quot;,&quot;stylers&quot;:[{&quot;visibility&quot;:&quot;on&quot;},{&quot;lightness&quot;:30}]},{&quot;featureType&quot;:&quot;road.highway&quot;,&quot;elementType&quot;:&quot;geometry.fill&quot;,&quot;stylers&quot;:[{&quot;color&quot;:&quot;#ef8c25&quot;},{&quot;lightness&quot;:40}]},{&quot;featureType&quot;:&quot;road.highway&quot;,&quot;elementType&quot;:&quot;geometry.stroke&quot;,&quot;stylers&quot;:[{&quot;visibility&quot;:&quot;off&quot;}]},{&quot;featureType&quot;:&quot;poi.park&quot;,&quot;elementType&quot;:&quot;geometry.fill&quot;,&quot;stylers&quot;:[{&quot;color&quot;:&quot;#b6c54c&quot;},{&quot;lightness&quot;:40},{&quot;saturation&quot;:-40}]},{}]">
-        <div class="google-map"></div>
-        <ul class="google-map-markers">
-          <li data-location="9870 St Vincent Place, Glasgow, DC 45 Fr 45." data-description="9870 St Vincent Place, Glasgow"></li>
-        </ul>
-      </div>
-    </div> -->
   </div>
 </section>
 
-
-     {% endblock %}
+{% endblock %}
